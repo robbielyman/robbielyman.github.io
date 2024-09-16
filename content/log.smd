@@ -1,0 +1,14 @@
+---
+.title = "Blog",
+.date = @date("2024-09-14T11:00:00-04:00"),
+.author = "Robbie Lyman",
+.layout = "log.shtml",
+.alternatives = [{
+  .layout = "log.xml",
+  .output = "log/index.xml",
+}],
+.draft = false,
+---
+[]($section.id('about'))
+## About
+You can [subscribe to this page via RSS](https://alanza.xyz/log/index.xml).

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head id="head">
+    <meta charset="UTF-8">
+    <meta name="description" content="alanza.xyz: Robbie Lyman">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="Robbie Lyman">
+    <meta name="twitter:author" content="Robbie Lyman">
+    <meta name="twitter:description" content="alanza.xyz: Robbie Lyman">
+    <meta name="twitter:title" content="$page.title.suffix(' | alanza.xyz')">
+    <meta property="og:type" content="website">
+    <meta property="og:title" conten="$page.title.suffix(' | alanza.xyz')">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title id="title">
+      <super>
+      - alanza.xyz
+    </title>
+    <link rel="stylesheet" type="text/css" href="$site.asset('fonts.css').link()">
+    <link rel="stylesheet" type="text/css" href="$site.asset('style.css').link()">
+    <super>
+  </head>
+  <body>
+    <nav id="menu" class="centered">
+      <a href="/">Home</a>
+      •
+      <a href="$site.page('log').link()">Blog</a>
+    </nav>
+    <div id="content">
+      <super>
+    </div>
+  </body>
+</html>
