@@ -1,9 +1,0 @@
-<extend template="base.shtml">
-<title id="title" :text="$page.title"></title>
-<head id="head">
-</head>
-<div id="content">
-  <h1 class="centered title">ROBBIE LYMAN</h1>
-  <h2 class="centered subtitle">alanza.xyz</h2>
-  <div id="page" :html="$page.content()"></div>
-</div>
