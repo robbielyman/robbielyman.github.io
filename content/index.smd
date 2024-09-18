@@ -5,9 +5,13 @@
 .layout = "index.shtml",
 .draft = false,
 ---
+
+[]($image.asset('headshot.jpeg'))
+
 Hi! I'm a mathematician, musician, programmer, writer and designer
 living in New York.
-I work as an assistant professor at Rutgers University–Newark.
+I work as an assistant professor in the mathematics department
+at Rutgers University–Newark.
 
 In 2022, I recorded and released my first album of pop music,
 _Learning to Run._
