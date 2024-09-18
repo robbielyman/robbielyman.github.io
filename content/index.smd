@@ -5,9 +5,10 @@
 .layout = "index.shtml",
 .draft = false,
 ---
-
+# []($section.id('headshot'))
 []($image.asset('headshot.jpeg'))
 
+# []($section.id('bio'))
 Hi! I'm a mathematician, musician, programmer, writer and designer
 living in New York.
 I work as an assistant professor in the mathematics department

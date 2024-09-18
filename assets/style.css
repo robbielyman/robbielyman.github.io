@@ -65,6 +65,10 @@ h3 {
     text-align: center;
 }
 
+a {
+    color: light-dark(#aa20bb, #773099);
+}
+
 body {
     font-family: 'Taviraj', serif;
     display: flex;
@@ -72,6 +76,8 @@ body {
     padding-bottom: 20px;
     scrollbar-gutter: stable;
     overflow-y: scroll;
+    background-color: light-dark(#f6efef, #2d2d3f);
+    color: light-dark(#0a0a2a, #efdcef);
 }
 
 p {
@@ -87,11 +93,37 @@ nav a:hover {
     text-decoration: underline;
 }
 
+#content {
+    align-self: center;
+    box-sizing: border-box;
+    padding: 0 30px;
+    max-width: min(600px, 100vw);
+}
+
+.centered {
+    align-self: center;
+    text-align: center;
+}
+
+.centered.title {
+    letter-spacing: .5rem;
+    font-size: 3em;
+    font-weight: bolder;
+}
+
+.centered.subtitle {
+    font-weight: lighter;
+}
+
 :root {
     color-scheme: light dark;
     font-size: 1rem;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
 
 @media screen and (min-width: 800px) and (max-width: 1000px) {
   :root {
