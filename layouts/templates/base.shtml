@@ -8,6 +8,7 @@
     <meta name="twitter:author" content="Robbie Lyman">
     <meta name="twitter:description" content="alanza.xyz: Robbie Lyman">
     <meta name="twitter:title" content="$page.title.suffix(' | alanza.xyz')">
+    <meta name="twitter:image" content="$site.host_url.addPath($site.asset('headshot.jpeg').link())">
     <meta property="og:type" content="website">
     <meta property="og:title" conten="$page.title.suffix(' | alanza.xyz')">
     <meta http-equiv="x-ua-compatible" content="ie=edge">

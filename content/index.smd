@@ -6,7 +6,7 @@
 .draft = false,
 ---
 # []($section.id('headshot'))
-[]($image.asset('headshot.jpeg'))
+[]($image.siteAsset('headshot.jpeg'))
 
 # []($section.id('bio'))
 Hi! I'm a mathematician, musician, programmer, writer and designer
