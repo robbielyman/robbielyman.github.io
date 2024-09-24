@@ -100,9 +100,20 @@ nav a:hover {
     max-width: min(600px, 100vw);
 }
 
+#footer-links {
+    align-self: center;
+    box-sizing: border-box;
+    padding: 30px 30px;
+    max-width: min(600px, 100vw);
+}
+
 .centered {
     align-self: center;
     text-align: center;
+}
+
+.overtitle.centered {
+    font-weight: lighter;
 }
 
 .centered.title {
@@ -113,6 +124,7 @@ nav a:hover {
 
 .centered.subtitle {
     font-weight: lighter;
+    line-height: 0.5;
 }
 
 :root {
