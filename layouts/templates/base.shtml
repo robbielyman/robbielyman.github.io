@@ -53,11 +53,7 @@
       •
       <a href="$site.page('math').link()">Math</a>
       •
-      <a href="$site.page('music').link()">Music</a>
-      •
-      <a href="$site.page('code').link()">Code</a>
-      •
-      <a href="$site.page('log').link()">Blog</a>
+      <a href="https://github.com/robbielyman">Code</a>
     </nav>
     <div id="content">
       <super>
