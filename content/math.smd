@@ -11,6 +11,8 @@
 
 # []($section.id('about'))
 
+Here is a [CV]($link.siteAsset('Lyman.pdf')).
+
 My area of expertise is called geometric group theory.
 Here is an explanation intended for anyone.
 (By the way, I’d love feedback on this explanation,
@@ -51,12 +53,13 @@ While doing that research,
 I read a bit of Gromov’s article “Asymptotic Invariants of Infinite Groups”.
 I’d like to quote a bit of the first couple paragraphs of that article for flavor.
 
+> []($block)
 > A group $\Gamma$ with a given system of generators $\\{\gamma_i \\}_{i \in I} $ carries a unique _maximal_ left-invariant distance function for which
 \\[ \operatorname{dist}(\gamma_i, id) = \operatorname{dist}(\gamma_i^{-1}, id) = 1,\ i \in I. \\]
 This distance function, called the _word metric_ associated to the generating set
 $\\{\gamma_i\\} \subset \Gamma$, makes $\Gamma$ subject
 to a geometric scrutiny as any other metric space.
-
+>
 > This space may appear boring and uneventful to a geometer’s eye,
 since it is discrete and the traditional local
 (e.g. topological and infinitesimal) machinery does not run in $\Gamma$.
@@ -67,6 +70,18 @@ becomes the original distance divided by $d$ and for $d \to \infty$
 the points in $\Gamma$ coalesce into a connected continuous solid unity
 which occupies the visual horizon without any gaps or holes
 and fills our geometer’s heart with joy. […]
+
+I love two things about this passage.
+For one, I love that Gromov’s geometer is an embodied person,
+bringing emotions (boredom, joy) and a locational vantage point to their work,
+rather than being some disembodied mind alone.
+Second, I love the visual of a collection of discrete points
+slowly coalescing into a unity,
+almost the process of zooming out from the atomic to the molecular
+to the cellular to the human level and beyond.
+I find that I’m often reaching for a similarly embodied and visual connection
+with the mathematics that I’m doing,
+and it’s great when I’m able to reach that kind of understanding.
 
 As applied to mathematics, I share [Federico Ardila-Mantilla](https://fardila.com/)'s axioms:
 - **Axiom 1.** Mathematical talent is distributed equally among different groups,
