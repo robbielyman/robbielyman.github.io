@@ -1,61 +1,3 @@
-@font-face {
-    font-family: 'Taviraj';
-    src: url('fonts/Taviraj-Regular.ttf') format('truetype');
-    font-weight: normal;
-}
-
-@font-face {
-    font-family: 'Taviraj';
-    src: url('fonts/Taviraj-Black.ttf') format('truetype');
-    font-weight: bolder;
-}
-
-@font-face {
-    font-family: 'Taviraj';
-    src: url('fonts/Taviraj-BlackItalic.ttf') format('truetype');
-    font-weight: bolder;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Taviraj';
-    src: url('fonts/Taviraj-Bold.ttf') format('truetype');
-    font-weight: bold;
-}
-
-@font-face {
-    font-family: 'Taviraj';
-    src: url('fonts/Taviraj-BoldItalic.ttf') format('truetype');
-    font-weight: bold;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Taviraj';
-    src: url('fonts/Taviraj-Italic.ttf') format('truetype');
-    font-weight: normal;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Taviraj';
-    src: url('fonts/Taviraj-Light.ttf') format('truetype');
-    font-weight: light;
-}
-
-@font-face {
-    font-family: 'Taviraj';
-    src: url('fonts/Taviraj-LightItalic.ttf') format('truetype');
-    font-weight: light;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Sarabun';
-    src: url('fonts/Sarabun-Regular.ttf') format('truetype');
-    font-weight: normal;
-}
-
 h1,
 h2,
 h3 {
@@ -135,6 +77,13 @@ nav a:hover {
 img {
     max-width: 100%;
     height: auto;
+}
+
+.block p {
+    padding-top: 0;
+    font-size: 0.8em;
+    padding-left: 12px;
+    padding-right: 12px;
 }
 
 @media screen and (min-width: 800px) and (max-width: 1000px) {
