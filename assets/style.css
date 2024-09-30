@@ -42,6 +42,17 @@ nav a:hover {
     max-width: min(600px, 100vw);
 }
 
+#blog-navigation {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+#blog-navigation > div {
+    font-size: 0.8em;
+}
+
 #footer-links {
     align-self: center;
     box-sizing: border-box;

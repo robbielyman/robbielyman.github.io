@@ -1,0 +1,50 @@
+---
+.title = "return \"Robbie\";",
+.date = @date("2024-09-28T11:30:00-04:00"),
+.author = "Robbie Lyman",
+.layout = "post.shtml",
+.draft = false,
+---
+[]($section.id('summary'))
+This summer I spent twelve weeks at [The Recurse Center]($link.url("https://recurse.com")),
+a self-directed program that describes itself as “like a writer’s retreat, but for programmers”.
+Many participants write a “return statement” describing and reflecting on their time with the program.
+The name is a cute little pun: many functions in a computer program finish with a “return statement”,
+which allows the function to yield a bit of data as a result of the function’s execution.
+Anyway, this is mine.
+
+[]($section.id("remainder"))
+
+# Some statistics
+
+According to [my GitHub](https://github.com/robbielyman) activity log,
+I created approximately 100 commits and 9 new repositories.
+By volume, I almost certainly wrote the most code in [seamstress](https://github.com/robbielyman/seamstress)
+and [my solutions repository for Advent of Code 2022](https://github.com/robbielyman/aoc-2022-rs).
+Eyeballing the former I count easily over 15,000 lines of code added and/or deleted;
+for the latter my final solutions add up to about 7,000 lines of code.
+
+I wrote 60 checkins, one for each weekday I was in the program
+(I didn’t manage to always write one during the day it was about, but I did manage to write all 60).
+I ran a weekly “Audio Hang” as a space to chat informally about audio programming,
+synthesis, DSP and music.
+I put JavaScript and Rust to serious use for the first time,
+served a webpage to `localhost` for the first time,
+made a game in the browser with friends,
+a game of solitaire in the terminal by myself, a toy programming language
+(and started working through [Crafting Interpreters](https://craftinginterpreters.com),
+which will eventually result in a second toy programming language),
+pair programmed for the first (and second and third and and and) time,
+gave two programming-focused presentations
+and one “non-programming talk” about some of the math behind implementing digital filters.
+
+I made sweeping changes to my work-in-progress version 2.0.0 seamstress repeatedly,
+aimed at improving the quality of my design
+and clarifying my vision for the project in the process.
+
+I made many new friends, whom I dearly hope to stay in touch with for years to come.
+I performed livecoded music sets twice.
+I was in more spaces that included a pronoun checkin than I had gone to since college.
+I iterated on myself with the same vigor that I iterated on code,
+ultimately readopting the name Robbie after almost a decade of disuse.
+(Hence the title of this blog post.)
