@@ -83,6 +83,7 @@ nav a:hover {
 :root {
     color-scheme: light dark;
     font-size: 1rem;
+    font-kerning: normal;
 }
 
 img {
