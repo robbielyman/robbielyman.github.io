@@ -1,0 +1,26 @@
+<extend template="base.shtml">
+<title id="title" :text="$page.title"></title>
+<head id="head"></head>
+<div id="content">
+  <h3 class="overtitle centered">Blog – alanza.xyz</h3>
+  <h1 class="centered title">ROBBIE LYMAN</h1>
+  <h3 class="centered subtitle" :text="$page.title"></h3>
+  <div id="blog-navigation">
+    <div id="left" :if="$page.prevPage()">
+      <a href="$if.link()">Previous</a>:
+      <span :text="$if.title"></span>
+    </div>
+    <div id="center">
+      <a href="$page.parentSection().link()">Up</a>
+    </div>
+    <div id="right" :if="$page.nextPage()">
+      <a href="$if.link()">Next</a>:
+      <span :text="$if.title"></span>
+    </div>
+  </div>
+  <div id="page">
+    <div :html="$page.contentSection('summary')"></div>
+    <div :html="$page.toc()"></div>
+    <div :html="$page.contentSection('remainder')"></div>
+  </div>
+</div>
