@@ -15,6 +15,95 @@ Anyway, this is mine.
 
 []($section.id("remainder"))
 
+# What is the Recurse Center like?
+
+## Overview
+
+“[The Recurse Center]($link.url("https://recurse.com"))
+is the retreat where curious programmers recharge and grow.”
+It was founded in 2011 as “Hacker School”,
+and operated under that name until 2015.
+During my retreat, attendees could be in-person, virtual or a mix of both.
+I opted to treat RC as if it were a job,
+commuting every day to downtown Brooklyn to attend in person during the hours of 11–5.
+I continued to have my standing math research meetings,
+but I asked that we meet outside of those hours,
+since I did want to devote a good amount of focus to RC.
+
+As opposed to a coding bootcamp,
+RC expects that you already know how to program.
+Granted, what this means looks different for everyone.
+You’ll see in the statistics below, for example,
+that before RC I had never written any meaningful amount of JavaScript,
+which is arguably the most popular programming language today.
+(It is true that I had opened JavaScript files in a text editor,
+and written a tiny scriptlet to hide and show divs in a previous iteration of this website.)
+
+## Applying
+
+To [apply]($link.url("https://recurse.com/apply")),
+there is a written application (really a web form)
+with a few questions aimed at understanding your background.
+This includes asking you to submit code for a simple program in a language of your choosing,
+as well as providing a link to a larger program you’ve written from scratch.
+
+If your application looks good, there are two interview stages,
+one more conversational, and one for pair programming.
+The pair programming interview was the first time I had pair programmed.
+For that stage of the interview process, there were a few suggested projects
+to work on and bring to the interview,
+and the goal of the interview was to add a little feature to the project.
+I chose to write a teeny tiny little Lisp parser;
+for the pairing interview, we implemented addition.
+I _loved_ this project,
+because it immediately told me what is super cool about Lisp:
+the code really _is_ the syntax tree,
+so evaluating Lisp can be as simple as replacing one syntax tree with another;
+this is more or less what my addition function did.
+
+I ended up becoming pretty fascinated with the idea of creating a programming language.
+I didn’t fully commit to chasing this idea down during my “batch” (i.e. my time at the retreat),
+but I did do a little bit, mostly actually between being accepted and the start of batch,
+I implemented [the Uxn virtual stack-machine]($link.url("https://100r.co/site/uxn"))
+as a little [Zig program]($link.url("https://github.com/robbielyman/uxn-zig")).
+(A next step on that program would be to begin implementing more of the “standard” aspects of
+the Varvara system, which includes video and audio output.)
+I also wrote a little [Forth]($link.url("https://forth.com"))-inspired programming language
+called [Hither]($link.url("https://github.com/robbielyman/hither")).
+
+## The Retreat
+
+The retreat is really mostly what you make it.
+RC has several “Faculty” (which is I think an accurate term for what they do;
+I just put the word in quotes to have an excuse to point out here that RC is not accredited
+and grants no degrees or diplomas or certificates),
+some of whom ran workshops spaced throughout the retreat
+as an opportunity to reflect and recenter on what it is I wanted to do with my time there.
+Most of the time, though, is deliberately unstructured.
+RC maintains a calendar that anyone can edit—this really is an invitation,
+and I made good on it by starting a weekly “Audio Hang” every Tuesday.
+The goal of Audio Hang was to provide a low-stakes space to chat about synthesis, audio programming,
+music, DSP, etc.
+I made a lot of friends through Audio Hang,
+even though I spent relatively little of my batch writing samples to a file or a DAC.
+
+Audio Hang joined a number of self-organized recurring events that were fixtures of my week.
+Others for me included a yoga session (which I missed about as often as I attended, due to research meetings),
+a meeting focused on game development, another on programming language design,
+and another on graphics (which inspired Audio Hang).
+
+As a physical space, during my batch RC occupied the 4th and 5th floows of an office building
+in downtown Brooklyn.
+The 5th floor tended to be quieter (actually very quiet),
+with desk spaces for people to work, as well as where the faculty sat, and a little library.
+The 4th floor was more social; still places to work,
+but also couches, a collection of old computers,
+a few conference rooms, and a kitchen.
+I decided almost immediately that I would spend all my time on the 4th floor.
+I tended to arrive earlier than most people
+(although I committed to 11–5, I usually found myself ready to go a little earlier),
+spend the quiet hours 
+
 # Some statistics
 
 According to [my GitHub](https://github.com/robbielyman) activity log,
@@ -38,7 +127,8 @@ pair programmed for the first (and second and third and and and) time,
 gave two programming-focused presentations
 and one “non-programming talk” about some of the math behind implementing digital filters.
 
-I made sweeping changes to my work-in-progress version 2.0.0 seamstress repeatedly,
+I made sweeping changes to my work-in-progress version 2.0.0
+of seamstress repeatedly,
 aimed at improving the quality of my design
 and clarifying my vision for the project in the process.
 

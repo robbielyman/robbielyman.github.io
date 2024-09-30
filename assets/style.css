@@ -11,8 +11,14 @@ a {
     color: light-dark(#aa20bb, #9750a9);
 }
 
+code {
+    font-family: 'Iosevka Term Slab Light Extended', monospace;
+    font-size: 0.9rem;
+    color: light-dark(#8a0a0a, #ffdcef);
+}
+
 body {
-    font-family: 'Taviraj', serif;
+    font-family: "Crimson", serif;
     display: flex;
     flex-direction: column;
     padding-bottom: 20px;
