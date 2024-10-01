@@ -3,6 +3,10 @@
 .date = @date("2024-09-30T19:00:00-04:00"),
 .author = "Robbie Lyman",
 .layout = "devlog.shtml",
+.alternatives = [{
+  .layout = "devlog.xml",
+  .output = "devlog/index.xml",
+}],
 .draft = false,
 ---
 
