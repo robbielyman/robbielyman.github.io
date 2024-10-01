@@ -71,6 +71,10 @@ nav a:hover {
     text-align: center;
 }
 
+.toc {
+    font-family: 'Sarabun', sans-serif;
+}
+
 .overtitle.centered {
     font-weight: lighter;
 }
