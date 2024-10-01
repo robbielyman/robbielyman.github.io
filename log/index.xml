@@ -5,14 +5,17 @@
     <description>Robbie Lyman's personal blog</description>
     <generator>Robbie Lyman -- https://alanza.xyz</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 01 Oct 2024 02:28:23 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 01 Oct 2024 02:33:51 +0000</lastBuildDate>
     
     <item>
      <pubDate>Sat, 28 Sep 2024 15:30:00 +0000</pubDate>
      <link>https://alanza.xyz/log/return-statement/</link>
      <guid>https://alanza.xyz/log/return-statement/</guid>
      <title>return &quot;Robbie&quot;;</title>
-     <description>&lt;div id=summary&gt;&lt;p&gt; This summer I spent twelve weeks at &lt;a href=&quot;https://recurse.com&quot;&gt;The Recurse Center&lt;/a&gt;, a self-directed program that describes itself as “like a writer’s retreat, but for programmers”. Many participants write a “return statement” describing and reflecting on their time with the program. The name is a cute little pun: many functions in a computer program finish with a “return statement”, which allows the function to yield a bit of data as a result of the function’s execution. Anyway, this is mine.&lt;/p&gt;&lt;/div&gt;</description>
+     <description>
+       <span>&lt;div id=summary&gt;&lt;p&gt; This summer I spent twelve weeks at &lt;a href=&quot;https://recurse.com&quot;&gt;The Recurse Center&lt;/a&gt;, a self-directed program that describes itself as “like a writer’s retreat, but for programmers”. Many participants write a “return statement” describing and reflecting on their time with the program. The name is a cute little pun: many functions in a computer program finish with a “return statement”, which allows the function to yield a bit of data as a result of the function’s execution. Anyway, this is mine.&lt;/p&gt;&lt;/div&gt;</span>
+       <a href="https://alanza.xyz/log/return-statement/">Read More</a>
+     </description>
     </item>
    
   </channel>
