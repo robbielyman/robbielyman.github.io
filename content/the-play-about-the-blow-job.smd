@@ -1,0 +1,7 @@
+---
+.title = "The play about the blow job",
+.author = "Robbie Lyman",
+.date = @date("2024-10-01T14:00:00-04:00"),
+.layout = "the-play-about-the-blow-job.shtml",
+.draft = false,
+---
