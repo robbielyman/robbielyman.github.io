@@ -15,6 +15,5 @@
      <description :text="$loop.it.html()"></description>
     </item>
    </ctx>
-  </ctx>
   </channel>
 </rss>
