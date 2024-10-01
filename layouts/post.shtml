@@ -19,8 +19,8 @@
     </div>
   </div>
   <div id="page">
-    <div :html="$page.contentSection('summary')"></div>
-    <div :html="$page.toc()"></div>
+    <div :html="$page.contentSection('summary')"></div>    
+    <div :html="$page.toc()" class="toc"></div>
     <div :html="$page.contentSection('remainder')"></div>
   </div>
 </div>
