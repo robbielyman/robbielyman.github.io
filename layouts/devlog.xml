@@ -8,10 +8,10 @@
     <lastBuildDate :text="$build.generated.formatHTTP()"></lastBuildDate>
     <ctx :loop="$page.contentSections()">
         <item>
-          <pubDate :text="$loop.it.data.get('date').parseDate().formatHTTP()"></pubDate>
+          <pubDate :text="$loop.it.id.parseDate().formatHTTP()"></pubDate>
           <link :text="$site.host_url.addPath($page.link()).suffix('#', $loop.it.id)"></link>
           <guid :text="$site.host_url.addPath($page.link()).suffix('#', $loop.it.id)"></guid>
-          <title :text="$loop.it.id"></title>
+          <title :text="$loop.it.heading()"></title>
           <description :text="$loop.it.html()"></description>
         </item>
       </ctx>
