@@ -11,8 +11,14 @@ a {
     color: light-dark(#aa20bb, #9750a9);
 }
 
+code {
+    font-family: 'Iosevka Term Slab Light Extended', monospace;
+    font-size: 0.9rem;
+    color: light-dark(#8a0a0a, #ffdcef);
+}
+
 body {
-    font-family: 'Taviraj', serif;
+    font-family: "Crimson", serif;
     display: flex;
     flex-direction: column;
     padding-bottom: 20px;
@@ -42,6 +48,17 @@ nav a:hover {
     max-width: min(600px, 100vw);
 }
 
+#blog-navigation {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+#blog-navigation > div {
+    font-size: 0.8em;
+}
+
 #footer-links {
     align-self: center;
     box-sizing: border-box;
@@ -52,6 +69,10 @@ nav a:hover {
 .centered {
     align-self: center;
     text-align: center;
+}
+
+.toc {
+    font-family: 'Sarabun', sans-serif;
 }
 
 .overtitle.centered {
@@ -72,6 +93,7 @@ nav a:hover {
 :root {
     color-scheme: light dark;
     font-size: 1rem;
+    font-kerning: normal;
 }
 
 img {
