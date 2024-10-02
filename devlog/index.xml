@@ -5,8 +5,17 @@
     <description>Robbie Lyman's devlog</description>
     <generator>Robbie Lyman -- https://alanza.xyz</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 01 Oct 2024 19:12:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 02 Oct 2024 20:06:36 +0000</lastBuildDate>
     
+        <item>
+          <pubDate>Wed, 02 Oct 2024 00:00:00 +0000</pubDate>
+          <link>https://alanza.xyz/devlog/2024/#2024-10-02</link>
+          <guid>https://alanza.xyz/devlog/2024/#2024-10-02</guid>
+          <title>241002 – Trees
+</title>
+          <description>&lt;div id=2024-10-02&gt;&lt;h1&gt;&lt;a class=&quot;&quot; href=&quot;#2024-10-02&quot;&gt;241002 – Trees&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;Made use of some high-powered observations in class today. Probably this deserves an actual math blog post, huh, since I kind of don’t want to write LaTeX in this space, but: first the moduli space idea—given a collection of disparate interesting things, can you assemble them into &lt;em&gt;one&lt;/em&gt; thing that parametrizes the originals and gives the whole some new structure which might be interesting to investigate. And then secondly, a cute trick: if you have uniformity but also the ability to rescale things, that uniform thing suddenly becomes nothing… Okay, yeah, I’ll go write a blog post, fine.&lt;/p&gt;&lt;p&gt;Fun, also, after the chaos of the past several years, to have more continuity lately to the point where I can start to see patterns. Fall is a time to focus in.&lt;/p&gt;&lt;/div&gt;</description>
+        </item>
+      
         <item>
           <pubDate>Tue, 01 Oct 2024 00:00:00 +0000</pubDate>
           <link>https://alanza.xyz/devlog/2024/#2024-10-01</link>
