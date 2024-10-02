@@ -10,6 +10,23 @@
 .draft = false,
 ---
 
+# [241002 – Trees]($section.id("2024-10-02"))
+
+Made use of some high-powered observations in class today.
+Probably this deserves an actual math blog post, huh,
+since I kind of don’t want to write LaTeX in this space,
+but: first the moduli space idea—given a collection of disparate interesting things,
+can you assemble them into _one_ thing that parametrizes the originals
+and gives the whole some new structure which might be interesting to investigate.
+And then secondly, a cute trick:
+if you have uniformity but also the ability to rescale things,
+that uniform thing suddenly becomes nothing…
+Okay, yeah, I’ll go write a blog post, fine.
+
+Fun, also, after the chaos of the past several years,
+to have more continuity lately to the point where I can start to see patterns.
+Fall is a time to focus in.
+
 # [241001 – Art]($section.id("2024-10-01"))
 
 Interesting observation:
