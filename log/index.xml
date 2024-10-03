@@ -5,7 +5,7 @@
     <description>Robbie Lyman's personal blog</description>
     <generator>Robbie Lyman -- https://alanza.xyz</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 01 Oct 2024 02:43:33 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 03 Oct 2024 02:09:52 +0000</lastBuildDate>
     
     <item>
      <pubDate>Sat, 28 Sep 2024 15:30:00 +0000</pubDate>
@@ -15,6 +15,17 @@
      <description>
        <span>&lt;div id=summary&gt;&lt;p&gt; This summer I spent twelve weeks at &lt;a href=&quot;https://recurse.com&quot;&gt;The Recurse Center&lt;/a&gt;, a self-directed program that describes itself as “like a writer’s retreat, but for programmers”. Many participants write a “return statement” describing and reflecting on their time with the program. The name is a cute little pun: many functions in a computer program finish with a “return statement”, which allows the function to yield a bit of data as a result of the function’s execution. Anyway, this is mine.&lt;/p&gt;&lt;/div&gt;</span>
        <a href="https://alanza.xyz/log/return-statement/">Read More</a>
+     </description>
+    </item>
+   
+    <item>
+     <pubDate>Sat, 20 Apr 2024 14:40:00 +0000</pubDate>
+     <link>https://alanza.xyz/log/for-completeness/</link>
+     <guid>https://alanza.xyz/log/for-completeness/</guid>
+     <title>For completeness: real numbers</title>
+     <description>
+       <span>&lt;div id=summary&gt;&lt;p&gt;In mathematics, if you squint, the word “real” has a kind of eldritch quality. Although calculus students work confidently with them, and they enable all kinds of nice behavior in topology, the definition of a /real number/ is, well, surreal. The title of this blog post is a pun. You might ask why we need the real numbers, and one answer is “for completeness”. For the same reason, I thought a blog post would be useful.&lt;/p&gt;&lt;/div&gt;</span>
+       <a href="https://alanza.xyz/log/for-completeness/">Read More</a>
      </description>
     </item>
    

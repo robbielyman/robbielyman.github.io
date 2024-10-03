@@ -5,34 +5,7 @@
     <description>Robbie Lyman's devlog</description>
     <generator>Robbie Lyman -- https://alanza.xyz</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 02 Oct 2024 20:06:36 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 01 Oct 2024 02:43:33 +0000</lastBuildDate>
     
-        <item>
-          <pubDate>Wed, 02 Oct 2024 00:00:00 +0000</pubDate>
-          <link>https://alanza.xyz/devlog/2024/#2024-10-02</link>
-          <guid>https://alanza.xyz/devlog/2024/#2024-10-02</guid>
-          <title>241002 – Trees
-</title>
-          <description>&lt;div id=2024-10-02&gt;&lt;h1&gt;&lt;a class=&quot;&quot; href=&quot;#2024-10-02&quot;&gt;241002 – Trees&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;Made use of some high-powered observations in class today. Probably this deserves an actual math blog post, huh, since I kind of don’t want to write LaTeX in this space, but: first the moduli space idea—given a collection of disparate interesting things, can you assemble them into &lt;em&gt;one&lt;/em&gt; thing that parametrizes the originals and gives the whole some new structure which might be interesting to investigate. And then secondly, a cute trick: if you have uniformity but also the ability to rescale things, that uniform thing suddenly becomes nothing… Okay, yeah, I’ll go write a blog post, fine.&lt;/p&gt;&lt;p&gt;Fun, also, after the chaos of the past several years, to have more continuity lately to the point where I can start to see patterns. Fall is a time to focus in.&lt;/p&gt;&lt;/div&gt;</description>
-        </item>
-      
-        <item>
-          <pubDate>Tue, 01 Oct 2024 00:00:00 +0000</pubDate>
-          <link>https://alanza.xyz/devlog/2024/#2024-10-01</link>
-          <guid>https://alanza.xyz/devlog/2024/#2024-10-01</guid>
-          <title>241001 – Art
-</title>
-          <description>&lt;div id=2024-10-01&gt;&lt;h1&gt;&lt;a class=&quot;&quot; href=&quot;#2024-10-01&quot;&gt;241001 – Art&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;Interesting observation: in (good) digital art, almost everything has a thickness. Even stuff that scans as linework is very rarely actually lines; so using the “stroke” option in Illustrator (which I spent most of the day in) is usually not the move.&lt;/p&gt;&lt;p&gt;I’m working on a postcard for &lt;a href=&quot;/the-play-about-the-blow-job/&quot;&gt;the play I’m composing music for&lt;/a&gt;, hence the work in Illustrator.&lt;/p&gt;&lt;/div&gt;</description>
-        </item>
-      
-        <item>
-          <pubDate>Mon, 30 Sep 2024 00:00:00 +0000</pubDate>
-          <link>https://alanza.xyz/devlog/2024/#2024-09-30</link>
-          <guid>https://alanza.xyz/devlog/2024/#2024-09-30</guid>
-          <title>240930 – Hello World
-</title>
-          <description>&lt;div id=2024-09-30&gt;&lt;h1&gt;&lt;a class=&quot;&quot; href=&quot;#2024-09-30&quot;&gt;240930 – Hello World&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;Going to start keep little microblogs of work I do here. Today I added this section to my website, prompted by &lt;a href=&quot;https://kristoff.it/blog/critical-social-infrastructure/&quot;&gt;this blog post by Loris Cro&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;I have two laptops, one of which lives in my office at Rutgers and which used to run Asahi Linux. This morning it occurred to me that my use of Linux was holding me back. For example, while I believe I’ve managed to get Bluetooth audio and the webcam working independently, I hadn’t managed to add that together to end up with a functional Zoom experience. I need to use Zoom every week for research meetings, which meant, functionally, that I had to carry my other laptop to work every day, completely defeating the purpose of having a second one.&lt;/p&gt;&lt;p&gt;Today in class, we continued working through a book chapter by Mladen Bestvina about real trees. This brought us to a very heady idea: given an action of a group on a metric space by isometries, and a basepoint in that metric space which is not a global fixed point, pulling back yields a pseudometric on the group. Focusing on the pseudometric and projectivizing yields a kind of moduli space for group actions on metric spaces: indeed, if you assert that the action is continuous, you can equip this space with the (quotient of the) compact–open topology, and talk about convergence of (basepointed) group actions!&lt;/p&gt;&lt;p&gt;Aside from this, I worked more on my actual blog, mostly writing a first new post for it; porting old posts will be a slower process.&lt;/p&gt;&lt;/div&gt;</description>
-        </item>
-      
   </channel>
 </rss>
