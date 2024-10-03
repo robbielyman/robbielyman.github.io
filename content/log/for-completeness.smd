@@ -1,0 +1,342 @@
+---
+.title = "For completeness: real numbers",
+.date = @date("2024-04-20T10:40:00-04:00"),
+.author = "Robbie Lyman",
+.layout = "post.shtml",
+.draft = false,
+.custom = {
+  .math = true,
+},
+---
+[]($section.id('summary'))
+
+In mathematics, if you squint,
+the word “real” has a kind of eldritch quality.
+Although calculus students work confidently with them,
+and they enable all kinds of nice behavior in topology,
+the definition of a /real number/ is, well, surreal.
+The title of this blog post is a pun.
+You might ask why we need the real numbers,
+and one answer is “for completeness”.
+For the same reason, I thought a blog post would be useful.
+
+[]($section.id('remainder'))
+
+# Constructing numbers
+
+I learned a little of how to prove things
+and the culture of mathematics
+by taking a class taught out of Apostol’s _Calculus._
+As a freshman in college,
+I remember being thoroughly at sea in that class,
+whose professor apologetically
+translated the symbols “$\forall$” and “$\exists$” into English
+a few days into the class—they had appeared on the board
+within the first week.
+
+One of the aspects of that class I appreciated
+was the _construction_ of the real numbers.
+I’d like to take us on a whirwind tour through taht construction.
+
+We’re on a quest:
+we seek a mathematical object $\mathbb{R}$
+called the “real numbers” with the following
+reasonable properties of numbers.
+
+- Counting numbers $1,2,\ldots$ are real numbers.
+- Real numbers may be added to produce other real numbers.
+  Addition is associative and commutative.
+- Real numbers may also be _subtracted._ Subtraction “undoes” addition.
+  There is a _unique_ real number $0$
+  which is equal to $x - x$ for every real number $x$.
+  This number $0$ is an _identity_ for addition.
+- Real numbers may be multiplied.
+  Multiplication is associative and commutative
+  and _distributes_ over addition.
+  It follows that $x * 0 = 0$ for every real number $x$.
+- Multiplication can be “undone” by _division_ in the sense that
+  $x \div y$ is the unique number $z$ such that $z * y = x$—except
+  that because $x * 0 = 0$ for every real number $x$,
+  there is no sensible way to define division by $0$, _so we don’t._
+- Real numbers are _ordered_ in a way that _extends_ the usual ordering
+  of the counting numbers and is compatible with addition and multiplication
+  in the way that you expect.
+- A set $S$ of real numbers has an _upper bound_
+  when there is a real number $B$ such that every $x$ in $S$ satisfies $x \le B$.
+  A _least upper bound_ (or _supremum_) for $S$
+  is an upper bound $\sup S$ such that every upper bound $B$
+  satisfies $\sup S \le B$.
+  Put another way, if $y < \sup S$,
+  then $y$ is not an upper bound for $S$,
+  so there must be some actual element $s$ of $S$ satisfying $y < x$.
+  Every set of real numbers that has an upper bound
+  has a least upper bound.
+
+While “reasonable”, as I’ll attempt to argue in a second,
+this last property is a good deal more complex than the previous ones.
+Indeed, this behavior of real numbers is what makes them eldritch
+(and different from the _rational_ numbers).
+
+Here’s why this proprety is reasonable:
+suppose you have a way of _approximating_ a quantity by real numbers.
+Like for example,
+suppose you have a method of computing more and more digits of this number
+in a decimal expansion.
+I claim that a reasonable definition of numbers
+should have an actual number that is what is being approximated.
+That is, given that we are able to compute (theoretically)
+$\pi$ to an arbitrary number of decimal places,
+$\pi$ is a real number.
+Notice that decimal expansions of $\pi$ have an upper bound
+($4$ will do, for instance),
+and that each decimal expansion is larger than the last.
+Thus, since the set of decimal expansions of $\pi$ has a least upper bound,
+we can /define/ that least upper bound to “be” $\pi$.
+It turns out to have all the properties of $\pi$
+that we can compute analytically,
+so this “synthetic” definition makes sense.
+
+So let’s go through our whirlwind tour.
+
+# The counting numbers
+
+We’re going to suppose that we already understand the counting numbers:
+they have the defining property that you start somewhere
+and always know what the next one is.
+That is, after $1$ comes $2$, after $2$ you have $3$ and so on.
+
+In other simulated confusions, ahem, _constructions_
+of various fields of mathematics,
+one starts with the idea of a “set”
+and ways of forming new sets from old ones
+and from there _defines_ the counting numbers and their _successor function_
+by some scheme.
+Let’s not do things this way:
+it makes possible certain silly statements,
+like, “what are the elements of $6$”
+which don’t seem reasonable to me.
+
+There are people who are skeptical
+about the idea of infinity in mathematics.
+I don’t want to poo-poo or misrepresent these people’s intellectual
+commitments, which can be really interesting to read defended.
+I’ll just confine myself to noticing that there’s a real
+psychological difference between the claim
+“I will never run out of counting numbers,
+since after any counting number I know which one comes next,
+and my scheme for counting never reuses numbers”
+and “I can conceive of the collection of counting numbers
+together in its total infinity”.
+
+# The integers
+
+Addition of counting numbers is another something we understand.
+We know how to compute $2 + 3$ and that it is $3 + 2$.
+I feel compelled to note the long history of the statement $2 + 2 = 5$,
+which dates back to at least Orwell’s 1984 but is older,
+and had a recent featured appearance in the “culture wars”,
+which caused well-intentioned progressive mathematicians
+a certain amount of angst and bending-over-backwards
+to affirm that $2 + 2 = 5$ can be a sensical mathematical statement;
+precisely the kind of thing that Orwell famously decried.
+Part of what makes this construction exercise sort of exhilerating
+and deeply silly is that what we are doing is _agreeing_ amongst ourselves
+that we know what the symbols $2$, $+$, $5$ and $=$ mean.
+In doing so, it must be noted that this agreement
+and the meanings agreed upon
+have a certain arbitrariness to them.
+Changing our agreements about meaning
+should have nothing to do with doublethink, newspeak, etc.
+but are instead an opportunity to invite creativity,
+a necessary part of the practice of mathematics,
+back into what can be an intensely conservative field.
+
+Anyway, our goal here is to follow our common sense here,
+a goal that has dubious outcomes in many situations,
+and indeed the goal of this blog post is to point up the dubiousness
+of the real numbers.
+
+Subtraction is also something we understand,
+but it leads us to our first hint of the eldritch:
+negative numbers.
+Since $2 - 3$ is a sensible formulation:
+we would like to be able to subtract numbers willy-nilly,
+it forces us to define numbers which we did not have previously.
+
+It’s fun to play with $0$ in particular:
+the rules of algebra tell us that since $x + y = x + y$,
+we have $x - x = y - y$ for every pair of real numbers.
+Similarly, $0$ is the only number for which
+$x + 0 = x$.
+If there were another such number, say $0'$,
+adding it to $0$ allows us to deduce
+that $0 + 0' = 0$ on the one hand, but also $0'$ on the other,
+so these are the same number by the transitive nature of equality.
+
+# The rational numbers
+
+Integers may be freely multiplied,
+and we argued above that division, whatever it is,
+should make sense only for nonzero numbers.
+It’s fun to see that our definitions
+force the existence of at most one number $1$
+for which $x * 1 = x$ for all real numbers $x$,
+and that $x * 0 = 0$ for all real numbers $x$,
+so $1 \ne 0$.
+
+But how to _define_ numbers that allow division?
+We have already from school the idea of fractions $\frac{a}{b}$.
+This generalizes in a fun way:
+a _ring_ in mathematics is a place where you can play the two games
+of _addition_ and _multiplication._
+Addition, like in school, is associative and commutative,
+and has an identity element $0$ and negatives,
+but mathematicians are happy to merely require
+multiplication to be associative and distribute over addition.
+Usually we require the existence of a $1$ in our rings,
+but there are times that mathematicians forego even that.
+
+Anyway, if you have a set $S$ in a ring $R$ (with $1$)
+which is _multiplicatively closed_
+in the sense that $s * t$ is in $S$ when $s$ and $t$ are and contains $1$,
+you can form a _ring of fractions_ $S^{-1}R$
+whose elements are formal fractions with denominators in $S$.
+When $R$ is commutative (that is, _multiplication_ in $R$ is commutative)
+and $S$ does not contain $0$ or any element $s$
+for which there exists a nonzero element $t$ such that $st = 0$,
+the ring of fractions behaves essentially like you would expect:
+$\frac{a}{b} + \frac{c}{d} = \frac{ad + bc}{bd}$,
+$\frac{a}{b} * \frac{c}{d} = \frac{ac}{bd}$, and so on.
+The cool thing I wanted to mention
+is that this construction actually makes sense more generally!
+
+In our situation, the set $S$ is just all of the integers which are nonzero,
+which implies that the ring of fractions is actually a
+_field,_ in the senes that we have a commutative ring in which
+every nonzero element of the field has a multiplicative inverse.
+
+# Ordering
+
+There’s a little to say here, but not too much.
+One wants an ordering on the real numbers that extends the usual one
+on the counting numbers
+and is compatible with addition
+in the sense that $a < b$ implies that $a + c < b + c$.
+This actually implies that _negation reverses order_
+since $a < b$ implies that $a + -(a + b) < b + -(a + b)$,
+and these numbers are $-b$ on the left and $-a$ on the right.
+Since for every pair of counting numbers $a$ and $b$,
+we have the trichotomy: either $a = b$, $a < b$ or $a > b$,
+it seems reasonable that this should be true for real numbers as well.
+It _cannot_ be true that $a < b$ implies that $a * c < b* c$
+for all numbers $c$, because of the existence of negation and zero,
+but we _can_ say that we would like this to be true for
+all real numbers $c$ which are positive (that is, for which $c > 0$).
+
+Actually, although the ordering stuff is pretty straightforward,
+(in particular, we didn’t have to invent new numbers)
+it’s woth pointing out that having such a _total order_
+is one of the properties which _characterize_ the real numbers.
+
+# Upper bounds
+
+This is where things really get eldritch.
+First of all, the rational numbers, $\mathbb{Q}$, do not have least upper buonds.
+Firstly, note that $\sqrt{2}$ is not a rational number.
+If you’ve never proved this, it’s so cute:
+suppose you could write $\sqrt{2}$ as $\frac{p}{q}$ for integers $p$ and $q$
+which are in “lowest terms”.
+Then you have to ask whether $p$ and $q$ are even or odd.
+It turns out neither answer will do, so it cannot be possible to write
+$\sqrt{2}$ as $\frac{p}{q}$.
+But, we can clearly ask, of any rational number $r = \frac{p}{q}$,
+whether $r^2 = r * r$ is greater than or less than $2$.
+The collection of all rational numbers for which the answer is “less than”
+has an upper bound but no least upper bound.
+This is a fun exercise:
+suppose you have a rational number $r$ whose square is greater than $2$.
+Can you find a general way of constructing a rational number $r'$
+which also satisfies $r'^2 > 2$
+but which is smaller than $r$?
+
+So to satisfy the least upper bound condition.
+We are going to have to add new real numbers.
+A _lot_ of them, actually.
+Formall, define a _cut_ $r$ in $\mathbb{Q}$ to be a partition of $\mathbb{Q}$
+into two nonempty pieces, $r^-$ and $r^+$,
+which do not overlap (this is what I mean by a partition)
+and are closed under ordering,
+in the sense that if $s$ is an element of $r^-$
+and $t < s$, then $t \in r^-$,
+and similarly if $s \in r^+$ and $t > s$, then $t \in r^+$.
+
+Now, if $S$ is a subset of $\mathbb{Q}$ which is bounded above,
+then $S$ _generates_ a cut $r$
+by the rule that an element of $\mathbb{Q}$ is in $r^-$
+if it is less than or equal to some element of $S$.
+Because $S$ is bounded above,
+the complement of this set $r^+$ is nonempty.
+So if we can turn the collection of _Dedekind cuts_ into a field, we’ll win.
+
+Defining the rules of algebra on these cuts
+is not so bad, but not fun enough to want to do here.
+I’ll just confine myself to saying that $(r + r')^-$
+should just be the set of elements of $\mathbb{Q}$
+of the form $q + q'$, where $q \in r^-$ and $q' \in r'^-$.
+
+This is a strange definition!
+It’s super weird!
+It works great!
+
+# Completeness
+
+The definitions above have a couple interesting and useful consequences.
+The first one I want to mention is that the real numbers are _Archimedean_
+in the sense that every real number $r$
+has a counting number $n$ larger than it.
+Indeed, if $r$ is negative this is clear,
+and if $r$ is positive,
+the collection of counting numbers less than $r$
+is bounded above (by $r$)
+has a least upper bound (which is actually a counting number, it turns out),
+and we can take $n$ to be that supremum plus one.
+
+Here is the other.
+A _sequence_ $x_1,x_2,\ldots$ of real numbers
+_converges_ to a real number $xx$
+when for every $\epsilon > 0$
+(which you are supposed to suppose is given to you by an adversary)
+you can find a large number $N > 0$
+such that for all $n > N$,
+the statement $|x_n - x| < \epsilon$ is true.
+In English, the elements of the sequence are getting closer and closer to $x$,
+even if it may be the case that none of them is precisely equal to $x$.
+
+_A priori_ weaker than the notion of convergence
+is the notion of being _Cauchy._
+(Augustin-Louis Cauchy, possibly mathematics’ most useful pedant,
+went around poking holes in the thinking of his contemporaries and
+predecessors, or so I’m told. As a result of his efforts,
+mathematics is more rigorous, which given its unreasonable
+applications to reality, is probably for the best.
+I have a stufed animal given to me by a high school boyfriend;
+in college I named him Cauchy.)
+
+A Cauchy sequence is one for which for any $\epsilon > 0$,
+there exists $N$ big enough so that whenever $n$ and $m$ are chosen
+greater than $N$,
+we have $|x_n - x_m| < \epsilon$.
+In English, the elements of the sequence get closer and closer
+_to each other_ as the sequence goes along.
+
+> []($block)
+> **Theorem.** Every Cauchy sequence of real numbers converges.
+
+More generally, in a _metric space_
+(more about which soon),
+the notions of convergence and being Cauchy make sense
+by using the notion of distance.
+A metric space is _complete_
+if the above theorem holds.
+Thus $\mathbb{R}$ is complete as a metric space,
+while its subset $\mathbb{Q}$ is not.
