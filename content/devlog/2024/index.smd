@@ -10,6 +10,49 @@
 .draft = false,
 ---
 
+# [241005]($section.id("2024-10-05"))
+
+Still figuring out the right cadence for posting here.
+I think the answer is that I should post when I do work,
+rather than attempting to post, for example, every weekday.
+
+[Justin Bennett]($link.url("https://just-be.dev")) has been organizing
+a “Side Project Saturday” event most weekends here in Brooklyn;
+I’ve managed to attend two so far, the second of which was today.
+
+I worked on [seamstress]($link.url("https://github.com/robbielyman/seamstress")) version 2.
+Today I mostly revisited `seamstress.async` and `seamstress.async.Promise`,
+which are implementations of JavaScript style Promises and asynchronous functions
+in Lua for use with libxev.
+So far, the implementation is basically complete
+(although I’m unsure what the expectation is when you execute `Promise.race()`
+with an empty list of Promises
+in JavaScript: should it resolve or reject?)
+but I still need to add documentation for use with LuaLS,
+as well as `README` documentation and eventually actual documentation,
+which will live on this website but currently has no home.
+(So much documenting!!)
+
+We ended the day with presentations, all of which were so so cool.
+Maybe my favorite was this:
+Owen, another attendee, shared a bit about some material design he’s been working on,
+thinking through placement of heatsinks,
+the mechanical operations behind latching drawers,
+distributing heat evenly throughout a machine, etc.
+Really an immediate clue-in about what is so cool
+about like 10 different things I hadn’t previously given a second glance to.
+
+The immediate next step with seamstress
+is to hook up `busted`-powered testing.
+I started working on this (I think to feel like I did it properly,
+I need to write my own version of the `busted` test runner),
+but found myself browsing the internet instead.
+Since I came back from Side Project Saturday intending to do more than just this with my day,
+I think this _is_ actually the signal that I was waiting for
+that I had hit a natural inflection point in the process.
+It was interesting to consider that I hadn’t noticed it initially
+because I was expecting a conscious “ah, we’ve hit a stopping point” instead.
+
 # [241004]($section.id("2024-10-04"))
 
 I clearly did not post any blog posts yesterday.
