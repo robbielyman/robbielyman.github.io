@@ -10,6 +10,49 @@
 .draft = false,
 ---
 
+# [241008 – busted]($section.id("2024-10-08"))
+
+[Seamstress]($link.url("https://github.com/robbielyman/seamstress")) version 2
+(or rather, the branch where I’m currently working)
+now once again is capable of running unit tests on the functionality of seamstress
+when run as `seamstress test`.
+Currently the suite of tests is entirely vendored,
+but it seems likely that I will eventually want to extend this capability
+to run tests in the directory seamstress is launched from as well.
+
+Unit tests are powered by [luarocks busted]($link.url("https://github.com/lunarmodules/busted")).
+My initial go at incorporating busted used its provided `runner` script,
+but I found this difficult to grok and the default behavior didn’t suit my use cases.
+Therefore part of the project this go-around
+was to properly understand what is needed to set up a busted runner.
+
+It turns out to be not so bad!
+This seems to be the bones of it:
+
+[An excerpt of the first draft of seamstress 2’s busted runner]($code.asset('runner.lua').language('lua'))
+
+(Apologies for the slightly haphazard syntax highlighting style;
+I’ll work on it soon.)
+
+Anyway, this snippet of code is pretty interesting:
+`busted` apparently wants to be loaded twice,
+once as `require 'busted.core'` which, as appears to be common practice
+among many luarocks libraries, returns a function rather than a table,
+and then again as `require 'busted'`.
+We’re using busted’s builtin test file loader
+which hooks Lua files in the specified directory with filename containing `_spec`
+up to busted’s complicated environment hijacking scheme.
+We’re also using (actually extending) busted’s base output handler,
+which is in charge of keeping track of the number of succeeded and failed tests.
+
+In seamstress 2, this runner function is called as `seamstress.async(runner)()`,
+which is crucial for testing seamstress itself:
+by running the tests in an asynchronous context
+(which is to say, on the event loop rather than immediately)
+we gain the ability to yield execution from the test back to the seamstress environment,
+allowing us to test functions which depend on input from outside of seamstress,
+or are fundamentally time-based, for example.
+
 # [241005]($section.id("2024-10-05"))
 
 Still figuring out the right cadence for posting here.
