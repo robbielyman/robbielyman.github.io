@@ -5,8 +5,17 @@
     <description>Robbie Lyman's devlog</description>
     <generator>Robbie Lyman -- https://alanza.xyz</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 08 Oct 2024 17:18:31 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 09 Oct 2024 19:09:37 +0000</lastBuildDate>
     
+        <item>
+          <pubDate>Wed, 09 Oct 2024 00:00:00 +0000</pubDate>
+          <link>https://alanza.xyz/devlog/2024/#2024-10-09</link>
+          <guid>https://alanza.xyz/devlog/2024/#2024-10-09</guid>
+          <title>241009 – Mathcha
+</title>
+          <description>&lt;div id=2024-10-09&gt;&lt;h1&gt;&lt;a class=&quot;&quot; href=&quot;#2024-10-09&quot;&gt;241009 – Mathcha&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;Today in my graduate class we talked about Stallings folding, which is one of my favorite topics in all of mathematics. It’s a really lovely piece of mathematics which has these beautifully simple-to-grasp proofs.&lt;/p&gt;&lt;p&gt;Also today, Jose Urrea, a student in my class, showed me &lt;a href=&quot;https://mathcha.io/&quot;&gt;Mathcha&lt;/a&gt;, which is a truly gorgeous little site: a what-you-see-is-what-you-get little editor for mathematical diagrams that supports LaTeX, clicking and dragging, bezier curves, etc. While it does export to TikZ, I’m really enthused that it exports to SVG (as well as to PNG). I think I’m going to make an effort to try it out when the need for more figures arises.&lt;/p&gt;&lt;p&gt;By the way, now that Google is slowrolling the death of Jamboard (itself a very imperfect tool) this is less urgent, but if you are reading this and you happen to have suggestions for a tablet-forward multiplayer whiteboard app in the vein of Jamboard, I’d love suggestions for use in one of my collaborations. We tried out Miro briefly but found it kind of annoying. Since we’re mathematicians and not UX designers, for instance, builtin support for beautiful widgets impresses us not at all, but good support for manipulating drawings created with a stylus like an Apple Pencil and low latency for collaboration that we can all look at while talking on Zoom without needing to share screen would capture our hearts for sure. If you happen to know anything, &lt;a href=&quot;mailto:rb.lymn@gmail.com&quot;&gt;shoot me an email&lt;/a&gt;.&lt;/p&gt;&lt;/div&gt;</description>
+        </item>
+      
         <item>
           <pubDate>Tue, 08 Oct 2024 00:00:00 +0000</pubDate>
           <link>https://alanza.xyz/devlog/2024/#2024-10-08</link>
