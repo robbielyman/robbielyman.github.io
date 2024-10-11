@@ -1,0 +1,11 @@
+---
+.title = "Trees for real, or: what's going on in class?",
+.date = @date("2024-10-02T20:00:00-04:00"),
+.author = "Robbie Lyman",
+.layout = "post.shtml",
+.draft = true,
+---
+[]($section.id('summary'))
+This semester at Rutgers, I’m teaching a graduate class for the first time!
+It’s been fun so far.
+I want to give an accounting of what we’ve done so far.

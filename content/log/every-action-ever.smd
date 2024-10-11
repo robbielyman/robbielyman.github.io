@@ -1,0 +1,132 @@
+---
+.title = "Every action ever: one of my favorite math tricks",
+.date = @date("2024-10-03T17:00:00-04:00"),
+.author = "Robbie Lyman",
+.layout = "post.shtml",
+.custom = {
+  .math = true,
+},
+.draft = false,
+---
+[]($section.id('summary'))
+
+The “moduli space” idea is maybe my favorite meta-strategy in mathematics.
+It came up yesterday in the graduate class I’m teaching this semester,
+and I wanted to share this instance of it and talk about why
+I find it so cool.
+
+[]($section.id('remainder'))
+
+# A little background
+
+Sorry for the throat-clearing here.
+I’m perpetually unsure where precisely to aim a blog post.
+Like, with a paper or a book or a review,
+the amount of familiarity with the jargon of math you can expect
+a reader to have feels much clearer.
+At least in theory,
+this post has a much wider audience.
+
+So: I’m going to talk about groups and metric spaces in this section.
+I’m aiming to be comprehensible,
+which is allied with but actually different from being gentle.
+Like Jane Austen refusing to pepper “said Mr. Darcy” throughout
+her very talky writing,
+I know that if you are reading this, you are not one of those
+“dull Elves As have not a great deal of Ingenuity themselves”.
+
+## Groups
+
+A group is the abstract concept of symmetry.
+If you have an object, the collection of its symmetries
+is an example of a group.
+So like, think about a regular octagon, like the shape of a stop sign.
+You can rotate the octagon one “click” or flip it and the shape is the same.
+These are symmetries.
+Symmetries can be composed (rotate and then flip),
+and this composition is associative, but need not be commutative.
+Every symmetry can be undone, and “do nothing” is a symmetry.
+
+This abstracting move—removing the object
+but leaving behind its symmetries—is a little odd, but extremely useful.
+
+Groups often feel like doing algebra:
+composing symmetries is represented in symbols the way
+multiplication is represented in algebra;
+you just have to remember that $xy$ is not necessarily $yx$
+(which, if you’ve multiplied matrices before, is not so bad).
+
+## Actions
+
+If you have a group, repatriating it with an object to be the symmetries of
+is the idea of a _group action._
+
+In symbols, group actions feel like multiplying matrices and vectors together.
+If your matrix is square (and invertible),
+this is an honest example of a group action,
+where the matrix is an element of a group
+and the vector is part of the object (the vector space)
+which the group is acting on.
+
+Weirdly (because it feels like it comes from the human writing system
+more than, like, some inherent truth)
+group actions have a “handedness” to them.
+An action “on the left” looks like the pair $(g, x)$
+with $g$ in your group and $x$ in your object it’s acting on
+going to $g.x$, a new thing your object.
+You know that it’s on the left because you have that
+$g.(h.x) = (gh).x$,
+whereas if you act “on the right”,
+you instead have $(x, g) \mapsto x.g$
+and when you consider pairs, you instead have that $(x.g).h = x.(gh)$.
+
+## Metric spaces
+
+A metric space is the abstraction of the idea of geometry and distance.
+It is a set $X$, together with a way of measuring distances
+between points of $X$.
+Formally this is a function $d \colon X \times X \to \mathbb{R}$.
+That is, it takes in a pair of points of $X$,
+say $x$ and $y$,
+and spits out a number, $d(x,y)$,
+which you should think of as “the distance from $x$ to $y$”.
+
+There are three properties that a distance function should have,
+although being mathematicians we often go “well…” and see what happens if we drop them.
+
+The first is that the distance between $x$ and $y$
+should be nonnegative and moreover if $d(x,y) = 0$, then $x = y$.
+(Dropping this latter assumption, you get a “pseudometric”,
+which will come up later in this post.)
+
+The second is that $d(x,y)$ should be the same as $d(y,x)$.
+This makes intuitive sense until you consider the real world,
+where headwinds, altitude differences,
+everything that is different between traveling “as the crow flies”
+and making do in the messy real world,
+factors in.
+Dropping this assumption you get the notion of an “asymmetric metric”.
+I happen to think about one particular asymmetric metric
+often enough that I can recall it to my mom’s attention
+by referring to its asymmetry.
+
+Finally, and most importantly,
+there is the “triangle inequality”:
+given $x$ and $y$, for any third point $z$,
+it should be the case that $d(x,y) \le d(x,z) + d(z,y)$.
+This makes intuitive sense—factoring in the distance to $z$
+has the potential to take you “out of your way” as you travel.
+
+## Isometries
+
+The right notion of symmetry for a metric space
+is called _isometry._
+An isometry of a metric space $(X,d)$
+is a (bijective) function $f \colon X \to X$
+with the property that $d(f(x), f(y)) = d(x, y)$.
+You can think of $f$ as just moving $X$ around rigidly
+without distorting distances.
+
+So when a group acts on a metric space $(X,d)$,
+we will say that the action is _by isometries_
+if $d(g.x, g.y) = d(x, y)$ for every group element $g$.

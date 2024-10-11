@@ -1,0 +1,152 @@
+---
+.title = "Understanding curvature: curves in the plane",
+.date = @date("2024-02-14T13:00:00-05:00"),
+.author = "Robbie Lyman",
+.layout = "post.shtml",
+.custom = {
+  .math = true,
+},
+.draft = false,
+---
+[]($section.id('summary'))
+
+As a geometric group theorist interested in “CAT(0)”
+and “hyperbolic geometry”,
+I appeasr to care very deeply about notions like “curvature”,
+but I have to admit that my understanding of what it means is not that deep.
+This post is an attempt (one of likely several)
+to deepen my understanding.
+I’d like to bring you along for the ride.
+
+[]($section.id('remainder'))
+
+# Curves
+
+## Curvature of curves is not intrinsic
+
+In differential geometry classes,
+curvature is often mooted as an inherently _two_-dimensional phenomenon,
+or rather, one that begins at dimension two.
+Yet, the word that mathematicians use to describe
+one-dimensional shapes sitting inside another shape is _curve._
+This is maybe a silly way of arguing,
+but I think this use of language suggests that curvature should have a one-dimensional meaning.
+Indeed, the point of a “curve” is that it is not “straight”
+(although perversely, for a mathematician a straight line counts as a curve).
+
+So what gives? The reason for this is that in dimension one,
+curvature is an “extrinsic” phenomenon.
+
+Let me explain.
+First, let’s make sense of what it would mean for something
+to be an _intrinsic_ property.
+Consider the [real line]($link.page('log/for-completeness')).
+Mathematicians usually denote it $\mathbb{R}$ for “real”,
+sometimes decorated as $\mathbb{R}^1$ to indicate the dimension
+and distinguish it from something like the Cartesian plane $\mathbb{R}^2$ and so on.
+For a mathematician, $\mathbb{R}$ lives “off by itself”.
+Although we as humans typically reason about things spatially,
+it’s important to be able to discard what is not part of the definition of $\mathbb{R}$
+and retain only what is.
+In other words, when I said “consider the real line”,
+maybe you imagined a line _living inside_ a three-dimensional space
+(I like to think pictorially, so I know I did this).
+But the point is, mathematically that three-dimensinal space
+_is not necessarily there._
+
+Now consider a curve inside the plane,
+say, or a curved line in three-dimensional space.
+Maybe the curve closes up, or maybe it stops short.
+Or maybe it continues forever in one direction
+and stops short in another.
+Any of these is more or less fine,
+but let’s pretend for a moment that the curve goes on forever
+in both directions.
+Like for example,
+take the graph of the function $y = x^2$ in the plane.
+Considered “topologically”, this curve is in some sense “the same”
+as $\mathbb{R}$.
+Making this precise is part of the content of a first course in topology,
+but we already know this to be true:
+even the expression of this curve as the graph of a
+(continuous, in fact smooth) function of one variable makes that manifest to us.
+
+There are many possible curves that have this property!
+The graph of $y = x^n$ for any positive integer $n$
+works just fine, for example,
+as does the set of points satisfying the equation $y^2 - x^2 = 1$
+(a _hyperbola_)
+where $y > 0$.
+Each of these curves, though,
+has different _geometry_ when thought of as sitting inside the plane,
+as we shall see and attempt to quantify.
+
+Therefore there is no _one_ way to define a notion of curvature for a curve—it always depends on _how_ that curve
+is sitting inside another space.
+That’s fine!
+Sometimes in math things just work that way.
+What’s maybe more surprising, as we’ll see, hopefully in a later post,u
+is that curvatucre _does_ become “intrinsic”
+in higher dimensions.
+
+## What should curvature mean?
+
+Intuitively, any quantitative measure of curvature
+should probably have the following properties.
+
++ The curvature of a straight line is zero,
+  because lines are not curved.
++ The curvature of a circle should be _inversely_ proportional to its radius.
+  Right? As a circle gets smaller,
+  tracing it out you draw a tighter and tighter curve,
+  whereas as a circle gets bigger and bigger,
+  you notice its “curviness” less and less until,
+  “in the limit” you get a straight line.
++ Curvature should make sense for any reasonable curev.
+
+As mathematicians, we love unreasonable things.
+There are definitely curves that we would like to avoid
+thinking about here.
+The “topologist’s sine curve” is a good example of one.
+Another is a “space-filling curve”.
+
+Anyway, the classical way of defining the curvature (at a point)
+of a curve $\gamma$ in $\mathbb{R}$^2 is, to my mind,
+pretty satisfying.
+
+Suppose our curve is not just continuous but has a first derivative everywhere.
+There are two things I could mean here:
+first of all we could be thinking of our curve in the Cartesian plane
+as the _graph_ of a function,
+or we could think of it _parametrically_
+as $\gamma = (x(t), y(t))$.
+Let’s work parametrically.
+I want there to exist a _tangent line_ at every point of our curve.
+Parametrically, this line has the equation
+$(x(t_0) + tx'(t_0), y(t_0) + ty'(t_0))$
+_provided_ these derivatives exist.
+In other words, a sufficient condition for our parametric
+function to have a tangent line
+is for the parametrizing functions $x$ and $y$
+to have derivatives everywhere.
+Let’s go ahead and assume that.
+
+For the parabola, for example,
+we could parametrize it as $x(t) = t$ and $y(t) = t^2$;
+both of these functions have derivatives everywhere.
+For the circle of radius $R$,
+we could parametrize this curve as $x(t) = R\cos t$
+and $y(t) = R\sin t$;
+both of these functions also have derivatives everywhere.
+
+## Defining curvature
+
+Anyway, if we fix a point on our curve
+and understand the tangent line to that curve at the point,
+we can also understand _circles_ tangent to our curve
+at that point.
+There are infinitely many of these and by
+_tangent_ I just mean that close to our point $p$,
+the circle does not cross the curve,
+in the same way that the tangent line does not because it has,
+in some sense, the “same slope” as the curve.
