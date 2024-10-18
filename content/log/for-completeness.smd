@@ -14,7 +14,7 @@ In mathematics, if you squint,
 the word “real” has a kind of eldritch quality.
 Although calculus students work confidently with them,
 and they enable all kinds of nice behavior in topology,
-the definition of a /real number/ is, well, surreal.
+the definition of a _real number_ is, well, surreal.
 The title of this blog post is a pun.
 You might ask why we need the real numbers,
 and one answer is “for completeness”.
@@ -36,7 +36,7 @@ within the first week.
 
 One of the aspects of that class I appreciated
 was the _construction_ of the real numbers.
-I’d like to take us on a whirwind tour through taht construction.
+I’d like to take us on a whirwind tour through that construction.
 
 We’re on a quest:
 we seek a mathematical object $\mathbb{R}$

@@ -7,6 +7,19 @@ h3 {
     text-align: center;
 }
 
+h4 {
+    font-family: 'Sarabun', sans-serif;
+    font-weight: lighter;
+    margin: 0.05rem;
+}
+
+h5 {
+    font-family: 'Sarabun', sans-serif;
+    font-weight: lighter;
+    font-size: 0.7rem;
+    margin-top: 0.1rem;
+}
+
 a {
     color: light-dark(#aa20bb, #9750a9);
 }
@@ -64,6 +77,19 @@ nav a:hover {
     box-sizing: border-box;
     padding: 30px 30px;
     max-width: min(600px, 100vw);
+}
+
+.content-item {
+    padding: 10px 10px;
+}
+
+.summary {
+    font-size: 0.8em;
+    margin-left: 1em;
+}
+
+.content-item:hover {
+    background-color: light-dark(#fcefef, #2d2d46);
 }
 
 .centered {

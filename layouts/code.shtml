@@ -3,6 +3,16 @@
 <title id="title" :text="$page.title"></title>
 <head id="head"></head>
 <div id="content">
-  <h3 class="overtitle centered">alanza.xyz</h3>
-  <h1 class="title" :text="$page.title"></h1>
+  <h3 class="overtitle centered">Code – alanza.xyz</h3>
+  <h1 class="centered title">ROBBIE LYMAN</h1>
+  <h3 class="centered subtitle">Code</h3>
+  <div id="page" :html="$page.content()"></div>
+  <div class="content-group">
+    <div :loop="$page.subpages()">
+      <div class="content-item">
+        <a href="$loop.it.link()"><h4 :text="$loop.it.title"></h4></a>
+        <div class="summary" :html="$loop.it.contentSection('summary')"></div>
+      </div>
+    </div>
+  </div>
 </div>
