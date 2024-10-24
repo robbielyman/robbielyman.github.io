@@ -22,6 +22,15 @@ this is the name on many of the papers below.
 # []($section.id('papers'))
 # Publications and Preprints
 
+- **A hyperbolic free-by-cyclic group determined by its finite quotients**    
+_Submitted._
+(with Naomi Andrew, Paige Hillen and Catherine Eva Pfaff)
+Avaiable at [arXiv:2410.17817]($link.url("https://arxiv.org/abs/2410.17817")).
+> []($block)
+> We show that the group $\langle a, b, c, t \mid a^t = b, b^t = c, c^t = ca^{-1} \rangle$
+is profinitely rigid amongst free-by-cyclic groups,
+providing the first example of a hyperbolic free-by-cyclic group with this property.
+
 - **The complex of cuts in a Stone Space**   
 _Submitted._
 (with Beth Branman)
@@ -175,7 +184,7 @@ In this paper we extend their techniques to fundamental groups of non-positively
 
 - **Some New CAT(0) Free-by-Cyclic Groups**
 _Mich. Math. J._ **73** (2023) 621–630.
-Avaiable at [arXiv:1909.03097]($link.url("https://arxiv.org/abs/1909.03097")).
+Available at [arXiv:1909.03097]($link.url("https://arxiv.org/abs/1909.03097")).
 []($image.asset("cat0freebyz-main.svg"))
 > []($block)
 > We show the existence of several new infinite families of polynomially-growing
