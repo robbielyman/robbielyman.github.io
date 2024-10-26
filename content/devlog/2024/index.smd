@@ -10,7 +10,47 @@
 .draft = false,
 ---
 
-# [241009 – Mathcha]($section.id("2024-10-09"))
+# [241009 – zOSC]($section.id("2024-10-26"))
+
+Today I finished a first milestone in implementing
+the [Open Sound Control]($link.url("https://opensoundcontrol.stanford.edu/")) (OSC) data format and RPC protocol in Zig:
+currently [the repository]($link.url("https://github.com/robbielyman/zosc")) contains what should be a complete implementation of the format
+at least as far as “message” objects are concerned.
+Next steps include implementing “bundles” of messages,
+and an RPC server.
+
+Zig really is lovely for everything, but I quite liked it for this.
+The reference-counting mechanism and other aspects of a `Message` object, including the full contents of the message
+can be contiguous with but hidden from the user’s handle to a `Message` by using the following sleight of hand:
+when a `Message` is created,
+a large block of memory is allocated:
+the beginning of the memory becomes a `Message.Header` struct
+which contains the `Message` object as a field,
+as well as a reference counter,
+a size of the allocation, and an offset where the data of the message begins.
+The user never interacts with `Message.Header` objects;
+instead, methods on the `Message` type
+use Zig’s `@fieldParentPtr` construction (similar to the Linux kernel’s `container_of` macro, but doing all the pointer manipulation for you)
+to first turn a `Message` into a `Header`,
+query the `Header` (or even the allocation)
+for the relevant data,
+and then pass it back to the caller.
+
+The data format is charmingly simple:
+strings in OSC are 0-terminated ASCII strings padded with zeros so that the string is followed in memory by at least one zeros, and the padded memory occupies a multiple of four bytes.
+An OSC message begins with a string whose first character is '/',
+and all well-formed messages should follow with a string (the “type tag” string) whose first character is ','.
+Each character of the type tag string corresponds to a type of an argument, which is present in what follows.
+Ints
+(32- and 64-bit 2’s-complement signed integers represented in big endian byte order),
+floats (32- and 64-bit, IEEE floats, also big endian),
+strings, and a few other “contentful” types,
+as well as some which occupy space only in the type tag,
+like “true”, “false”, “nil” and “bang” (or “infinitum”).
+The whole chunk of memory is 0-padded to occupy a multiple of 4 bytes,
+and can be transparently communicated over UDP, for instance.
+
+# [241026 – Mathcha]($section.id("2024-10-09"))
 
 Today in my graduate class we talked about Stallings folding,
 which is one of my favorite topics in all of mathematics.
