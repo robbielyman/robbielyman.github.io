@@ -10,7 +10,7 @@
 .draft = false,
 ---
 
-# [241009 – zOSC]($section.id("2024-10-26"))
+# [241026 – zOSC]($section.id("2024-10-26"))
 
 Today I finished a first milestone in implementing
 the [Open Sound Control]($link.url("https://opensoundcontrol.stanford.edu/")) (OSC) data format and RPC protocol in Zig:
@@ -50,7 +50,7 @@ like “true”, “false”, “nil” and “bang” (or “infinitum”).
 The whole chunk of memory is 0-padded to occupy a multiple of 4 bytes,
 and can be transparently communicated over UDP, for instance.
 
-# [241026 – Mathcha]($section.id("2024-10-09"))
+# [241009 – Mathcha]($section.id("2024-10-09"))
 
 Today in my graduate class we talked about Stallings folding,
 which is one of my favorite topics in all of mathematics.
