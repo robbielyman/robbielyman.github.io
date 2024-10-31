@@ -1,0 +1,64 @@
+---
+.title = "Announcing zOSC",
+.date = @date("2024-10-30T21:30:00-04:00"),
+.author = "Robbie Lyman",
+.layout = "post.shtml",
+.draft = false,
+---
+[]($section.id('summary'))
+I wrote a little library!
+The purpose of this post is to advertise its existence.
+
+[]($section.id('remainder'))
+
+# What is it?
+
+zOSC is an MIT-licensed, Zig-powered implementation of the  “Open Sound Control” (OSC) data format.
+OSC is a simple message format, similar to JSON or XML.
+The informal [1.1 specification]($link.url("https://opensoundcontrol.stanford.edu/spec-1_1.html"))
+sketches out the beginnings of a distinction between OSC as a content format
+and its most common use as a form of RPC (remote procedure call)
+between sound-aligned digital communicators.
+
+# Why is it?
+
+I needed an MIT-compatible implementation of the OSC RPC for use in [seamstress]($link.url("https://github.com/robbielyman/seamstress"))
+version 2.0.0.
+Seamstress versions 1.x are licensed under the GPL,
+but versions 2.x will be MIT.
+(It’s not really my aim to become rich off of seamstress,
+but I’ll flag that the license may change again in the future.)
+The main OSC implementation that I’m aware of, [liblo]($link.url("https://liblo.sourceforge.net")) is LGPL.
+While that’s not incompatible for use in an MIT project,
+I’d like seamstress 2.x to be usable in, e.g. closed-source or commercial projects,
+for which an LGPL dependency becomes mildly annoying.
+
+# What did I learn?
+
+As it turns out, the OSC specification is a good deal easier to implement than I had initially imagined.
+I found even attempting the implementation to be an extremely clarifying use of my energy;
+for instance turning OSC messages from black boxes to chunks of data that I understand completely.
+It’s eminently possible to process and create OSC messages with (nearly) zero allocations,
+and this Zig implementation supports that use case beautifully
+(although creation of messages requires a careful use of the Zig standard library’s `FixedBufferAllocator`).
+
+It also is much clearer to me when and how best to reuse OSC message objects; for example
+zOSC has a convenient `Message.Builder` type which can be used to store message data in an editable fashion
+which can then be `commit()`-ed one or more times to create messages to send.
+
+# How can I use it?
+
+If your project is in Zig or can link against a C library, you can use zOSC.
+Head over to [the repository]($link.url("https://github.com/robbielyman/zosc")).
+You can either download the source and build it using version 0.13 of the Zig compiler,
+or if you’re interested only in the C library,
+you can check the Releases for a .zip file for your target.
+A `pkg-config` file is provided for smoothing out compilation.
+If your project is in Zig, of course, you can access it
+by pointing the Zig package manager at the repository;
+more detailed instructions are in the README of the repository.
+
+# Can I help?
+
+Yes! If you use zOSC in your projects, I’d love feedback and welcome contributions on documentation, the API, etc.
+Feel free to open an issue, a pull request, or [send me an email]($link.url("mailto:rb.lymn@gmail.com")).
