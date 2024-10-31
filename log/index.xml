@@ -5,8 +5,19 @@
     <description>Robbie Lyman's personal blog</description>
     <generator>Robbie Lyman -- https://alanza.xyz</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 24 Oct 2024 12:41:42 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 31 Oct 2024 16:52:19 +0000</lastBuildDate>
     
+    <item>
+     <pubDate>Thu, 31 Oct 2024 01:30:00 +0000</pubDate>
+     <link>https://alanza.xyz/log/announcing-zosc/</link>
+     <guid>https://alanza.xyz/log/announcing-zosc/</guid>
+     <title>Announcing zOSC</title>
+     <description>
+       <span>&lt;div id=summary&gt;&lt;p&gt; I wrote a little library! The purpose of this post is to advertise its existence.&lt;/p&gt;&lt;/div&gt;</span>
+       <a href="https://alanza.xyz/log/announcing-zosc/">Read More</a>
+     </description>
+    </item>
+   
     <item>
      <pubDate>Tue, 08 Oct 2024 18:26:00 +0000</pubDate>
      <link>https://alanza.xyz/log/thoughts-on-learning/</link>
