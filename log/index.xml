@@ -5,8 +5,19 @@
     <description>Robbie Lyman's personal blog</description>
     <generator>Robbie Lyman -- https://alanza.xyz</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 31 Oct 2024 16:52:19 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 18 Nov 2024 19:30:38 +0000</lastBuildDate>
     
+    <item>
+     <pubDate>Mon, 18 Nov 2024 19:30:00 +0000</pubDate>
+     <link>https://alanza.xyz/log/how-magic-is-too-magic/</link>
+     <guid>https://alanza.xyz/log/how-magic-is-too-magic/</guid>
+     <title>How magic is too magic? Personalities of programming languages</title>
+     <description>
+       <span>&lt;div id=summary&gt;&lt;p&gt; I’ve heard people observe that although we often think of language as purely a medium for expressing something that exists prior to language, that the words available to us shape who we are as well. I think there’s some truth to this: I took four semesters of Japanese in grad school—not enough to approach fluency without intensive immersion, but plenty to start feeling out the language. I found that at the time my personality as expressed in Japanese was a bit more cautious than I am in English.&lt;/p&gt;&lt;p&gt;It’s interesting to observe that this difference in what I &lt;em&gt;want&lt;/em&gt; to express and &lt;em&gt;how&lt;/em&gt; is also present for me in programming. Not every language I’ve written a line of has a personality for me yet—mostly this correlates with how seriously I’ve learned what the language has to offer, but interestingly as I’ve improved as a programmer, the personality associations have also started coming faster.&lt;/p&gt;&lt;/div&gt;</span>
+       <a href="https://alanza.xyz/log/how-magic-is-too-magic/">Read More</a>
+     </description>
+    </item>
+   
     <item>
      <pubDate>Thu, 31 Oct 2024 01:30:00 +0000</pubDate>
      <link>https://alanza.xyz/log/announcing-zosc/</link>
