@@ -10,6 +10,30 @@
 .draft = false,
 ---
 
+# [241119 - seamstress.monome]($section.id("2024-11-19"))
+
+On Sunday I finished working on implementing support for [monome]($link.url("https://monome.org"))
+grid and arc devices in seamstress v2.
+Here's a snippet from the test file that illustrates their use.
+
+[An excerpt of seamstress 2’s monome device spec]($code.asset('runner.lua').language('lua'))
+
+If a monome grid is connected while the tests are running,
+the tests will first cause all the LEDs on the grid to raise and then lower
+through all 16 brightness levels (counting 0 as a level),
+and then blink the 4, 4 key until it is pressed (or released, really).
+
+Something I love about this test is it really shows the shine of the `Timer` and `Promise` objects
+I dreamed up over the summer.
+I don’t need to assign any of the return values of `seamstress.Timer` to anything
+because each `Timer` is smart enough to clean itself up when it’s done
+by setting `self.running = false`
+(which under the hood sets off a chain of events which eventually enables the `Timer` to be garbage collected),
+even though `Timer` and `Promise` objects fundamentally have to be available to the Zig side of seamstress.
+Using a `Promise` earlier in the test block allows me to
+tie the execution of the test block to the execution of the `Promise` by using `:await()`.
+So fun!!
+
 # [241026 – zOSC]($section.id("2024-10-26"))
 
 Today I finished a first milestone in implementing
