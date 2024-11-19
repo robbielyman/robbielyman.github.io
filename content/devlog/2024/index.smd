@@ -16,7 +16,7 @@ On Sunday I finished working on implementing support for [monome]($link.url("htt
 grid and arc devices in seamstress v2.
 Here's a snippet from the test file that illustrates their use.
 
-[An excerpt of seamstress 2’s monome device spec]($code.asset('runner.lua').language('lua'))
+[An excerpt of seamstress 2’s monome device spec]($code.asset('monome_spec.lua').language('lua'))
 
 If a monome grid is connected while the tests are running,
 the tests will first cause all the LEDs on the grid to raise and then lower
