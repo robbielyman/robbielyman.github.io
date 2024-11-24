@@ -10,6 +10,23 @@
 .draft = false,
 ---
 
+# [241124 - CoreFoundation in Zig]($section.id("2024-11-24"))
+
+I started working on MIDI for seamstress,
+but quickly realized I would like to write my own library
+rather than depend on a C++ library like RtMidi.
+(This is a little silly of me, but the whole project is that level of silly,
+and anyway it’s fun.)
+The first step is to get a handle on how CoreMIDI works,
+which somehow became “hey, it would be nice to understand how CoreFoundation works”,
+so I started writing [a Zig interface to CoreFoundation]($link.url("https://github.com/robbielyman/corefoundation.zig")).
+I’m very excited that I can create CFAllocator types,
+and feel pretty good about the improvements I’ve made
+to [my underlying Objective-C interface library]($link.url("https://github.com/robbielyman/objz")).
+That latter library owes a lot to Mitchell Hashimoto’s prior art,
+which unlocked “oh, libraries with C APIs? they’re accessible from Zig” for me,
+which has really been quite fun the past year.
+
 # [241120 - /ai]($section.id("2024-11-20"))
 
 I added a pretty punchy [/ai]($link.page("ai")) page,
