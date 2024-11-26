@@ -5,8 +5,19 @@
     <description>Robbie Lyman's personal blog</description>
     <generator>Robbie Lyman -- https://alanza.xyz</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 26 Nov 2024 19:04:16 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 26 Nov 2024 21:57:20 +0000</lastBuildDate>
     
+    <item>
+     <pubDate>Tue, 26 Nov 2024 20:00:00 +0000</pubDate>
+     <link>https://alanza.xyz/log/double-cosets-are-edges/</link>
+     <guid>https://alanza.xyz/log/double-cosets-are-edges/</guid>
+     <title>Double cosets are edges</title>
+     <description>
+       <span>&lt;div id=summary&gt;&lt;p&gt; Today &lt;a href=&quot;https://arxiv.org/abs/2411.15337&quot;&gt;my 15th posting&lt;/a&gt; to the arXiv went live! I intend to write about some of the other aspects of that paper elsewhere (possibly another post on this blog), since I think it really clarified something important for me, but I wanted to explain one insight that made a mysterious thing less mysterious to me: “double cosets”.&lt;/p&gt;&lt;/div&gt;</span>
+       <a href="https://alanza.xyz/log/double-cosets-are-edges/">Read More</a>
+     </description>
+    </item>
+   
     <item>
      <pubDate>Tue, 26 Nov 2024 18:00:00 +0000</pubDate>
      <link>https://alanza.xyz/log/so-whats-topology/</link>
