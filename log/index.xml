@@ -5,8 +5,30 @@
     <description>Robbie Lyman's personal blog</description>
     <generator>Robbie Lyman -- https://alanza.xyz</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 18 Nov 2024 19:30:38 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 26 Nov 2024 19:04:16 +0000</lastBuildDate>
     
+    <item>
+     <pubDate>Tue, 26 Nov 2024 18:00:00 +0000</pubDate>
+     <link>https://alanza.xyz/log/so-whats-topology/</link>
+     <guid>https://alanza.xyz/log/so-whats-topology/</guid>
+     <title>So what’s this topology thing?</title>
+     <description>
+       <span>&lt;div id=summary&gt;&lt;p&gt; The purpose of this post is to serve as a reference I can link to. I define topological spaces, sure, but the goal is really to communicate what they feel like, how I think about them, what I think is neat about them.&lt;/p&gt;&lt;/div&gt;</span>
+       <a href="https://alanza.xyz/log/so-whats-topology/">Read More</a>
+     </description>
+    </item>
+   
+    <item>
+     <pubDate>Tue, 26 Nov 2024 16:00:00 +0000</pubDate>
+     <link>https://alanza.xyz/log/so-whats-a-group/</link>
+     <guid>https://alanza.xyz/log/so-whats-a-group/</guid>
+     <title>So what’s a group again?</title>
+     <description>
+       <span>&lt;div id=summary&gt;&lt;p&gt; The purpose of this post is to serve as a reference I can link to. I define groups, sure, but the goal is really to communicate what they feel like, how I think about them, what I think is neat about them.&lt;/p&gt;&lt;/div&gt;</span>
+       <a href="https://alanza.xyz/log/so-whats-a-group/">Read More</a>
+     </description>
+    </item>
+   
     <item>
      <pubDate>Mon, 18 Nov 2024 19:30:00 +0000</pubDate>
      <link>https://alanza.xyz/log/how-magic-is-too-magic/</link>
