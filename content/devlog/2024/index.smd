@@ -10,6 +10,31 @@
 .draft = false,
 ---
 
+# [241130 – Seamstress as Lua library]($section.id("2024-11-30"))
+
+Having embraced the “Lua module” mode of code structure for Seamstress v2,
+many things become more possible.
+For instance, given that everything now loads via `require`,
+why not use Seamstress itself that way?
+Initially I had some idea that this would be difficult,
+but it turns out not to be.
+
+On the current [dev branch]($link.url("https://github.com/robbielyman/seamstress/tree/v2-again")),
+the changes are actually fairly minimal!
+Whereas previously in `main.zig`
+I had been creating a `Seamstress` struct on the stack
+and using it to start up the Lua environment,
+now instead I create a Lua instance
+and use it to allocate and manage the `Seamstress` struct,
+like many other Seamstress modules.
+
+This also clarified for me which parts of loading a Seamstress module
+should be part of the function which `require 'seamstress'` runs,
+and which should be only run by `seamstress` the program.
+
+Anyway, a really nice feeling to be able to type `lua` at the command prompt
+and subsequently load my little passion project in.
+
 # [241124 - CoreFoundation in Zig]($section.id("2024-11-24"))
 
 I started working on MIDI for seamstress,
