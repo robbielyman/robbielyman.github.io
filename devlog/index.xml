@@ -5,8 +5,17 @@
     <description>Robbie Lyman's devlog</description>
     <generator>Robbie Lyman -- https://alanza.xyz</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 24 Nov 2024 19:52:44 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 01 Dec 2024 03:01:51 +0000</lastBuildDate>
     
+        <item>
+          <pubDate>Sat, 30 Nov 2024 00:00:00 +0000</pubDate>
+          <link>https://alanza.xyz/devlog/2024/#2024-11-30</link>
+          <guid>https://alanza.xyz/devlog/2024/#2024-11-30</guid>
+          <title>241130 – Seamstress as Lua library
+</title>
+          <description>&lt;div id=2024-11-30&gt;&lt;h1&gt;&lt;a class=&quot;&quot; href=&quot;#2024-11-30&quot;&gt;241130 – Seamstress as Lua library&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;Having embraced the “Lua module” mode of code structure for Seamstress v2, many things become more possible. For instance, given that everything now loads via &lt;code&gt;require&lt;/code&gt;, why not use Seamstress itself that way? Initially I had some idea that this would be difficult, but it turns out not to be.&lt;/p&gt;&lt;p&gt;On the current &lt;a href=&quot;https://github.com/robbielyman/seamstress/tree/v2-again&quot;&gt;dev branch&lt;/a&gt;, the changes are actually fairly minimal! Whereas previously in &lt;code&gt;main.zig&lt;/code&gt; I had been creating a &lt;code&gt;Seamstress&lt;/code&gt; struct on the stack and using it to start up the Lua environment, now instead I create a Lua instance and use it to allocate and manage the &lt;code&gt;Seamstress&lt;/code&gt; struct, like many other Seamstress modules.&lt;/p&gt;&lt;p&gt;This also clarified for me which parts of loading a Seamstress module should be part of the function which &lt;code&gt;require &apos;seamstress&apos;&lt;/code&gt; runs, and which should be only run by &lt;code&gt;seamstress&lt;/code&gt; the program.&lt;/p&gt;&lt;p&gt;Anyway, a really nice feeling to be able to type &lt;code&gt;lua&lt;/code&gt; at the command prompt and subsequently load my little passion project in.&lt;/p&gt;&lt;/div&gt;</description>
+        </item>
+      
         <item>
           <pubDate>Sun, 24 Nov 2024 00:00:00 +0000</pubDate>
           <link>https://alanza.xyz/devlog/2024/#2024-11-24</link>
