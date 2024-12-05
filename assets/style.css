@@ -50,12 +50,12 @@ nav a:hover {
 
 #blog-navigation {
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
+    flex-direction: column;
     justify-content: space-between;
 }
 
 #blog-navigation > div {
+    text-align: center;
     font-size: 0.8em;
 }
 
@@ -87,7 +87,6 @@ nav a:hover {
 
 .centered.subtitle {
     font-weight: lighter;
-    line-height: 0.5;
 }
 
 :root {
