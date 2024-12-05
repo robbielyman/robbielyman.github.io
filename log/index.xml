@@ -5,8 +5,19 @@
     <description>Robbie Lyman's personal blog</description>
     <generator>Robbie Lyman -- https://alanza.xyz</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 26 Nov 2024 21:57:20 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 05 Dec 2024 16:17:41 +0000</lastBuildDate>
     
+    <item>
+     <pubDate>Thu, 05 Dec 2024 15:40:00 +0000</pubDate>
+     <link>https://alanza.xyz/log/advent-of-code-learning/</link>
+     <guid>https://alanza.xyz/log/advent-of-code-learning/</guid>
+     <title>What I learned from Advent Of Code, or: That time I wrote a blog post and linked to it in the Zig issue tracker</title>
+     <description>
+       <span>&lt;div id=summary&gt;&lt;p&gt;I’m doing Advent of Code again this year; so far I’ve been very pleasantly surprised that my facility for solving the problems has improved. (Of course, I’m well aware that the difficulty is likely to ramp up soon, so I may end up eating my words.) Previously, I did the 2023 Advent of Code as it happened in Zig. &lt;em&gt;Pace&lt;/em&gt; Loris Cro, &lt;a href=&quot;https://kristoff.it/blog/advent-of-code-zig/&quot;&gt;who wrote a great blog post on the subject&lt;/a&gt;, I think that despite the way Advent of Code problems are at odds with the kinds of software problems that Zig aims itself at solving, doing Advent of Code is a great way to gain familiarity with Zig. Over this past summer I also did the 2022 Advent of Code problems as a way of learning Rust. Today, solving the 5th problem for 2024, it occurred to me that Rust had taught me something surprisingly useful for my Zig solution. The purpose of this post is to talk about what I learned—this post does not contain spoilers for any Advent of Code problems, and indeed is not really “about” Advent of Code at all: as I was writing it, it became clear that part of this blog post actually belongs on the Zig issue tracker.&lt;/p&gt;&lt;/div&gt;</span>
+       <a href="https://alanza.xyz/log/advent-of-code-learning/">Read More</a>
+     </description>
+    </item>
+   
     <item>
      <pubDate>Tue, 26 Nov 2024 20:00:00 +0000</pubDate>
      <link>https://alanza.xyz/log/double-cosets-are-edges/</link>
