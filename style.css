@@ -45,7 +45,7 @@ nav a:hover {
     align-self: center;
     box-sizing: border-box;
     padding: 0 30px;
-    max-width: min(600px, 100vw);
+    max-width: min(700px, 110vw);
 }
 
 #blog-navigation {
@@ -115,19 +115,13 @@ img {
 
 @media screen and (min-width: 1000px) and (max-width: 1200px) {
   :root {
-    zoom: 1.0;
+    zoom: 1.05;
   }
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
   :root {
-    zoom: 1.0;
-  }
-}
-
-@media screen and (min-width: 1400px) and (max-width: 1600px) {
-  :root {
-    zoom: 1.0;
+    zoom: 1.1;
   }
 }
 

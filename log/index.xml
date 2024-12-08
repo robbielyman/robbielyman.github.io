@@ -5,8 +5,19 @@
     <description>Robbie Lyman's personal blog</description>
     <generator>Robbie Lyman -- https://alanza.xyz</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 05 Dec 2024 16:17:41 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 08 Dec 2024 18:49:51 +0000</lastBuildDate>
     
+    <item>
+     <pubDate>Sun, 08 Dec 2024 16:00:00 +0000</pubDate>
+     <link>https://alanza.xyz/log/just-write-the-function/</link>
+     <guid>https://alanza.xyz/log/just-write-the-function/</guid>
+     <title>Just write the function!</title>
+     <description>
+       <span>&lt;div id=summary&gt;&lt;p&gt; This is a post inspired by my approach to this year’s &lt;a href=&quot;https://adventofcode.com/&quot; target=&quot;_blank&quot;&gt;Advent of Code&lt;/a&gt;, but it does not contain spoilers. Instead I want to talk about how being more “data-oriented” has helped my thinking about coding problems.&lt;/p&gt;&lt;/div&gt;</span>
+       <a href="https://alanza.xyz/log/just-write-the-function/">Read More</a>
+     </description>
+    </item>
+   
     <item>
      <pubDate>Thu, 05 Dec 2024 15:40:00 +0000</pubDate>
      <link>https://alanza.xyz/log/advent-of-code-learning/</link>
