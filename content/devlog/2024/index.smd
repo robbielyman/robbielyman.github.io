@@ -10,6 +10,41 @@
 .draft = false,
 ---
 
+# [241231 – EmbedFile.zig]($section.id("2024-12-31"))
+
+Some of the source files for Seamstress are written in Lua.
+In v1, Seamstress relied on the following invariant of the end-user’s filesystem:
+if `seamstress` is present at `path/subpath/seamstress`, the Lua files must be in `path/share/seamstress/lua`.
+This is annoying to enforce and needlessly brittle.
+In v2, initially I made it possible to specify the path to the Lua files
+with an environment variable, `SEAMSTRESS_LUA_PATH`.
+I think this is a valuable improvement which I will continue to support:
+it makes it possible to iterate on Lua files without having to recompile Seamstress
+(or even install the Zig compiler).
+Of course, one of the reasons Seamstress is written in Zig is to make the process
+of building Seamstress easy for a newcomer to compiled languages,
+but in my experience, more people are willing to contribute Lua code
+than are willing to compile Seamstress from source.
+
+Anyway, the environment variable situation is still brittle,
+partly because the process of setting an environment variable for a running process
+is different on Windows vs macOS and Linux.
+And ideally Seamstress should be usable in fairly “hardened” situations
+where being able to alter its behavior by setting an environment variable would be a net negative.
+
+Zig has a builtin function, `@embedFile`, which is well-suited to this situation.
+The builtin copies the contents of the specified file and makes them available to the programmer
+as a string (or really a pointer of type `*const [LEN:0]u8`, where `LEN` is the size of the file in bytes).
+Seamstress v2 will (by default) still respond to `SEAMSTRESS_LUA_PATH`,
+but in the absence of it (or in the event that a file is missing)
+will fall back to using the copies of the Lua source files which are copied into the binary with `@embedFile`.
+
+This decision makes it desirable for me to programmatically construct these `@embedFile` calls
+rather than having to maintain a hand-written file that faithfully reproduces
+the structure present in the Seamstress repo.
+So I wrote a little extension to the Zig build system to do this for me.
+You can find it [here]($link.url("https://github.com/robbielyman/embedfile.zig"))
+
 # [241130 – Seamstress as Lua library]($section.id("2024-11-30"))
 
 Having embraced the “Lua module” mode of code structure for Seamstress v2,
