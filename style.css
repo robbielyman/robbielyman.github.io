@@ -50,13 +50,14 @@ nav a:hover {
 
 #blog-navigation {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: nowrap;
     justify-content: space-between;
-}
 
-#blog-navigation > div {
-    text-align: center;
-    font-size: 0.8em;
+    #left,#right {
+        max-width: 15em;
+        font-size: 0.8em;
+    }
 }
 
 #footer-links {
