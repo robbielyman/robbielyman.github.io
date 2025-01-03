@@ -1,9 +1,10 @@
 ---
-.title = "Devlog",
+.title = "Devlog 2024",
 .date = @date("2024-09-30T19:00:00-04:00"),
 .author = "Robbie Lyman",
 .layout = "devlog.shtml",
 .alternatives = [{
+  .name = "rss",
   .layout = "devlog.xml",
   .output = "devlog/2024/index.xml",
 }],

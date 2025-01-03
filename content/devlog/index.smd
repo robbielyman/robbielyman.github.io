@@ -4,9 +4,5 @@
 .author = "Robbie Lyman",
 .layout = "archive.shtml",
 .draft = false,
-.alternatives = [{
-  .layout = "devlog.xml",
-  .output = "devlog/index.xml",
-}],
 ---
 All entries are categorized by year.

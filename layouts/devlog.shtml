@@ -5,5 +5,16 @@
 <h3 class="overtitle centered">Devlog – alanza.xyz</h3>
   <h1 class="centered title">ROBBIE LYMAN</h1>
   <h3 class="centered subtitle">Devlog</h3>
+  <div id="blog-navigation">
+    <div id="left" :if="$page.prevPage()">
+      <a href="$if.link()" :text="$if.title"></a>
+    </div>
+    <div id="center">
+      <a href="$page.parentSection().link()">Archive</a>
+    </div>
+    <div id="right" :if="$page.nextPage()">
+      <a href="$if.link()" :text="$if.title"></a>
+    </div>
+  </div>
   <div id="page" :html="$page.content()"></div>
 </div>

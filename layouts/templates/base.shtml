@@ -44,7 +44,7 @@
       •
       <a href="$site.page('log').link()">Blog</a>
       •
-      <a href="$site.page('devlog').link()">Devlog</a>
+      <a href="$site.page('devlog/2025').link()">Devlog</a>
     </nav>
     <div id="content">
       <super>
