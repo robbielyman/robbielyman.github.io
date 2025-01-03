@@ -5,7 +5,7 @@
 .layout = "devlog.shtml",
 .alternatives = [{
   .layout = "devlog.xml",
-  .output = "devlog/index.xml",
+  .output = "devlog/2024/index.xml",
 }],
 .draft = false,
 ---
