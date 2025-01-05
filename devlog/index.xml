@@ -5,8 +5,18 @@
     <description>Robbie Lyman's devlog</description>
     <generator>Robbie Lyman -- https://alanza.xyz</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 03 Jan 2025 20:14:37 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 05 Jan 2025 21:05:48 +0000</lastBuildDate>
     
+        <item>
+          <pubDate>Sun, 05 Jan 2025 00:00:00 +0000</pubDate>
+          <link>https://alanza.xyz/devlog/2025/#2025-01-05</link>
+          <guid>https://alanza.xyz/devlog/2025/#2025-01-05</guid>
+          <title>250104 – Please clap
+</title>
+          <description>&lt;div id=2025-01-05&gt;&lt;h1&gt;&lt;a class=&quot;&quot; href=&quot;#2025-01-05&quot;&gt;250104 – Please clap&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/robbielyman/seamstress&quot;&gt;Seamstress&lt;/a&gt;, until recently, had a pretty simple approach to command-line arguments: if you fed it &lt;code&gt;-v&lt;/code&gt; or &lt;code&gt;--version&lt;/code&gt; or &lt;code&gt;-h&lt;/code&gt; or &lt;code&gt;--help&lt;/code&gt; it would print a short message and exit. I realized the other day that of course Lua&apos;s approach to command-line arguments is a detail of the interpreter implementation and not the language&apos;s doing. In anticipation of making more of that goodness available from the Seamstress command-line tool, I figured it might be good to get a better parser going.&lt;/p&gt;&lt;p&gt;Here&apos;s where we&apos;re at today:&lt;/p&gt;&lt;script src=&quot;https://gist.github.com/robbielyman/83dfd1d54ed251d0997832548b50f396.js&quot;&gt;&lt;/script&gt;
+&lt;p&gt;Here&apos;s what my code does: we declare a bunch of optional things we want to pull out of the arguments. Then we loop through the arguments (using a &lt;code&gt;while&lt;/code&gt; loop so that we can alter the index mid-flight) and attempt to match against the flags we accept. Since the arguments are strings, the way to match is just a bunch of &lt;code&gt;if&lt;/code&gt; statements. Obviously something like Rust&apos;s &lt;code&gt;match&lt;/code&gt; would feel nicer to write, but I appreciate the honesty of the &lt;code&gt;if&lt;/code&gt; statement, since it&apos;s not like there&apos;s an a priori obvious way to magic up a jump table in assembly out of these conditions. If none of the flags match, we treat the argument as a filename. Since we declared our arguments as optionals, we know that if the optional is already populated, there&apos;s a duplicate arguent, so we can fail in that case. Finally we package all of what we got up into our &lt;code&gt;Args&lt;/code&gt; type and return that.&lt;/p&gt;&lt;p&gt;Processing command line arguments appears to be a common place where people shell out to a package for the actual parsing code. I frankly haven&apos;t the foggiest idea why.&lt;/p&gt;&lt;/div&gt;</description>
+        </item>
+      
         <item>
           <pubDate>Fri, 03 Jan 2025 00:00:00 +0000</pubDate>
           <link>https://alanza.xyz/devlog/2025/#2025-01-03</link>
