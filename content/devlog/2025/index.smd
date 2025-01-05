@@ -11,6 +11,41 @@
 .draft = false,
 ---
 
+# [250104 – Please clap]($section.id("2025-01-05"))
+
+[Seamstress]($link.url("https://github.com/robbielyman/seamstress")), until recently,
+had a pretty simple approach to command-line arguments:
+if you fed it `-v` or `--version` or `-h` or `--help` it would print a short message and exit.
+I realized the other day that of course Lua's approach to command-line arguments
+is a detail of the interpreter implementation and not the language's doing.
+In anticipation of making more of that goodness available from the Seamstress command-line tool,
+I figured it might be good to get a better parser going.
+
+Here's where we're at today:
+
+```=html
+<script src="https://gist.github.com/robbielyman/83dfd1d54ed251d0997832548b50f396.js"></script>
+```
+
+Here's what my code does:
+we declare a bunch of optional things we want to pull out of the arguments.
+Then we loop through the arguments
+(using a `while` loop so that we can alter the index mid-flight)
+and attempt to match against the flags we accept.
+Since the arguments are strings, the way to match is just a bunch of `if` statements.
+Obviously something like Rust's `match` would feel nicer to write,
+but I appreciate the honesty of the `if` statement,
+since it's not like there's an a priori obvious way to magic up a jump table in assembly
+out of these conditions.
+If none of the flags match, we treat the argument as a filename.
+Since we declared our arguments as optionals,
+we know that if the optional is already populated, there's a duplicate arguent, so we can fail in that case.
+Finally we package all of what we got up into our `Args` type and return that.
+
+Processing command line arguments appears to be a common place where people shell out to a package
+for the actual parsing code.
+I frankly haven't the foggiest idea why.
+
 # [250103 – Seamstress for Windows?]($section.id("2025-01-03"))
 
 A month or so ago I was talking with [Jeremy]($link.url("https://jdkaplan.dev"))
