@@ -7,20 +7,22 @@
   <h3 class="centered subtitle" :text="$page.title"></h3>
   <div id="blog-navigation">
     <div id="left" :if="$page.prevPage()">
-      <a href="$if.link()">Previous</a>:
+      <a href="$if.link()">Previous</a>:<br>
       <span :text="$if.title"></span>
     </div>
     <div id="center">
       <a href="$page.parentSection().link()">Up</a>
     </div>
     <div id="right" :if="$page.nextPage()">
-      <a href="$if.link()">Next</a>:
+      <a href="$if.link()">Next</a>:<br>
       <span :text="$if.title"></span>
     </div>
   </div>
-  <div id="page">
-    <div :html="$page.contentSection('summary')"></div>    
+  <div></div>
+  <div id="page" :loop="$page.contentSections()">
+    <div :html="$page.contentSection($loop.it.id)"></div>
+    <span :if="$loop.first">
     <div :html="$page.toc()" class="toc"></div>
-    <div :html="$page.contentSection('remainder')"></div>
+    </span>
   </div>
 </div>
