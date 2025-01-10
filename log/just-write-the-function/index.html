@@ -43,19 +43,26 @@
   <h3 class="centered subtitle">Just write the function!</h3>
   <div id="blog-navigation">
     <div id="left">
-      <a href="/log/advent-of-code-learning/">Previous</a>:
+      <a href="/log/advent-of-code-learning/">Previous</a>:<br>
       <span>What I learned from Advent Of Code, or: That time I wrote a blog post and linked to it in the Zig issue tracker</span>
     </div>
     <div id="center">
       <a href="/log/">Up</a>
     </div>
-    <div id="right"></div>
+    <div id="right">
+      <a href="/log/seamstress-is-an-art-engine/">Next</a>:<br>
+      <span>Seamstress is an art engine</span>
+    </div>
   </div>
+  <div></div>
   <div id="page">
-    <div><div id=summary><p> This is a post inspired by my approach to this year’s <a href="https://adventofcode.com/" target="_blank">Advent of Code</a>, but it does not contain spoilers. Instead I want to talk about how being more “data-oriented” has helped my thinking about coding problems.</p></div></div>    
+    <div><div id=summary><p> This is a post inspired by my approach to this year’s <a href="https://adventofcode.com/" target="_blank">Advent of Code</a>, but it does not contain spoilers. Instead I want to talk about how being more “data-oriented” has helped my thinking about coding problems.</p></div></div>
+    <span>
     <div class="toc"><ul>
 <li>Maps<ul><li>
 The “obvious” approach</li><li>Just write the function!</li></ul></li><li>This is a testable assertion!</li><li>Appendix: even being clever, you can still be dumb</ul></div>
+    </span>
+  
     <div><div id=remainder><h1>Maps</h1><p>A pretty frequent Advent of Code metaphor involves having a little rectangular map that you are navigating or manipulating. The map is usually represented in the puzzle input as a rectangular grid of ASCII characters, with newlines, <code>&apos;\n&apos;</code>, delimiting each row of the grid.</p><h2>The “obvious” approach</h2><p>In my previous runs of Advent of Code, I dutifully parsed the map into some kind of 2D array structure, so that if I wanted to access the value at <code>(x,y)</code>, with (0,0) as the upper left-hand corner, I could do <code>const value = map[y][x];</code></p><p>There’s nothing wrong with this pattern, it’s just slow. Many people have made variants of this point in my hearing, but I think the two that stuck the best were <a href="https://www.youtube.com/watch?v=YQs6IC-vgmo" target="_blank">Bjarne Stroustrup</a> and <a href="https://www.youtube.com/watch?v=IroPQ150F6c" target="_blank">Andrew Kelley</a>. (The Stroustrup clip is shorter, and the Kelley talk really shows you how he was able to lean into this learning.) The short of it is that faithfully replicating in memory a multidimensional or nested structure that some data is trying to convey <strong>is often a mistake</strong> because it introduces indirection.</p><p>My understanding (which I want to underline is not expertise) is that your machine has some number of “registers”, each of which holds some small amount of data that can be accessed and manipulated on the level of or at the speed of single assembly instructions—very quickly. After that, computers can hold a good amount of <em>contiguous</em> data in various <em>caches</em> at a time. I’m told that there are various sizes of caches, each larger than the last and correspondingly slower to access. Slower than that is memory that is neither currently in a register nor in cache but somewhere in RAM, and slowest of all (while still on your physical machine) is memory on disk. When you access a bit of data, for example by executing the line <code>const value = map[y][x];</code> above, assuming that the data is not already in a register, the computer will attempt to “load” it from cache or if that operation fails (you have a “cache miss”), from RAM.</p><p>The point is that in the worst case, <code>map[y][x]</code> has to first load <code>map</code> in order to index into it as <code>map[y]</code> and then load <code>map[y]</code> to index into <em>that.</em></p><h2>Just write the function!</h2><p>But what if I do need to operate on the <code>(x,y)</code> coordinate of a point on the map? Well, why not determine those coordinates yourself? After all, they’re not hard to compute: if you store the map as a flat array of bytes, <code>[]const u8</code> in Zig, since each ASCII character takes up one byte, the <code>y</code>-coordinate is the number of newline characters before the byte-offset of the point you care about, and the <code>x</code>-coordinate is either the byte-offset, if <code>y</code> is zero, or the byte-offset minus one more than the byte-offset of the previous newline character.</p><p>If we rely on the assumption that the grid is rectangular, though, we don’t even need to actually count! In code:</p><pre><code class="zig"><span class="comment">/// for a buffer of length len
 /// representing a rectangular grid
 /// with identically-spaced delimiters at line endings,
@@ -163,6 +170,7 @@ Benchmark 18: ./segmented 08.txt 9
   Time (mean ± σ):      3.314 s ±  0.002 s    [User: 3.290 s, System: 0.021 s]
   Range (min … max):    3.312 s …  3.320 s    10 runs
 </code></pre><p>As you can see, in all cases <code>./contiguous</code> runs faster—not by a ton, but measurably faster. For example, on the final iteration, the mean time for a run of <code>./segmented</code> took 1.296 times as long to complete as <code>./contiguous</code>. At 1,000,000,000 iterations, (and thanks to the <code>--warmup</code> call), you can be fairly sure that this difference is coming from the hot loop, rather than the different allocation pattern or costs from interacting with the file.</p><h1>Appendix: even being clever, you can still be dumb</h1><p>Initially, (and in my solution for today’s Advent of Code), I had an <code>indexToCoordinates</code> function which actually <em>counted</em> the newline characters on each call. Of course, this transforms an <code>O(1)</code> lookup call into an <code>O(n)</code> iteration calculation! Now, <code>n</code> is fixed and not super large, but each count has to index into the buffer and do a comparison, so there’s no reason to expect that this version of <code>indexToCoordinates</code> should be speedy. It took actually running <code>hyperfine</code> for me to realize that I could get a speedup by trusting the structure of the data.</p></div></div>
+    <span></span>
   </div>
 
     </div>

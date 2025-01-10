@@ -5,8 +5,19 @@
     <description>Robbie Lyman's personal blog</description>
     <generator>Robbie Lyman -- https://alanza.xyz</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 03 Jan 2025 15:50:06 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 10 Jan 2025 14:55:20 +0000</lastBuildDate>
     
+    <item>
+     <pubDate>Fri, 10 Jan 2025 15:00:00 +0000</pubDate>
+     <link>https://alanza.xyz/log/seamstress-is-an-art-engine/</link>
+     <guid>https://alanza.xyz/log/seamstress-is-an-art-engine/</guid>
+     <title>Seamstress is an art engine</title>
+     <description>
+       <span>&lt;div id=summary&gt;&lt;p&gt;Seamstress is an &quot;art engine&quot;. That&apos;s not a term, as far as I&apos;m aware, but I think it describes accurately where I&apos;m hoping to take it. Programmers might be familiar with the concept of a &quot;game engine&quot;, like &lt;a href=&quot;https://www.unrealengine.com/en-US&quot; target=&quot;_blank&quot;&gt;Unreal Engine&lt;/a&gt;, &lt;a href=&quot;https://unity.com&quot; target=&quot;_blank&quot;&gt;Unity&lt;/a&gt;, &lt;a href=&quot;https://godotengine.org&quot; target=&quot;_blank&quot;&gt;Godot&lt;/a&gt;, or &lt;a href=&quot;https://love2d.org&quot; target=&quot;_blank&quot;&gt;Love2D&lt;/a&gt;. None of these programs are games, rather, they &lt;em&gt;enable&lt;/em&gt; building games by attempting to let a user focus on what is expressive and joyful about making a game rather than what can feel like drudgery.&lt;/p&gt;&lt;p&gt;I started writing Seamstress because I was lonely and a little bored. It grew out of a love letter to the &lt;a href=&quot;https://monome.org&quot; target=&quot;_blank&quot;&gt;monome&lt;/a&gt; &lt;a href=&quot;https://github.com/monome/norns&quot; target=&quot;_blank&quot;&gt;norns&lt;/a&gt;, a little &quot;sound computer&quot; which orchestrates an inspiring and accessible palette for &lt;a href=&quot;https://llllllll.co&quot; target=&quot;_blank&quot;&gt;a truly special community&lt;/a&gt; by weaving together &lt;a href=&quot;https://supercollider.github.io&quot; target=&quot;_blank&quot;&gt;SuperCollider&lt;/a&gt;, a general-purpose synthesis and musical coding framework, &lt;a href=&quot;https://github.com/monome/softcut-lib&quot; target=&quot;_blank&quot;&gt;softcut&lt;/a&gt;, a powerful audio buffer manipulation library, and &lt;a href=&quot;https://lua.org&quot; target=&quot;_blank&quot;&gt;Lua&lt;/a&gt; scripting for designing sequencers, user interfaces, speaking with external devices, drawing to a screen, and so on.&lt;/p&gt;&lt;/div&gt;</span>
+       <a href="https://alanza.xyz/log/seamstress-is-an-art-engine/">Read More</a>
+     </description>
+    </item>
+   
     <item>
      <pubDate>Sun, 08 Dec 2024 16:00:00 +0000</pubDate>
      <link>https://alanza.xyz/log/just-write-the-function/</link>

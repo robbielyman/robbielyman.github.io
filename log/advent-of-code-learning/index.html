@@ -43,22 +43,26 @@
   <h3 class="centered subtitle">What I learned from Advent Of Code, or: That time I wrote a blog post and linked to it in the Zig issue tracker</h3>
   <div id="blog-navigation">
     <div id="left">
-      <a href="/log/double-cosets-are-edges/">Previous</a>:
+      <a href="/log/double-cosets-are-edges/">Previous</a>:<br>
       <span>Double cosets are edges</span>
     </div>
     <div id="center">
       <a href="/log/">Up</a>
     </div>
     <div id="right">
-      <a href="/log/just-write-the-function/">Next</a>:
+      <a href="/log/just-write-the-function/">Next</a>:<br>
       <span>Just write the function!</span>
     </div>
   </div>
+  <div></div>
   <div id="page">
-    <div><div id=summary><p>I’m doing Advent of Code again this year; so far I’ve been very pleasantly surprised that my facility for solving the problems has improved. (Of course, I’m well aware that the difficulty is likely to ramp up soon, so I may end up eating my words.) Previously, I did the 2023 Advent of Code as it happened in Zig. <em>Pace</em> Loris Cro, <a href="https://kristoff.it/blog/advent-of-code-zig/">who wrote a great blog post on the subject</a>, I think that despite the way Advent of Code problems are at odds with the kinds of software problems that Zig aims itself at solving, doing Advent of Code is a great way to gain familiarity with Zig. Over this past summer I also did the 2022 Advent of Code problems as a way of learning Rust. Today, solving the 5th problem for 2024, it occurred to me that Rust had taught me something surprisingly useful for my Zig solution. The purpose of this post is to talk about what I learned—this post does not contain spoilers for any Advent of Code problems, and indeed is not really “about” Advent of Code at all: as I was writing it, it became clear that part of this blog post actually belongs on the Zig issue tracker.</p></div></div>    
+    <div><div id=summary><p>I’m doing Advent of Code again this year; so far I’ve been very pleasantly surprised that my facility for solving the problems has improved. (Of course, I’m well aware that the difficulty is likely to ramp up soon, so I may end up eating my words.) Previously, I did the 2023 Advent of Code as it happened in Zig. <em>Pace</em> Loris Cro, <a href="https://kristoff.it/blog/advent-of-code-zig/">who wrote a great blog post on the subject</a>, I think that despite the way Advent of Code problems are at odds with the kinds of software problems that Zig aims itself at solving, doing Advent of Code is a great way to gain familiarity with Zig. Over this past summer I also did the 2022 Advent of Code problems as a way of learning Rust. Today, solving the 5th problem for 2024, it occurred to me that Rust had taught me something surprisingly useful for my Zig solution. The purpose of this post is to talk about what I learned—this post does not contain spoilers for any Advent of Code problems, and indeed is not really “about” Advent of Code at all: as I was writing it, it became clear that part of this blog post actually belongs on the Zig issue tracker.</p></div></div>
+    <span>
     <div class="toc"><ul>
 <li>All I know is eat hot chip and <code>Impl Iterator</code></li><li>Containers? Use ’em</li><li>Managed vs. Unmanaged and ArrayLists<ul><li>
 Initialization</li><li>Size</li><li>Optimizability</li></ul></ul></div>
+    </span>
+  
     <div><div id=remainder><h1>All I know is eat hot chip and <code>Impl Iterator</code></h1><p>In my opinion, both Rust and Zig have (very different!) hard edges that ultimately lead you towards writing better programs. The “obvious” hard edge that Rust has is the borrow checker, which other people have beaten to death. The borrow checker is a beautiful piece of software; I’m not interested in discussing it here.</p><p>No, with Rust i was so immediately taken with the <code>Iterator</code> trait and the ease of creating <code>Vecs</code> and <code>HashSets</code> and so forth with <code>.collect()</code> that i spent a large amount of thought while ramping up with the first several problems so that my processing of the input could go something like</p><pre><code class="rust"><span class="keyword">fn</span> <span class="function">process</span><span class="punctuation bracket">(</span><span class="variable parameter">input</span><span class="punctuation delimiter">:</span> <span class="operator">&</span><span class="type builtin">str</span><span class="punctuation bracket">)</span> -&gt; <span class="type builtin">u32</span> <span class="punctuation bracket">{</span>
 	<span class="constant">input</span><span class="punctuation delimiter">.</span><span class="function method">lines</span><span class="punctuation bracket">(</span><span class="punctuation bracket">)</span>
 	    <span class="punctuation delimiter">.</span><span class="function method">map</span><span class="punctuation bracket">(</span>|<span class="constant">line</span>| <span class="punctuation bracket">{</span> ..<span class="punctuation delimiter">.</span><span class="property"></span> <span class="punctuation bracket">}</span><span class="punctuation bracket">)</span>
@@ -112,6 +116,7 @@ Initialization</li><li>Size</li><li>Optimizability</li></ul></ul></div>
 <span class="punctuation bracket">}</span>
 </code></pre>
 <p>I'm told (although I have to continue to joyfully confess that I am not an expert!) that calling functions through function pointers can be expensive. This makes sense—you have to prepare the computer to jump to an essentially arbitrary section of code to run, whereas with a "normal" function call, you know where you're going already.</p><p>Now, there are ways to mitigate this expense: one of them is "devirtualization", which as far as I understand means that if the compiler knows that the function pointer is always pointing to the same place in code, when it optimizes, it can replace the "virtual" function call with a "normal" one.</p><p>The point is that for <code>std.ArrayListUnmanaged(T)</code>, the compiler is far more likely to be able to come to this conclusion: because the <code>Allocator</code> only ever appears as a function parameter (and function parameters are always <code>const</code> in Zig), the chances of the compiler realizing that it never changes are much higher, since you cannot change fields of a <code>const</code> struct, and you cannot reach through and change values on the other side of the <code>*const VTable</code> either. But for <code>std.ArrayList(T)</code>, if you take (as you must) a mutable pointer to the <code>ArrayList</code>, suddenly, while it is not possible for you to change values on the other side of <code>*const VTable</code>, you <em>can</em> change out that <code>*const VTable</code> for another one wholesale. There's no reason you <em>would,</em> and I doubt that anyone <em>does,</em> but the possibility is more likely to make the compiler go "nah, too risky, I can't devirtualize that".</p></div></div>
+    <span></span>
   </div>
 
     </div>
