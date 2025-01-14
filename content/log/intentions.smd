@@ -1,0 +1,180 @@
+---
+.title = "Intentions: 2024 into 2025",
+.date = @date("2025-01-14T15:00:00-05:00"),
+.author = "Robbie Lyman",
+.layout = "post.shtml",
+.draft = false,
+---
+[]($section.id('summary'))
+
+Over on [the lines forum]($link.url("https://llllllll.co")),
+I snagged the opportunity to be the one who started [the yearly goals thread]($link.url("https://llllllll.co/t/goals-2025/70222/35")).
+(Actually, I was hoping that one of the previous posters would have started it,
+but then suddenly it was almost the new year and the thread had still not started.)
+I really appreciated these threads over the past couple years.
+Slightly uncharacteristically, my contribution, which I just wrote today,
+has very little in the way of specific achievements I'm in pursuit of.
+Anyway, the purpose of this post is to riff on what I wrote there.
+(By the way, if you're reading this and would like an invitation to join the conversation,
+please feel invited to sign up and chime in.)
+
+[]($section.id('remainder'))
+
+# How was 2024 for you?
+
+In my reply to the thread, I gave an answer for how 2024 felt.
+Here's how it shook out in terms of Things Done.
+
+I spoke at the Joint Math Meetings in January in San Francisco.
+It was my first time visiting the city,
+and I was pleased with myself for skipping an entire day of the conference
+in order to do things like: meet [Will Pragnell]($link.url("https://willpragnell.com"))
+and [RGB]($link.url("https://rgbrgbrgb.bandcamp.com/album/ceramics-class"))
+in meatspace,
+walk around the Mission neighborhood in a (failed) search for a compelling thrift store
+and a successful search for a bookstore,
+where I bought a bell hooks book (*The Will to Change*) which I read in August
+and a Thich Nhat Hanh book (*Going Home: Jesus and Buddha as Brothers*),
+which I read a week or two later while doing jury duty.
+
+In late January I led a workshop on [VCV Rack]($link.url("https://vcvrack.com"))
+with [Dani Derks]($link.url("https://dndrks.com"))
+and performed on a bill with them and [A. Campbell Payne]($link.url("https://acampbellpayne.com")),
+both in Worcester, Massachusetts.
+
+Spoke in seminars at CUNY, Temple, McGill and SUNY Buffalo,
+and an AMS meeting in Albany.
+Spent a week with a SQuaRE at [AIM]($link.url("https://aimath.org")) in Pasadena.
+Broke my streak (since September 2023) of doing a Celtic cross tarot spread
+every day in February.
+Had two fairly short relationships.
+Visited Georgia (the country) with two of my siblings,
+where I was a worse sport than I intended to be—I was caught off-guard
+by the common practice in Georgian churches and monasteries
+for women to cover their hair (and occasionally don a skirt)
+and men to remove any hat they had on.
+Georgia, it turns out, is positively *littered* with monasteries,
+and all of them poked at my gender in a place that I hadn’t fully realized I was vulnerable.
+
+Spent 12 weeks attending [The Recurse Center]($link.url("https://recurse.com")).
+Realized partway through doing it that I was transitioning again.
+Wrote many tens of thousands of lines of code,
+much of it for [Seamstress]($link.url("https://github.com/robbielyman/seamstress")),
+most of which didn’t stick yet.
+Performed twice with [Janie Jaffe]($link.url("https://janiejaffe.com")),
+once with LiveCodeNYC and once at VJoltron.
+Worked on music for a new play which the cast and I ultimately decided not to move forward with.
+Read at least 15 books.
+Hit the ArXiv with new papers four times, all of them collaborations.
+Completed Advent of Code (for 2022) in Rust and (for 2024) in Zig.
+
+# What would you like to accomplish?
+
+I have a bunch of longer-term goals that I’d like to continue working towards,
+but I’m not particularly bothered on whether I finish them this year.
+Indeed, it would not surprise me if I abandoned them or worked on something different;
+that’s pretty par for the course.
+Having the goals and attempting to strive for them usually
+helps me work out what I should really be doing.
+Here are three.
+
+- I’d like to write Album #2 as Alanza, tentatively titled *Moire*.
+- I’d like to write a book. The shape of book has kind of been slippery, but I think it is probably mathematical at least a little.
+- I’d like to get Seamstress closer to my original vision for version 2.
+
+Most of what I’m interested in working on is a bit more process-oriented.
+In September I happened to make a list of things I’d like to be doing daily, weekly and monthly.
+At the time I was pretty struck by how many things I wanted to be doing every day.
+It seemed to me then that it would be pretty challenging to keep up with all of them.
+This was useful! It let me allow myself to fail
+to actually do everything I would like to do daily daily
+without needing to therefore give up the intention to do them daily.
+
+**Daily:**
+- Physical:    
+    - Tooth care (brushing 2x, flossing 1x, mouthwash)    
+      Do you have a kind of Maslowe’s hierarchy of needs,
+      except it’s a list of habits that being able to maintain
+      signal to yourself that you’re in a good place?
+      For longer than I care to admit, flossing has been at the phase transition
+      from “surviving” to “thriving” for me.
+    - Pushups    
+      Without getting too intensely personal,
+      it’s been interesting navigating a changing body
+      along with changing desires for living in that body.
+      I’m happy that gender shifts have brought me back up
+      to my longtime plateau for body satisfaction.
+      On the balance I’d like to see what it’s like to
+      have slightly more muscle definition,
+      particularly in my chest.
+      Somehow it’s hard to own up to that?
+      Which probably helps me understand why I haven’t
+      followed this one through much at all.
+      I think in September I could do maybe 5 really good pushups at once.
+      I don’t think I’ve progressed significantly since.
+    - Tidy my room    
+      Think “make your bed” level cleaning;
+      the kind of thing that you can knock out on autopilot when waking up.
+      I’m pretty good at managing to clean when it becomes obviously necessary,
+      but historically less good at maintaining cleanliness.
+    - Chores    
+      My responsibilities currently include processing dishes through the dishwasher
+      and sweeping the main level
+      (important, since my brother whom I live with carves wood).
+- Mental / Creative:    
+    - 日本語を練習    
+      I have a subscription to a language-learning app,
+      but haven’t managed to use it nearly as much as I should.
+      I think I’d like to visit Japan this year (maybe in the summer?) if I can.
+      But really, it would be nice to be closer to being able to consume
+      Japanese culture and media in Japanese.
+      I *have* been watching anime more frequently,
+      (it’s a good thing—I’m in general quite bad at TV and movies,
+      but enjoy good art)
+      which is not nothing on this front.
+    - Read
+      I managed at least 15 books last year, but ideally
+      would like to reactivate the part of myself that read voraciously as a child.
+      I have a decently long train commute many days of the week,
+      which is a perfect opportunity to read a book
+      rather than rotting on my phone.
+    - Write
+      In addition to being a professional writer (of academic math)
+      I am interested in writing creatively, blogging, etc.
+    - Music
+      At my most recent peak of music-making in 2022,
+      I was in the habit of finishing work for the day and opening up Ableton
+      or firing up a synthesizer to play with.
+      I observed to myself once that when I go too long without
+      playing an instrument, something inside me knots up.
+- Spiritual:
+    - Journal
+    - Meditate
+    - Throw tarot
+
+**Weekly:**
+- Cleaning (my room, the bathroom, other parts of the apartment)
+- Cooking    
+  My brother and I alternate days we’re responsible for dinner.
+  In an attempt to Solve Breakfast in 2023 I started making my own granola.
+  It’s really good and not too difficult,
+  but does take some effort to maintain.
+- Maintain my planner + calendar    
+  Midway through 2024 I committed to a physical planner,
+  which has been really lovely for me.
+- Blog
+- See friends, visit the Recurse Center
+- Code
+
+**Monthly:**
+- Plan for the next month
+- See a show
+- Deep clean something
+- Set goals
+
+I have a couple alterations I’d make to this list today,
+but for some reason not enough to write them either in this post
+or on my notebook just yet.
+Partly since my semester hasn’t started yet,
+it’s been gratifying to realize that I’ve done a bit better of a job
+maintaining work on these intentions than I expected.
