@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head id="head">
+    <meta charset="UTF-8">
+    <meta name="description" content="alanza.xyz: Robbie Lyman">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="Robbie Lyman">
+    <meta name="twitter:author" content="Robbie Lyman">
+    <meta name="twitter:description" content="alanza.xyz: Robbie Lyman">
+    <meta name="twitter:title" content="English Implications | alanza.xyz">
+    <meta name="twitter:image" content="https://alanza.xyz/headshot.jpeg">
+    <meta property="og:type" content="website">
+    <meta property="og:title" conten="English Implications | alanza.xyz">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title id="title">
+      English Implications
+      - alanza.xyz
+    </title>
+    <link rel="stylesheet" type="text/css" href="/fonts.css">
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <link rel="stylesheet" type="text/css" href="/highlight.css">
+    <link href="https://merveilles.town/@alanza" rel="me">
+    
+        <link rel="stylesheet" href="/katex.min.css">
+        <script defer src="/katex.min.js"></script>
+        <script defer src="/auto-render.min.js" onload="renderMathInElement(document.body, { 
+            delimiters: [
+                {left: '$$', right: '$$', display: true},
+                {left: '$', right: '$', display: false},
+                {left: '\\(', right: '\\)', display: false},
+                {left: '\\[', right: '\\]', display: true}   
+            ]});"></script>
+    
+    
+  </head>
+  <body>
+    <nav id="menu" class="centered">
+      <a href="/">Home</a>
+      •
+      <a href="/math/">Math</a>
+      •
+      <a href="https://github.com/robbielyman">Code</a>
+      •
+      <a href="/log/">Blog</a>
+      •
+      <a href="/devlog/2025/">Devlog</a>
+    </nav>
+    <div id="content">
+      
+  <h3 class="overtitle centered">Blog – alanza.xyz</h3>
+  <h1 class="centered title">ROBBIE LYMAN</h1>
+  <h3 class="centered subtitle">English Implications</h3>
+  <div id="blog-navigation">
+    <div id="left">
+      <a href="/log/intentions/">Previous</a>:<br>
+      <span>Intentions: 2024 into 2025</span>
+    </div>
+    <div id="center">
+      <a href="/log/">Up</a>
+    </div>
+    <div id="right"></div>
+  </div>
+  <div></div>
+  <div id="page">
+    <div><div id=summary><p>I wanted to share a little a-ha moment that I ran into while teaching today.</p></div></div>
+    <span>
+    <div class="toc"><ul>
+</ul></div>
+    </span>
+  
+    <div><div id=remainder><p>This semester I'm teaching two classes, both of which begin by discussing set theory, proceed onto the foundations of mathematical logic, and then start discussing proofs. I assume that at some point they will diverge more dramatically (it's my first time teaching either of them), but so far the biggest difference is that most of the students in one class are majoring in Computer Science and in the other, most of them are majoring in Math.</p><p>I've noticed that one of the worst parts about this first couple weeks is that the "table setting" of it all is really pretty hefty. In the first five classes, we've defined sets, membership, the subset relation, the power set, unions, intersections, complementation (within a "universe"), logical "and", "or", "not" and more. Each of these concepts is accompanied by one or more mathematical symbols. If every one of them is new for a student, it really adds up to a lot.</p><p>Anyway, perhaps the most important logical construction in math is implication. If $P$ and $Q$ are mathematical statements (assertions with a possibility of being either true or false), the construction $P \implies Q$ is pronounced "$P$ implies $Q$" or "if $P$ then $Q$". Most of mathematical deductions involve assembling and manipulating implications.</p><p>If you think of the construction $P \implies Q$ as a function whose truth value depends on its two "arguments" $P$ and $Q$, in mathematics we agree that the statement $P \implies Q$ is <em>false</em> when $P$ is true and $Q$ is not, but is <em>true</em> otherwise. When I first encountered this as an undergraduate taking a logic course online in an attempt to try to catch up with the level my classes expected me to be at, I thought this was arbitrary and a little silly. After all, shouldn't the statement be false when $P$ is false?</p><p>Think about it this way: ask yourself, "when is the statement a lie?" For example, let's say $P$ is the statement "I pass the test" and $Q$ is the statement "I pass the class". It seems pretty clear that if you pass the test but fail the class, that I lied to you when I said $P \implies Q$. But if you <em>don't</em> pass the test, then whether or not you pass the class, I would say that I didn't lie to you when I said $P \implies Q$.</p><p>Often you want a stronger guarantee: you want that if $P$ is true, then $Q$ is true, sure, but also that if $P$ is false, then $Q$ is false. In math we write this as $P \iff Q$ and say "$P$ if and only if $Q$".</p><p>We also sometimes describe this state of affairs in terms of "necessary" and "sufficient conditions". When $P \implies Q$, one way of thinking is that if $P$ is true, then we conclude that $Q$ is true. In other words, observing the truth of $P$ is <em>sufficient</em> evidence to conclude that $Q$ is true. On the other hand, if the truth of $P$ is <em>necessary</em> for $Q$ to be true, what we can say is that if we find $Q$ to be true, then since $P$ was necessary for this state of affairs, it must be the case that $P$ is true. So $P$ being necessary for $Q$ can be represented symbolically as $Q \implies P$.</p><p>I found this really confusing to talk about alongside the phrasing "$P$ if and only if $Q$", and I just realized why today. In the construction "$P$ is necessary/sufficient for $Q$", we are treating $P$ as the condition and $Q$ as the result. But when we say "$P$ if $Q$" or "$P$ only if $Q$", suddenly it is $Q$ and not $P$ which is the condition! (Right? the construction "$P$ if $Q$" could be restated as "if $Q$ then $P$".)</p><p>So my confusion was not mathematical, really, but actually more linguistic, or involving the kind of teleological logic used in English but not present in mathematics in this way: I was being tripped up not because I was in any way confused about what $P \implies Q$ means (although there are reasons to be iffy about it!), but because the same use of symbols supports thinking of <em>either</em> $P$ or $Q$ as the "condition" when put into English, and the two most common dichotomies represented for this usage in mathematical English make the <em>opposite</em> choice about which is the condition.</p></div></div>
+    <span></span>
+  </div>
+
+    </div>
+  </body>
+</html>
