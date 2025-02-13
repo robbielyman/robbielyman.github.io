@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head id="head">
+    <script src="https://raw.githack.com/Qwuke/recurse-ring/main/static/ring.js" type="text/javascript"></script>
     <meta charset="UTF-8">
     <meta name="description" content="alanza.xyz: Robbie Lyman">
     <meta name="twitter:card" content="summary_large_image">
@@ -49,5 +50,9 @@
     <div id="content">
       <super>
     </div>
+    <div><a id="rc-ring-prev" href="https://ring.recurse.com/prev?id=42">Prev</a></div>
+    <div><a id="rc-ring-home" data-rc-uuid="e1ffadff-a81f-4bf3-804d-7550df25c7e7" href="https://ring.recurse.com/">The Recurse Webring</a></div>
+    <div><a id="rc-ring-rand" href="https://ring.recurse.com/rand">Random</a></div>
+    <div><a id="rc-ring-next" href="https://ring.recurse.com/next?id=42">Next</a></div>
   </body>
 </html>
