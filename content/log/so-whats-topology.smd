@@ -24,7 +24,7 @@ is that they cannot tell the difference between a doughnut and a coffee cup.
 One year my brother got me a white mug with text as a gift
 that reads “this is a doughnut. trust me, i’m a topologist”.
 
-The joke isn’t particularly funny when you first here it because
+The joke isn’t particularly funny when you first hear it because
 you don’t understand what is true about it.
 _Topology_ is the mathematical study of continuity,
 of shape and of space.
@@ -54,7 +54,7 @@ I realized, in an exercise that I did at a
 [Communicating Math]($link.url("https://sites.google.com/view/communicating-math/"))
 workshop in 2022,
 that I can explain the concept of an _end_ of a topological space to almost anyone.
-I loved this discovery,
+I loved this discovery;
 it really transformed my ability and willingness to explain what I think about to people.
 Forgive me for repeating myself if you’ve heard me give this spiel before
 (I tried it on almost all of my friends,
@@ -97,7 +97,7 @@ which will one day have its time to shine here on the blog.
 Anyway, I say none of this to my friend if it doesn’t come up.
 Instead, I point out that if we change the situation, the behavior might change.
 Think of a plane that goes on forever in all directions instead.
-Now do the same thing;
+Now do the same thing:
 walk up to the plane and take a chunk out and throw the chunk away.
 Now people sometimes have different ideas initially about how many pieces are left;
 the answer I’m looking for here is “one”,
@@ -110,10 +110,19 @@ A beautiful little theorem due to Freudenthal and Hopf
 says that the notion of “ends” makes sense for (abstract) groups as well.
 There the number of ends of a group is the number of ends of a topological space
 which it [acts]($link.page('log/so-whats-a-group')) on “nicely”.
-What’s more, although you can come up with _shapes_ that have essentially arbitrary numbers of ends,
-for example a “Y” shape that goes on forever would have three ends,
-for a group the possible numbers of ends are “zero”, “one”, “two”, or “infinity”.
+What’s more, although you can come up with _shapes_ that have essentially arbitrary numbers of ends—for
+example a “Y” shape that goes on forever would have three ends—for
+a group the possible numbers of ends are “zero”, “one”, “two”, or “infinity”.
 In other words, if you have at least three ends, you actually have infinitely many.
+
+Intuitively the reason for this is that groups, being an abstraction of the concept of symmetry,
+are themselves highly symmetric. If you have three ends, there is a chunk witnessing that fact.
+By using the symmetry of the group, you can move that chunk far away from itself;
+say off into one of the three ends.
+Now you have two chunks which separately show that your group has at least three ends,
+but you can argue that together they show you that actually you have at least four.
+From there you’re off to the races;
+from four you produce five, and so on until “in the limit” you must have infinitely many.
 
 # What is topology formally?
 
@@ -176,8 +185,46 @@ In a topological space like the real line
 that is additionally a _metric space,_
 so that we can measure _distances,_
 the _distance_ between $x_n$ and $x$ should get smaller and smaller as $n$ gets larger and larger.
-Formalizing this is the “epsilon–delta” formulation of continuity
-that many Calculus students struglle with.
+Formalizing this is the “epsilon–delta” formulation of limits
+that many Calculus students struggle with.
+
+### Metric Spaces
+
+Let me be a little more concrete:
+A *metric* on a set $X$ is a function $d \colon X \times X \to \mathbb{R}$
+that associates to two points $x$ and $y$, a number we think of as the *distance* between them.
+- Distances should be nonnegative, so we require that $d(x, y) \ge 0$,
+and if I have two different locations, that is, if $x \ne y$,
+then the distance between them should be actually nonzero.
+(If I relax this requirement, allowing $d(x, y) = 0$ for distinct points $x$ and $y$,
+the function $d$ is called an *écart* or a *pseudometric.*)
+- Distances should be the same without regard to the order I take the points, so we require that
+$d(x, y) = d(y, x)$.
+(Now, there are geometric settings in the real world where this doesn’t feel true:
+walking uphill, for example, might cover the same amount of ground, but it doesn’t *feel* that way.
+If I allow $d(x, y) \ne d(y, x)$, I get the concept of an *asymmetric metric.*)
+- Given points $x$ and $y$, if I also visit $z$ on the way from $x$ to $y$, I am going out of my way.
+That is, we have the *triangle inequality* $d(x, y) \le d(x, z) + d(z, y)$.
+
+Given a metric $d$ on $X$, I can think of $(X,d)$ as a kind of topological space called a *metric space,*
+by defining a subset $U \subset X$ to be *open*
+(i.e. contained in the metric topology $\tau = \tau_d$)
+if whenever it contains a point $x \in X$,
+it also contains the *ball of radius $\epsilon$ about $x$*,
+that is, the set $B(x, \epsilon) = \{ y \in X : d(x, y) < \epsilon \}$
+for some number $\epsilon > 0$ (which may vary as $x \in U$ varies).
+
+#### Limits in metric spaces
+
+Now, we said that a sequence $x_1,x_2,\ldots$ in a space $X$ *converges* or *limits* to $x$
+if for every open set $U$ containing $x$, there is some number $N$ such that
+the set $U$ will contain $x_n$ whenever $n \ge N$.
+
+In a metric space, since $U$ is open and contains $x$, this means that
+the sequence will converge to $x$ precisely when for every $\epsilon > 0$
+there is some number $N$ such that $d(x, x_n) < \epsilon$ whenever $n \ge N$.
+In other words, for any fixed unit of distance $\epsilon > 0$,
+all points in my sequence are eventually closer than $\epsilon$ units away from $x$.
 
 ### Continuity
 
@@ -194,6 +241,19 @@ This is true with our more abstract definition of continuity,
 and our formulation reveals what is core to topology
 that makes it different from analysis or Calculus.
 
+Let’s bring in the metric space definition (which is the Calculus class definition).
+A function $f \colon X \to Y$ between metric spaces $(X, d_X)$ and $(Y, d_Y)$
+is continuous in the above framing if and only if,
+for every point $x$ in $X$ and $\epsilon > 0$,
+the preimage of the ball of radius $\epsilon$ about $f(x)$,
+i.e. the set of $x' \in X$ such that $d_Y(f(x), f(x')) < \epsilon$
+is open in $X$. Since this set contains $x$,
+for it to be open, this set must also contain the ball of radius $\delta > 0$ about $x$.
+
+That is, continuity implies (and turns out to be implied by) the statement that
+for all $x \in X$ and all $\epsilon > 0$ there exists a $\delta > 0$
+such that if $d_X(x, x') < \delta$, then $d_Y(f(x), f(x')) < \epsilon$.
+
 ### Connectedness
 
 Think about the closed intervals $[0,1]$ and $[2,3]$ on the real line.
@@ -201,7 +261,7 @@ Together they form a _subspace_ $X$ of the real line:
 the open sets in this subspace
 are the sets $U \cap X$, where $U$ is open in the real line.
 For example, $[0,1]$ is not open in the real line,
-but it is equal to $X \cap (\nicefrac{-1}{2}, \nicefrac{3}{2})$,
+but it is equal to $X \cap (\frac{-1}{2}, \frac{3}{2})$,
 so it _is_ open in $X$.
 Since $[0,1]$ is closed in the real line, it is closed in $X$ too.
 Mathematicians often refer to such subsets
@@ -228,7 +288,7 @@ actually you only needed finitely many of them to get it done.
 The _word_ “compactness” evokes a sense of smallness;
 think “compact car”, for instance.
 Many mathematical objects conform to this expectation:
-circles, closed intervals like $[0,1]$, finite sets, all are compact.
+circles, closed intervals like $[0,1]$, finite sets, are all compact.
 A mathematical result named for Heine and Borel
 says that for subsets of $\mathbb{R}^n$ with the usual topology,
 a subset $K$ is compact if and only if it is _closed,_
