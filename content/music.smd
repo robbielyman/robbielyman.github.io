@@ -1,7 +1,0 @@
----
-.title = "Music",
-.date = @date("2024-09-19T21:30:00-04:00"),
-.author = "Robbie Lyman",
-.layout = "music.shtml",
-.draft = false,
----

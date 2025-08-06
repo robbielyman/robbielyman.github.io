@@ -1,3 +1,0 @@
-* alanza.xyz
-
-static site and blog using [[https://github.com/kristoff-it/zine][Zine]].

@@ -1,51 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head id="head">
-    <meta charset="UTF-8">
-    <meta name="description" content="alanza.xyz: Robbie Lyman">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="Robbie Lyman">
-    <meta name="twitter:author" content="Robbie Lyman">
-    <meta name="twitter:description" content="alanza.xyz: Robbie Lyman">
-    <meta name="twitter:title" content="$page.title.suffix(' | alanza.xyz')">
-    <meta name="twitter:image" content="$site.host_url.addPath($site.asset('headshot.jpeg').link())">
-    <meta property="og:type" content="website">
-    <meta property="og:title" conten="$page.title.suffix(' | alanza.xyz')">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title id="title">
-      <super>
-      - alanza.xyz
-    </title>
-    <link rel="stylesheet" type="text/css" href="$site.asset('fonts.css').link()">
-    <link rel="stylesheet" type="text/css" href="$site.asset('style.css').link()">
-    <link rel="stylesheet" type="text/css" href="$site.asset('highlight.css').link()">
-    <link href="https://merveilles.town/@alanza" rel="me">
-    <ctx :if="$page.custom.getOr('math', false)">
-        <link rel="stylesheet" href="$build.asset('katex-css').link()">
-        <script defer src="$build.asset('katex-js').link()"></script>
-        <script defer src="$build.asset('katex-auto').link()" onload="renderMathInElement(document.body, { 
-            delimiters: [
-                {left: '$$', right: '$$', display: true},
-                {left: '$', right: '$', display: false},
-                {left: '\\(', right: '\\)', display: false},
-                {left: '\\[', right: '\\]', display: true}   
-            ]});"></script>
-    </ctx>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1">
+    <title :text="$site.title"></title>
+    <link type="text/css" rel="stylesheet" href="$site.asset('style.css').link()">
+    <link type="text/css" rel="stylesheet" href="$site.asset('highlight.css').link()">
+    <!-- mathtex -->
+    <link type="text/css" rel="stylesheet" href="$site.asset('Temml-Local.css').link()">
+    <script defer src="$site.asset('temml.min.js').link()"></script>
+    <script defer src="$site.asset('render-mathtex.js').link()"></script>
+    <!-- /mathtex -->
     <super>
   </head>
-  <body>
-    <nav id="menu" class="centered">
-      <a href="/">Home</a>
-      •
-      <a href="$site.page('math').link()">Math</a>
-      •
-      <a href="https://github.com/robbielyman">Code</a>
-      •
-      <a href="$site.page('log').link()">Blog</a>
-    </nav>
-    <div id="content">
-      <super>
-    </div>
+  <body id="body">
+    <h1 class="site-title" :text="$site.title"></h1>
+    <super>
+    <footer>
+      <hr>
+      <h5>SITE UNDER CONSTRUCTION</h5>
+    </footer>
   </body>
 </html>

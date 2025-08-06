@@ -1,28 +1,40 @@
 <extend template="base.shtml">
-<title id="title" :text="$page.title"></title>
-<head id="head"></head>
-<div id="content">
-  <h3 class="overtitle centered">Blog – alanza.xyz</h3>
-  <h1 class="centered title">ROBBIE LYMAN</h1>
-  <h3 class="centered subtitle" :text="$page.title"></h3>
-  <div id="blog-navigation">
-    <div id="left" :if="$page.prevPage()">
-      <a href="$if.link()">Previous</a>:<br>
-      <span :text="$if.title"></span>
+<head id="head">
+  <style>
+    #prev-next {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     margin-top: 40px;
+    }
+
+    figure {
+      align-self: center;
+      text-align: center;
+      font-style: italic;
+    }
+
+    .post {
+      display:flex;
+      flex-direction: column;
+    }
+  </style>
+</head>
+<body id="body">
+  <h1 :text="$page.title"></h1>
+  <div class="post" :html="$page.content()"></div>
+  <div id="prev-next">
+    <div :if="$page.prevPage?()">
+      <a href="$if.link()">
+        ←
+        <span :text="$if.title"></span>
+      </a>
     </div>
-    <div id="center">
-      <a href="$page.parentSection().link()">Up</a>
-    </div>
-    <div id="right" :if="$page.nextPage()">
-      <a href="$if.link()">Next</a>:<br>
-      <span :text="$if.title"></span>
+    <div :if="$page.nextPage?()">
+      <a href="$if.link()">
+        <span :text="$if.title"></span>
+        →
+      </a>
     </div>
   </div>
-  <div></div>
-  <div id="page" :loop="$page.contentSections()">
-    <div :html="$page.contentSection($loop.it.id)"></div>
-    <span :if="$loop.first">
-    <div :html="$page.toc()" class="toc"></div>
-    </span>
-  </div>
-</div>
+</body>
