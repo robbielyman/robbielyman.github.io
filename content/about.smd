@@ -1,0 +1,93 @@
+---
+.title = "Robbie Lyman",
+.date = @date("2025-08-06T14:31:00-04:00"),
+.author = "Robbie Lyman",
+.layout = "index.shtml",
+.draft = false,
+--- 
+
+Hi! My name is Robbie Lyman.
+
+## Now (November 2025)
+Currently I am working on long-overdue revisions to a research paper,
+learning professional techniques for pop music production,
+practicing for the JLPT N3 Japanese language proficiency test,
+and preparing to run a marathon with my brothers. 
+
+This semester I am teaching College Algebra.
+
+## Work
+I work as an assistant professor in the department of [Mathematics and Computer Science](https://sasn.rutgers.edu/mathematics-and-computer-science)
+at [Rutgers University–Newark](https://www.newark.rutgers.edu/).
+Before becoming an assistant professor,
+I was at Rutgers on a postdoctoral fellowship from the National Science Foundation working with Lee Mosher.
+I earned my PhD in mathematics from Tufts University, where my advisor was Kim Ruane.
+
+## Research
+My [math research](math) focuses on geometric group theory.
+I like symmetry, metric geometry, group actions, topology, automorphisms of groups,
+and many many more things, mathematically.
+
+I have published papers on things like the following.
+The structure and dynamics of outer automorphism groups of free groups and related groups,
+CAT(0) or CAT(-1) geometries for free-by-cyclic groups and Coxeter groups,
+"Stallings folding" for CAT(0) cube complexes,
+mapping class groups of surfaces of infinite type,
+homeomorphism groups of Stone spaces (or automorphim groups of Boolean algebras),
+and Christian Rosendal's program coarse geometry for topological groups.
+
+### Collaborators
+In roughly chronological order, my research collaborators include
+[Santana Afton](https://sites.google.com/view/santanaafton/home),
+[Danny Calegari](https://sites.google.com/view/santanaafton/home),
+[Lvzhou Chen](https://lvzhouchen.github.io/),
+[Robert Kropholler](http://www.robertkropholler.com/),
+[Michael Ben-Zvi](https://sites.google.com/view/benzvi),
+[Thomas Ng](https://sites.google.com/site/thomasng192/),
+[Naomi Andrew](https://naomigandrew.wordpress.com/),
+[Paige Hillen](https://sites.google.com/view/paigehillen/home/),
+[Catherine Eva Pfaff](https://catherinepfaff.com/),
+Beth Branman,
+[George Domat](https://sites.google.com/view/georgedomat/home),
+[Hannah Hoganson](https://www.math.umd.edu/~hoganson/),
+[Elizabeth Field](https://sites.google.com/view/elizabeth-field),
+[Radhika Gupta](https://sites.google.com/view/radhikag),
+[Emily Stark](https://www.estark.net/),
+[Francisco Fournier-Facio](https://www.fffmaths.com/),
+Peter Kropholler,
+[Matt Zaremsky](https://zaremsky.github.io),
+[Kasia Jankiewicz](https://people.ucsc.edu/~kjankiew/),
+[Michelle Chu](https://www-users.cse.umn.edu/~mchu/),
+[Jean Pierre Mutanguha](https://mutanguha.com/),
+and
+[Genevieve Walsh](https://genevieve.walsh.math.tufts.edu/).
+
+## Code
+I organize the [Zig NYC](https://zignyc.github.io/) meetups
+around the [Zig programming language.](https://ziglang.org/)
+In 2024 I spent a summer at [The Recurse Center](https://recurse.com/),
+a programming community centered around a 12-week "writer's retreat for programmers." 
+
+I help maintain the Zig bindings for Lua project [Ziglua](https://github.com/natecraddock/ziglua).
+In 2023 I wrote a Lua environment for creative coding implemented Zig called Seamstress.
+
+## Music
+I've played piano since I was eight years old.
+In 2022 I wrote, recorded and released an album of music titled "Learning to Run"
+as [Alanza](https://alanza.bandcamp.com/),
+centered around some Max4Live devices I made called [bitters](https://github.com/robbielyman/bitters-max/).
+
+I'm working on a more solidly pop artist project, which I'm calling [Alonzo](https://alonzo.zip),
+but it's very early days yet. I'm also upping my production skills, working with [Terence Lam](https://www.youtube.com/@terence_p_lam)
+
+## Contact
+If you'd like to get in touch, I'd love to hear from you.
+My email is [me@robbielyman.com](mailto:me@robbielyman.com).
+
+## Links
+
+[Bluesky](https://bsky.app/profile/robbielyman.com)
+‧ [Alonzo](https://alonzo.zip) (artist project, work-in progress) 
+‧ [Pinboard](https://pinboard.in/u:alanza)
+‧ [LinkedIn](https://www.linkedin.com/in/robbie-lyman/)
+‧ [GitHub](https://github.com/robbielyman)

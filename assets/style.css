@@ -1,29 +1,33 @@
+:root {
+  color-scheme: light dark;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5 {
-  color: #ddd;
-  font-family: "Verdana", sans-serif;
+  color: light-dark(#4c4f69,#cdd6f4);
+  font-family: "Avenir Next", "Avenir", "Helvetica Neue", "Helvetica", sans-serif;
 }
 
 b,
 strong {
-  color: #fff;
+  color: light-dark(#dc8a78, #f5e0dc);
 }
 
 a {
-  color: #eee;
+  color: light-dark(#8839ef, #cba6f7);
 }
 
 html {
-  color: #ccc;
-  font-family: "Georgia", serif;
+  color: light-dark(#4c4f69,#cdd6f4);
+  font-family: "Palatino", "Georgia", serif;
   font-size: 1.2em;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background-color: #111;
+  background-color: light-dark(#eff1f5,#1e1e2e);
 }
 
 body {

@@ -1,0 +1,305 @@
+---
+.title = "Robbie Lyman",
+.date = @date("2025-08-06T14:31:00-04:00"),
+.author = "Robbie Lyman",
+.layout = "math.shtml",
+.draft = false,
+--- 
+
+[]($section.id("about"))
+
+My math research is focused on geometric group theory and related topics.
+My 2020 PhD thesis, [Train track maps on graphs of groups and outer automorphisms of hyperbolic groups](https://arxiv.org/abs/2005.00164),
+focused on automorphisms of groups acting on trees,
+but my mathematical interests are fairly broad, with group theory, geometry and symmetry at the core.
+
+# Papers and preprints
+
+## On a lemma of Milnor and Schwarz, après Rosendal []($section.id("2025-11-05"))
+
+[arXiv preprint: 2511.03887](https://arxiv.org/abs/2511.03887).
+
+**Abstract:** Perhaps the fundamental theorem of geometric group theory, the
+Milnor–Schwarz lemma gives conditions under which the orbit map relating the
+geometry of a geodesic metric space and the word metric on a group acting
+isometrically on the space is a quasi-isometry. Pioneering work of Rosendal
+makes these and other techniques of geometric group theory applicable to an
+arbitrary (topological) group. We give a succinct treatment of the
+Milnor–Schwarz lemma, setting it within this context. We derive some
+applications of this theory to non-Archimedean groups, which have plentiful
+continuous actions on graphs. In particular, we sharpen results of Bar-Natan and
+Verberne on actions of "big" mapping class groups on hyperbolic graphs and
+clarify a project begun by Mann and Rafi to classify these mapping class groups
+up to quasi-isometry, noting some extensions to the theory of mapping class
+groups of locally finite infinite graphs and homeomorphism groups of Stone
+spaces.
+
+## A hyperbolic free-by-cyclic group determined by its finite quotients []($section.id("2025-09"))
+with [Naomi Andrew](https://naomigandrew.wordpress.com/),
+[Paige Hillen](https://sites.google.com/view/paigehillen/home/) and
+[Catherine Eva Pfaff](https://catherinepfaff.com/).
+
+[Glasgow J. Math 67 (3):500-502 (2025)](https://doi.org/10.1017/S0017089525000096).
+
+**Abstract:** We show that the group  
+[`\langle a, b, c, t : a^t = b, b^t = c, c^t = ca^{-1} \rangle`]($mathtex) is
+profinitely rigid amongst free-by-cyclic groups, providing the first example of
+a hyperbolic free-by-cyclic group with this property.
+
+## The complex of cuts in a Stone space []($section.id("2025-08-05"))
+with Beth Branman.
+
+[Groups Geom. Dyn. (2025)](https://doi.org/10.4171/ggd/915).
+
+**Abstract:** Stone’s representation theorem asserts a duality between Boolean
+algebras on the one hand and _Stone spaces,_ which are compact, Hausdorff and
+totally disconnected, on the other. This duality implies a natural isomorphism
+between the homeomorphism group of the space and the automorphism group of the
+algebra. We introduce a _complex of cuts_ on which these groups act and prove
+that when the algebra is countable and the space has at least five points,
+these groups are the full automorphism group of the complex.
+
+## Finiteness properties of stabilisers of oligomorphic actions []($section.id("2025-06-02"))
+with 
+[Francisco Fournier-Facio](https://www.fffmaths.com/),
+Peter Kropholler, and
+[Matt Zaremsky](https://zaremsky.github.io).
+
+[arXiv preprint: 2506.02319](https://arxiv.org/abs/2506.02319).
+
+**Abstract:** An action of a group on a set is oligomorphic if it has finitely many
+orbits of [`n`]($mathtex)-element subsets for all [`n`]($mathtex). We prove that for a large class of
+groups (including all groups of finite virtual cohomological dimension and all
+countable linear groups), for any oligomorphic action of such a group on an
+infinite set there exists a finite subset whose stabiliser is not of type [`\mathrm{FP}_\infty`]($mathtex).
+This leads to obstructions on finiteness properties for permutational wreath
+products and twisted Brin-Thompson groups. We also prove a version for actions
+on flag complexes, and discuss connections to the Boone-Higman conjecture. In
+the appendix, we improve on the criterion of Bartholdi-Cornulier-Kochloukova
+for finiteness properties of wreath products, and the criterion of
+Kropholler-Martino for finiteness properties of graph-wreath products.
+
+## Graphical models for topological groups: A case study on countable Stone spaces []($section.id("2025-05-15"))
+with Beth Branman,
+[George Domat](https://sites.google.com/view/georgedomat/home), and
+[Hannah Hoganson](https://www.math.umd.edu/~hoganson/).
+
+[Bull. London Math. Soc. 57 (8):2311-2335 (2025)](https://doi.org/10.1112/blms.70097).
+
+**Abstract:** By analogy with the Cayley graph of a group with respect to a
+finite generating set or the Cayley–Abels graph of a totally disconnected,
+locally compact group, we detail countable connected graphs associated to
+Polish groups that we term Cayley–Abels–Rosendal graphs. A group admitting a
+Cayley–Abels–Rosendal graph acts on it continuously, coarsely metrically
+properly and cocompactly by isometries of the path metric. By an expansion of
+the Milnor–Schwarz lemma, it follows that the group is generated by a coarsely
+bounded set and the group equipped with a word metric with respect to a
+coarsely bounded generating set and the graph are quasi-isometric. In other
+words, groups admitting Cayley–Abels–Rosendal graphs are topological analogues
+of finitely generated groups. Our goal is to introduce this topological
+perspective on the work of Rosendal to a geometric group theorist. We apply
+these concepts to homeomorphism groups of countable Stone spaces. We completely
+characterize when these homeomorphism groups are coarsely bounded, when they
+are locally bounded (all of them are), and when they admit a
+Cayley–Abels–Rosendal graph, and if so produce a coarsely bounded generating set.
+
+## When is the Outer Space of a free product CAT(0) []($section.id("2025-04-25"))
+
+[Int. J. of Alg. and Comp. 35 (4) (2025)](https://doi.org/10.1142/S0218196725500134).
+
+**Abstract:** Generalizing Culler and Vogtmann’s Outer Space for the free
+group, Guirardel and Levitt construct an Outer Space for a free product of
+groups. We completely characterize when this space (or really its simplicial
+spine) supports an equivariant piecewise-Euclidean or piecewise-hyperbolic
+CAT(0) metric. Our results are mostly negative, extending thesis work of
+Bridson and related to thesis work of Cunningham. In particular, provided the
+dimension of the spine is at least three, it is never CAT(0). Surprisingly, we
+exhibit one family of free products for which the Outer Space is
+two-dimensional and does support an equivariant CAT(0) metric.
+
+## Conformal dimension bounds for certain Coxeter group Bowditch boundaries []($section.id("2025-04-16"))
+with [Elizabeth Field](https://sites.google.com/view/elizabeth-field),
+[Radhika Gupta](https://sites.google.com/view/radhikag), and
+[Emily Stark](https://www.estark.net/).
+
+[arXiv preprint: 2504.12404](https://arxiv.org/abs/2504.12404).
+
+**Abstract:** We give upper and lower bounds on the conformal dimension of the
+Bowditch boundary of a Coxeter group with defining graph a complete graph and
+edge labels at least three. The lower bounds are obtained by
+quasi-isometrically embedding Gromov's round trees in the Davis complex. The
+upper bounds are given by exhibiting a geometrically finite action on a CAT(-1)
+space and bounding the Hausdorff dimension of the visual boundary of this
+space. Our results imply that there are infinitely many quasi-isometry classes
+within each infinite family of such Coxeter groups with edge labels bounded
+from above. As an application, we prove there are infinitely many
+quasi-isometry classes among the family of hyperbolic groups with Pontryagin
+sphere boundary. Combining our results with work of Bourdon--Kleiner proves the
+conformal dimension of the boundaries of hyperbolic groups in this family
+achieves a dense set in [`(1, \infty)`]($mathtex).
+
+## One-endedness of outer automorphism groups of free products of finite and cyclic groups []($section.id("2025-02"))
+(as Rylee Alanza Lyman).
+
+In [Topology at Infinite of Discrete Groups, Contemp. Math. 812](https://doi.org/10.1090/conm/812).
+
+**Abstract:** The main result of this paper is that the outer automorphism group of
+a free product of finite groups and cyclic groups is semistable at infinity
+(provided it is one ended) or semistable at each end. In a previous paper, we
+showed that the group of outer automorphisms of the free product of two
+nontrivial finite groups with an infinite cyclic group has infinitely many
+ends, despite being of virtual cohomological dimension two. We also prove that
+aside from this exception, having virtual cohomological dimension at least two
+implies the outer automorphism group of a free product of finite and cyclic
+groups is one ended. As a corollary, the outer automorphism groups of the free
+product of four finite groups or the free product of a single finite group with
+a free group of rank two are virtual duality groups of dimension two, in
+contrast with the above example. Our proof is inspired by methods of Vogtmann,
+applied to a complex first studied in another guise by Krstic and Vogtmann.
+
+## Low complexity among principal fully irreducible elements of [`\mathrm{Out}(F_3)`]($mathtex) []($section.id("2024-05-06"))
+with [Naomi Andrew](https://naomigandrew.wordpress.com/),
+[Paige Hillen](https://sites.google.com/view/paigehillen/home/) and
+[Catherine Eva Pfaff](https://catherinepfaff.com/).
+
+[arXiv preprint: 2405.03681, to appear in AG&T](https://arxiv.org/abs/2405.03681).
+
+**Abstract:** We find the shortest realized stretch factor for a fully irreducible
+[`\varphi \in \mathrm{Out}(F_3)`]($mathtex) and show that it is realized by a "principal" fully irreducible
+element. We also show that it is the only principal fully irreducible produced
+by a single fold in any rank.
+
+## Some New CAT(0) Free-by-Cyclic Groups []($section.id("2023-07"))
+(as Rylee Alanza Lyman).
+
+[Michigan Math. J. 73 (3):621-630 (2023)](https://doi.org/10.1307/mmj/20205989).
+
+**Abstract:** We show the existence of several new infinite families of
+polynomially-growing automorphisms of free groups whose mapping tori are CAT(0)
+free-by-cyclic groups. Such mapping tori are _thick,_ and thus not relatively
+hyperbolic. These are the first families comprising infinitely many examples
+for each rank of the nonabelian free group; they contrast strongly with
+Gersten’s example of a thick free-by-cyclic group which cannot be a subgroup of
+a CAT(0) group.
+
+## Lipschitz metric isometries between outer spaces of virtually free groups []($section.id("2023-06"))
+(as Rylee Alanza Lyman).
+
+[Illinois J. Math. 67 (2):409-422 (2023)](https://doi.org/10.1215/00192082-10592435).
+
+**Abstract:** Dowdall and Taylor observed that, given a finite-index subgroup of a
+free group, taking covers induces an embedding from the outer space of the free
+group to the outer space of the subgroup, this embedding is an isometry with
+respect to the (asymmetric) Lipschitz metric and that the embedding sends
+folding paths to folding paths. The purpose of this note is to extend this
+result to virtually free groups. We further extend a result of Francaviglia and
+Martino, proving the existence of “candidates” for the Lipschitz distance
+between points in the outer space of the virtually free group. Additionally, we
+identify a deformation retraction of the spine of the outer space for the
+virtually free group with the space considered by Krstić and Vogtmann.
+
+## On Whitehead's cut vertex lemma []($section.id("2023-01-26"))
+(as Rylee Alanza Lyman).
+
+[J. Group Theory 26 (4):665-675 (2023)](https://doi.org/10.1515/jgth-2022-0089).
+
+**Abstract:** One version of Whitehead’s famous cut vertex lemma says that if an
+element of a free group is part of a free basis, then a certain graph
+associated to its conjugacy class that we call the star graph is either
+disconnected or has a cut vertex. We state and prove a version of this lemma
+for conjugacy classes of elements and convex-cocompact subgroups of groups
+acting cocompactly on trees with finitely generated edge stabilizers.
+## Train track maps on graphs of groups []($section.id("2022-11-12"))
+(as Rylee Alanza Lyman).
+
+[Groups Geom. Dyn. 16(4):1389-1422 (2022)](https://doi.org/10.4171/ggd/698).
+
+**Abstract:** In this paper we develop the theory of train track maps on graphs of
+groups. Expanding a definition of Bass, we define a notion of a map of a graph
+of groups, and of a homotopy equivalence. We prove that under one of two
+technical hypotheses, any homotopy equivalence of a graph of groups may be
+represented by a relative train track map. The first applies in particular to
+graphs of groups with finite edge groups, while the second applies in
+particular to certain generalized Baumslag–Solitar groups.
+
+## Folding-like techniques for CAT(0) cube complexes []($section.id("2022-07"))
+(as Rylee Alanza Lyman), with
+[Robert Kropholler](http://www.robertkropholler.com/) and
+[Michael Ben-Zvi](https://sites.google.com/view/benzvi).
+
+[Proc. Camb. Philos. Soc. 173 (1):227-238 (2022)](https://doi.org/10.1017/S0305004121000645).
+
+**Abstract:** In a seminal paper, Stallings introduced folding of morphisms of
+graphs. One consequence of folding is the representation of finitely-generated
+subgroups of a finite-rank free group as immersions of finite graphs.
+Stallings’s methods allow one to construct this representation algorithmically,
+giving effective, algorithmic answers and proofs to classical questions about
+subgroups of free groups. Recently Dani–Levcovitz used Stallings-like methods
+to study subgroups of right-angled Coxeter groups, which act geometrically on
+CAT(0) cube complexes. In this paper we extend their techniques to fundamental
+groups of non-positively curved cube complexes.
+
+## CTs for free products []($section.id("2022-03-16"))
+(as Rylee Alanza Lyman).
+
+[arXiv preprint: 2203.08868](https://arxiv.org/abs/2203.08868).
+
+**Abstract:** The fundamental group of a finite graph of groups with trivial
+edge groups is a free product. We are interested in those outer automorphisms
+of such a free product that permute the conjugacy classes of the vertex groups.
+We show that in particular cases of interest, such as where vertex groups are
+themselves finite free products of finite and cyclic groups, given such an
+outer automorphism, after passing to a positive power, the outer automorphism
+is represented by a particularly nice kind of relative train track map called a
+CT. CTs were first introduced by Feighn and Handel for outer automorphisms of
+free groups. We develop the theory of attracting laminations for and principal
+automorphisms of free products. We prove that outer automorphisms of free
+products satisfy an index inequality reminiscent of a result of Gaboriau,
+Jaeger, Levitt and Lustig and sharpening a result of Martino. Finally, we prove
+a result reminiscent of a theorem of Culler on the fixed subgroup of an
+automorphism of a free product whose outer class has finite order.
+
+## Nielsen realization for infinite-type surfaces []($section.id("2021-01-26"))
+(as Rylee Alanza Lyman), with
+[Santana Afton](https://sites.google.com/view/santanaafton/home),
+[Danny Calegari](https://sites.google.com/view/santanaafton/home),
+and
+[Lvzhou Chen](https://lvzhouchen.github.io/).
+
+[Proc. Amer. Math. Soc. 149:1791-1799 (2021)](https://doi.org/10.1090/proc/15316).
+
+**Abstract:** Given a finite subgroup [`G`]($mathtex) of the mapping class group of a surface
+[`S`]($mathtex), the Nielsen realization problem asks whether G can be realized as a finite
+group of homeomorphisms of [`S`]($mathtex). In 1983, Kerckhoﬀ showed that for [`S`]($mathtex) a finite-
+type surface, any finite subgroup [`G`]($mathtex) may be realized as a group of isometries
+of some hyperbolic metric on [`S`]($mathtex). We extend Kerckhoﬀ’s result to orientable,
+infinite-type surfaces. As applications, we classify torsion elements in the
+mapping class group of the plane minus a Cantor set, and also show that
+topological groups containing sequences of torsion elements limiting to the
+identity do not embed continuously into the mapping class group of [`S`]($mathtex). Finally,
+we show that compact subgroups of the mapping class group of [`S`]($mathtex) are finite,
+and locally compact subgroups are discrete.
+
+## Extensions of hyperbolic groups have locally uniform exponential growth []($section.id("2020-12-29"))
+(as Rylee Alanza Lyman)
+with 
+[Robert Kropholler](http://www.robertkropholler.com/) and
+[Thomas Ng](https://sites.google.com/site/thomasng192/).
+
+[arXiv preprint: 2012.14880](https://arxiv.org/abs/2405.03681).
+
+**Abstract:** We introduce a quantitative characterization of subgroup alternatives modeled
+on the Tits alternative in terms of group laws and investigate when this
+property is preserved under extensions. We develop a framework that lets us
+expand the classes of groups known to have locally uniform exponential growth
+to include extensions of either word hyperbolic or right-angled Artin groups by
+groups with locally uniform exponential growth. From this, we deduce that the
+automorphism group of a torsion-free one-ended hyperbolic group has locally
+uniform exponential growth. Our methods also demonstrate that automorphism
+groups of torsion-free one-ended toral relatively hyperbolic groups and certain
+right-angled Artin groups satisfy our quantitative subgroup alternative.
+
+____
+
+(Until 2024, I published under the name Rylee Alanza Lyman.
+By convention, multi-author papers in mathematics list authors in alphabetical order by surname.)
