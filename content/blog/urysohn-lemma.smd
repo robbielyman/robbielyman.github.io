@@ -1,0 +1,232 @@
+---
+.title = "The Urysohn Lemma",
+.date = @date("2025-11-30T12:00:00-05:00"),
+.author = "Robbie Lyman",
+.layout = "post.shtml",
+.draft = true,
+---
+
+# Reinit
+
+Hi again. This is Robbie.
+For most of a decade, I used to go by Rylee.
+I do math,
+I make music,
+I write code,
+I'm learning Japanese.
+I like graphic design, writing, cooking, some other stuff too.
+Lately I've been discovering that running and the gym are actually fun and good things,
+which would have blown my sixteen-year-old self's mind.
+
+This is a blog. Let's go.
+
+# Topology
+
+I was going to tell you about a fact in group theory,
+but I was talking to [Jeremy](https://jdkaplan.dev/) about
+my first favorite theorem in math—the one that blew my mind for the first time—and realized I should just write about that instead.
+
+It's a theorem in Topology.
+Topology starts with numbers—subsets of [`\mathbb{R}^n`]($mathtex).
+These have a natural way of measuring closeness: the _distance formula_ on [`\mathbb{R}^n`]($mathtex)
+is a kind of generalization of the Pythagorean theorem,
+saying that the distance between two points [`\vec{x} = (x_1,\ldots,x_n)`]($mathtex) and [`\vec{y} = (y_1,\ldots,y_n)`]($mathtex)
+is
+
+```=mathtex
+d(\vec{x}, \vec{y}) = \sqrt{(x_1 - y_1)^2 + \cdots + (x_n - y_n)^2}.
+```
+
+One way that this notion of closeness gets used is the following:
+say that a subset [`U \subset \mathbb{R}^n`]($mathtex)
+is _open_ if whenever [`U`]($mathtex) contains a point [`x`]($mathtex),
+it actually contains alllllll the points sufficiently close to [`x`]($mathtex)
+(the jargon is "a small neighborhood of [`x`]($mathtex)"),
+as measured by that distance function.
+
+Here are some facts:
+- The whole space and the empty set are open.
+
+The fact that [`\mathbb{R}^n`]($mathtex) is open is pretty clear,
+but the fact that [`\varnothing`]($mathtex) is open is one of
+those instances in math where being a scholar of the empty set requires clear sight:
+since there are _no_ points to ask about, it _is_ (vacuously) true
+that for every point in sight, the empty set also contains a little neigbhorhood of that point.
+
+- The union of an arbitrary number of open sets is open.
+- The intersection of a finite number of open sets is open.
+
+Topology as a subject starts by taking those facts as a _definition,_ and then running wild.
+That is, a _topological space_ is a set (whose objects may be nice things, like elements of [`\mathbb{R}^n`]($mathtex),
+but truly need not be) with a specified collection of subsets which are called _open,_
+which satisfy the properties above.
+
+## Pavel Urysohn
+
+[Pavel Urysohn](https://en.wikipedia.org/wiki/Pavel_Urysohn) was a mathematician born in what is now the Ukraine in 1898,
+but he finished high school in Moscow.
+He earned a PhD in 1921 (yes, the year he turned 24!)
+and traveled a little in Europe with mathematician [Pavel Aleksandrov](https://en.wikipedia.org/wiki/Pavel_Alexandrov).
+The recent historical consensus, which I only learned this year,
+is that the two were lovers, which I like to hear personally, since Urysohn's math really hit for me.
+Also, extremely strong move to date somebody with the same first name as you.
+Anyway, while they were traveling in France, Urysohn drowned while swimming at the age of 26.
+
+Urysohn was working when topology itself was a very new field.
+For example, he and Alexandrov gave the modern formulation of a foundational and very peculiar mathematical property
+called _compactness._
+He also constructed a really profoundly beautiful and cursèd object:
+a metric space which contains an isometric copy of every separable metric space.
+Kid did good math.
+
+## Separation axioms
+
+One of the frequent topics in a first topology course is working with the
+so-called "separation axioms".
+These are properties that a topological space can have that make it behave progressively more and more like
+a subset of [`\mathbb{R}^n`]($mathtex).
+The most famous of these is the _Hausdorff_ property,
+which I like to remember by the following punny explanation:
+a space [`X`]($mathtex) is Hausdorff if any two distinct points [`x`]($mathtex) and [`y`]($mathtex) in [`X`]($mathtex)
+can be "housed off" of each other, in the sense that there are open sets [`U \ni x`]($mathtex) and [`V \ni y`]($mathtex)
+whose intersection is empty.
+Here is a cartoon:
+
+```=html
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Adobe Illustrator 24.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg
+  version="1.1"
+  id="Layer_1"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  x="0px"
+  y="0px"
+  width="min(640, 100%)"
+  height="min(240, 75vh)"
+  viewBox="0 0 640 480"
+  style="enable-background: new 0 0 640 480; isolation: isolate; margin: 0 auto"
+  xml:space="preserve"
+>
+  <style type="text/css">
+    .st0 {
+      stroke: var(--green);
+      fill: var(--green);
+      stroke-miterlimit: 10;
+    }
+    .st1 {
+      fill: rgb(from var(--blue) r g b / 30%);
+      stroke: var(--green);
+      stroke-width: 3;
+      stroke-miterlimit: 10;
+      stroke-dasharray: 12, 12, 12, 12, 12, 12;
+    }
+  </style>
+  <circle class="st0" cx="108.65" cy="168.32" r="6" />
+  <foreignObject x="125" y="172" width="50" height="50">
+  <math color="var(--green)">
+      <mi>x</mi>
+    </math>
+  </foreignObject>
+  <circle class="st0" cx="478.65" cy="329.32" r="6" />
+  <foreignObject x="490" y="335" width="50" height="50">
+  <math color="var(--green)">
+      <mi>y</mi>
+    </math>
+  </foreignObject>
+  <foreignObject x="40" y="75" width="50" height="50">
+  <math color="var(--green)">
+      <mi>U</mi>
+    </math>
+  </foreignObject>
+  <foreignObject x="340" y="265" width="50" height="50">
+  <math color="var(--green)">
+      <mi>V</mi>
+    </math>
+  </foreignObject>
+  <path
+    class="st1"
+    d="M62.99,145.2c9.33-19.97,19.59-41.03,38.25-52.76c5.92-3.73,13.27-6.39,19.86-4.04
+	c9.01,3.22,12.41,13.8,17.14,22.12c6.18,10.85,16.46,19.3,28.3,23.27c7.35,2.46,15.17,3.23,22.57,5.55s14.74,6.63,17.92,13.7
+	c3.59,7.99,0.97,17.49-3.54,24.99c-4.51,7.5-10.77,13.83-15.31,21.32c-5.13,8.47-7.91,18.35-7.96,28.25
+	c-0.04,8.2,1.7,16.75-1.25,24.4c-1.68,4.37-4.78,8.06-8.23,11.24c-17.45,16.08-45.51,19.26-66.13,7.51s-32.16-37.53-27.21-60.74
+	c1.2-5.62,3.27-11.2,2.81-16.92c-0.46-5.73-4.56-11.76-10.31-11.82c-4.73-0.05-8.5,3.77-12.9,5.5c-8.49,3.34-18.89-2.39-21.89-11
+	c-3.01-8.61,0.65-18.68,7.6-24.59S59.33,143.19,62.99,145.2z"
+  />
+  <path
+    class="st1"
+    d="M398.23,254.51c5.95-12.19,18.49-20.13,31.6-23.61c13.11-3.47,26.9-3.06,40.45-2.41
+	c11.74,0.57,24.33,1.62,33.44,9.04c8.91,7.26,12.52,18.97,17.66,29.25c5.1,10.21,12.42,19.77,22.61,24.92
+	c10.18,5.15,23.57,4.99,32.15-2.54c5.96-5.23,12.18-14.24,19.34-10.84c2.87,1.36,4.47,4.42,5.81,7.31
+	c9.11,19.72,15.06,41.29,14.12,63s-9.29,43.56-25.26,58.28c-11.54,10.63-26.33,17.06-41.3,21.72c-26.7,8.32-57.84,10.95-80.83-4.98
+	c-11.9-8.24-22.39-21.54-36.86-21.13c-10.75,0.31-19.44,8.3-28.39,14.26c-10.65,7.1-23.64,11.81-36.21,9.44
+	c-12.57-2.37-23.96-13.45-23.52-26.24c0.47-13.59,12.77-23.4,24.17-30.82c5.43-3.54,13.06-6.27,17.46-8.26
+	c9.26-4.18,30.27-15.53,31.54-25.61C418.77,314.79,384.42,282.83,398.23,254.51z"
+  />
+</svg>
+```
+
+```=html
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Adobe Illustrator 24.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg
+  version="1.1"
+  id="Layer_1"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  x="0px"
+  y="0px"
+  width="640px"
+  height="210px"
+  viewBox="0 0 640 210"
+  style="enable-background: new 0 0 640 210"
+  xml:space="preserve"
+>
+  <style type="text/css">
+    .st0 {
+      fill: #ffffff;
+      stroke: #000000;
+      stroke-miterlimit: 10;
+    }
+    .st1 {
+      fill: none;
+      stroke: #000000;
+      stroke-miterlimit: 10;
+    }
+    .st2 {
+      font-family: "SourceSansPro-Regular";
+    }
+    .st3 {
+      font-size: 14px;
+    }
+  </style>
+  <circle class="st0" cx="120.55" cy="101.55" r="4.25" />
+  <circle class="st0" cx="479.21" cy="85.09" r="4.5" />
+  <path
+    class="st1"
+    d="M107.66,22.67c23.12,0.11,43.95,12.84,64.55,23.33c4.81,2.45,9.81,4.84,15.19,5.23
+	c6.9,0.51,13.56-2.29,20.05-4.7c16.24-6.03,34.26-9.88,50.79-4.7c22.3,6.98,37.35,30.3,37.75,53.66
+	c0.18,10.57-2.52,21.66-9.79,29.33c-6.59,6.96-16.13,10.33-25.55,12.09c-9.42,1.76-19.08,2.14-28.41,4.31
+	c-17.87,4.16-34.08,15.08-44.65,30.07c-2.98,4.23-5.57,8.81-9.39,12.3c-9.75,8.92-24.62,8.5-37.74,6.96
+	c-17.38-2.05-35.55-5.56-48.86-16.92c-10.93-9.33-19.27-24.12-33.57-25.55c-10.32-1.03-20.3,5.7-30.59,4.41
+	c-11.43-1.44-19.7-13.05-20.21-24.56s25.2-16.83,32.63-25.64c6.83-8.1-1.53-38.52,6.31-48.29C56.97,40.55,81.19,22.54,107.66,22.67z
+	"
+  />
+  <path
+    class="st1"
+    d="M424.16,52.95c7.19-10.9,19.01-18.93,31.99-20.43c17.07-1.98,33.37,6.97,47.66,16.51
+	c14.29,9.54,28.71,20.32,45.71,22.77c11.71,1.69,23.56-0.76,35.36-1.58c11.8-0.81,24.61,0.37,33.66,7.99
+	c5.53,4.66,9.07,11.28,11.51,18.08c2.93,8.17,4.45,17.05,2.82,25.57c-1.63,8.52-6.76,16.63-14.53,20.49
+	c-5.43,2.7-11.69,3.18-17.39,5.27c-5.7,2.08-11.3,6.75-11.26,12.82c0.03,4.35,2.93,8.07,4.93,11.94c2,3.87,2.91,9.2-0.33,12.11
+	c-1.44,1.3-3.42,1.81-5.33,2.18c-4.93,0.97-9.96,1.34-14.97,1.72c-11.06,0.82-22.11,1.64-33.17,2.46
+	c-13.57,1.01-28.46,1.65-39.35-6.51c-3.18-2.38-5.95-5.48-9.67-6.85c-6.76-2.49-14,1.42-20.45,4.65
+	c-10.53,5.28-22.21,9.07-33.95,8.09c-11.1-0.93-21.44-6.05-30.7-12.23c-14.62-9.77-28.07-24.05-29.44-41.58
+	c-0.15-1.98-0.14-4.04,0.64-5.87c1.84-4.31,7.02-5.85,11.52-7.16c6.07-1.77,11.99-4.05,17.68-6.81c5.43-2.63,11-6.06,13.38-11.61
+	S416.97,63.85,424.16,52.95z"
+  />
+  <text transform="matrix(1 0 0 1 128.5541 117.4244)" class="st2 st3">x</text>
+  <text transform="matrix(1 0 0 1 489.5541 101.2072)" class="st2 st3">x</text>
+  <text transform="matrix(1 0 0 1 394.5541 92.5975)" class="st2 st3">x</text>
+  <text transform="matrix(1 0 0 1 22.5541 87.1651)" class="st2 st3">x</text>
+</svg>
+```

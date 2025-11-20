@@ -6,11 +6,9 @@
 .draft = false,
 --- 
 
-[]($image.siteAsset('headshot-2024.JPG'))
+[]($image.siteAsset('headshot-2025.jpeg'))
 
 I am a polymath based in Brooklyn, New York.
 
 I like math, music, writing, design, code...
 今も日本語を勉強してる。
-
-- [about]($link.page('about')) info and links

@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html>
-  <head id="head">
-    <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1">
-    <title :text="$site.title"></title>
-    <link type="text/css" rel="stylesheet" href="$site.asset('style.css').link()">
-    <link type="text/css" rel="stylesheet" href="$site.asset('highlight.css').link()">
-    <!-- mathtex -->
-    <link type="text/css" rel="stylesheet" href="$site.asset('Temml-Local.css').link()">
-    <script defer src="$site.asset('temml.min.js').link()"></script>
-    <script defer src="$site.asset('render-mathtex.js').link()"></script>
-    <!-- /mathtex -->
-    <super>
-  </head>
-  <body id="body">
-    <h1 class="site-title" :text="$site.title"></h1>
-    <nav>
-    <ul>
-      <li><a href="$site.page('').link()">Home</a></li>
-      <li><a href="$site.page('about').link()">About</a></li>
-      <li><a href="$site.page('math').link()">Math</a></li>
-      <!-- <li><a href="$site.page('blog').link()">Blog</a></li> -->
-    </ul>
-    </nav>
-    <super>
-    <footer>
-      <hr>
-      <h5>SITE UNDER CONSTRUCTION</h5>
-    </footer>
-  </body>
+	<head id="head">
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1">
+		<title :text="$site.title"></title>
+		<link type="text/css" rel="stylesheet" href="$site.asset('style.css').link()">
+		<link type="text/css" rel="stylesheet" href="$site.asset('highlight.css').link()">
+		<!-- mathtex -->
+		<link type="text/css" rel="stylesheet" href="$site.asset('Temml-Local.css').link()">
+		<script defer src="$site.asset('temml.min.js').link()"></script>
+		<script defer src="$site.asset('render-mathtex.js').link()"></script>
+		<!-- /mathtex -->
+		<super>
+	</head>
+	<body id="body">
+		<h1 class="site-title" :text="$site.title"></h1>
+		<nav>
+			<ul>
+				<li><a href="$site.page('').link()">Home</a></li>
+				<li><a href="$site.page('about').link()">About</a></li>
+				<li><a href="$site.page('math').link()">Math</a></li>
+				<li><a href="$site.page('blog').link()">Blog</a></li>
+			</ul>
+		</nav>
+		<super>
+		<footer>
+			<hr>
+			<script async defer src="https://www.recurse-scout.com/loader.js?t=481004d6b700a153d74901f056b2c9f0"></script>
+		</footer>
+	</body>
 </html>
