@@ -124,8 +124,12 @@ In the interests of embarrassing myself, here's a script-kiddie approach.
 ```sh
 mkdir dwnld && cd dwnld
 curl https://ziglang.org/download/index.json -o zig_idx.json
-cat zig_idx.json | jq '"url = \(.master.["aarch64-macos"].tarball)"' -r | curl -K- -o zig.tar.xz
-cat zig_idx.json | jq '"\(.master.["aarch64-macos"].shasum)  zig.tar.xz"' -r | shasum -a 256 -c -
+cat zig_idx.json | \
+    jq '"url = \(.master.["aarch64-macos"].tarball)"' -r | \
+    curl -K- -o zig.tar.xz
+cat zig_idx.json | \
+    jq '"\(.master.["aarch64-macos"].shasum)  zig.tar.xz"' -r | \
+    shasum -a 256 -c -
 ```
 
 These commands download the JSON blob from the zig website
@@ -193,7 +197,8 @@ The fix is pretty easy:
 -    triangle_exe.linkSystemLibrary("glfw");
 +    triangle_exe.linkSystemLibrary("glfw3");
 
-     const registry_path: std.Build.LazyPath = if (maybe_override_registry) |override_registry|
+     const registry_path: std.Build.LazyPath = 
+        if (maybe_override_registry) |override_registry|
          .{ .cwd_relative = override_registry }
 ```
 
