@@ -1,4 +1,5 @@
 :root {
+  line-height: 1.4;
   color-scheme: light dark;
   --rosewater: light-dark(#dc8a78, #f5e0dc);
   --flamingo: light-dark(#dd7878, #f2cdcd);
@@ -26,6 +27,10 @@
   --base: light-dark(#eff1f5, #1e1e2e);
   --mantle: light-dark(#e6e9ef, #181825);
   --crust: light-dark(#dce0e8, #11111b);
+}
+
+math {
+  color: color-mix(in oklab, var(--green), var(--subtext1));
 }
 
 a {

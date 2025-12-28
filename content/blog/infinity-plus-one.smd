@@ -1,0 +1,239 @@
+---
+.title = "Nuh-uh! Infinity plus one!",
+.date = @date("2026-05-23T16:00:00-05:00"),
+.author = "Robbie Lyman",
+.layout = "post.shtml",
+.draft = false,
+---
+
+This is a blog post about ordinal numbers,
+ordinal arithmetic,
+and a brief advertisement for a result
+I proved with Beth Branman, [George Domat](https://sites.google.com/view/georgedomat/home), and [Hannah Hoganson](https://www.math.umd.edu/~hoganson/).
+We're hoping to put a paper on the arXiv and submit for publication in the coming weeks;
+I'll update this post with a link when it's up.
+
+## Nuh-uh! Infinity plus one!
+
+I'm sure you've probably spent enough time
+with children or were once a child to remember
+a variant of the line above.
+Somehow you and a friend are competing to name bigger
+and bigger numbers.
+Maybe your friend thinks they've won
+because they know about infinity and say "Infinity!"
+and you _have_ to top that, so you say
+"Nuh-uh! Infinity _plus one!_"
+At a vibes level, ordinal numbers in mathematics are a way to actually take that idea seriously.
+
+## Two definitions
+
+A _totally ordered set_ is a set [`S`]($mathtex)
+with an order [`>`]($mathtex);
+given any two distinct elements [`x`]($mathtex) and [`y`]($mathtex) of the set, one is always bigger,
+maybe [`x`]($mathtex) is bigger, so we say [`x > y`]($mathtex). The order is transitive as usual.
+
+Some total orders go on forever in one or both directions.
+For example, the integers [`\mathbb{Z}`]($mathtex). 
+Given an integer like 16, there's always an element smaller than it, and an element bigger than it.
+A set is _well-ordered_ if it only goes on forever as you get bigger.
+That is, a set is _well-ordered_ if any nonempty subset has a smallest element.
+
+So the integers are not well-ordered, but the _natural numbers_ [`\mathbb{N} = \{0,1,2,\ldots\}`]($mathtex) are well-ordered.
+
+An _ordinal_ is the order-isomorphism class of a well-ordered set.
+
+The _von Neumann_ definition of the ordinals provides a convenient (although initially very confusing because the quickest way to say it gets circular fast) way to represent ordinals:
+
+We start with [`\mathbf{0} = \varnothing`]($mathtex). The empty set is the zero ordinal.
+Next [`\mathbf{1} = \{\mathbf{0}\} = \{\varnothing\}`]($mathtex). The set containing the empty set is the first successor ordinal.
+In general, given an ordinal [`\alpha`]($mathtex), there is an ordinal [`\alpha + 1`]($mathtex) which, as a set, is the collection of all ordinals up to and including [`\alpha`]($mathtex) in the order that they appear.
+So for example [`\mathbf{2} = \mathbf{1} + 1 = \{\mathbf{0}, \mathbf{1}\}`]($mathtex).
+
+In this definition, each ordinal is a prefix of all ordinals which are bigger than it.
+Given an increasing sequence of ordinals [`\{\alpha_n\}_{n \in \mathbb{N}}`]($mathtex), their union is a well-ordered set which we call [`\lim_{n\to\infty}\alpha_n`]($mathtex). The first example is
+[`\mathbb{N} = \omega = \lim_{n\to\infty} \mathbf{n}`]($mathtex). The notation [`\omega`]($mathtex) is standard when referring to the set of natural numbers as an ordinal, so we'll use it throughout this post.
+
+Notice, this definition makes it totally sensible to say [`\omega + 1 = \omega \cup \{\omega\} = \mathbb{N} \cup \{\omega\}`]($mathtex)!
+Here is a picture representing [`\omega + 1`]($mathtex).
+
+```=html
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Adobe Illustrator 24.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg 
+    version="1.1" 
+    id="Layer_1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink" 
+    x="0px" 
+    y="0px"
+    width="640px" 
+    height="210px" 
+    viewBox="0 0 640 210" 
+    style="enable-background:new 0 0 640 210; isolation: isolate; margin: 0 auto" 
+    xml:space="preserve"
+>
+  <style type="text/css">
+    .st0 {
+      fill: var(--lavender);
+      stroke: var(--lavender);
+      stroke-miterlimit: 10;
+    }
+    .st1 {
+      fill: var(--surface2);
+      stroke: var(--overlay0);
+      stroke-miterlimit: 10;
+      stroke-width: 5;
+      stroke-dasharray: 12, 12, 12, 12, 12, 12;
+    }
+    .st2 {
+      font-family: "SourceSansPro-Regular";
+    }
+    .st3 {
+      font-size: 14px;
+    }
+  </style>
+<circle class="st0" cx="51.55" cy="100.75" r="4.25"/>
+<foreignObject width="50" height="50" transform="matrix(1 0 0 1 48.2772 125.7437)" class="st2"><math color="var(--green)"><mi>0</mi></math></foreignObject>
+<circle class="st0" cx="101.55" cy="100.75" r="4.25"/>
+<foreignObject width="50" height="50" transform="matrix(1 0 0 1 98.2772 125.7437)" class="st2"><math color="var(--green)"><mi>1</mi></math></foreignObject>
+<circle class="st0" cx="151.55" cy="100.75" r="4.25"/>
+<foreignObject width="50" height="50" transform="matrix(1 0 0 1 148.2772 125.7437)" class="st2"><math color="var(--green)"><mi>2</mi></math></foreignObject>
+<circle class="st0" cx="201.55" cy="100.75" r="4.25"/>
+<foreignObject width="50" height="50" transform="matrix(1 0 0 1 198.2772 125.7437)" class="st2"><math color="var(--green)"><mi>3</mi></math></foreignObject>
+<ellipse class="st0" cx="251.55" cy="100.65" rx="4.25" ry="4.15"/>
+<foreignObject width="50" height="50" transform="matrix(1.0248 0 0 1 248.2773 125.0361)" class="st2"><math color="var(--green)"><mi>4</mi></math></foreignObject>
+<ellipse class="st0" cx="301.55" cy="100.65" rx="4.25" ry="4.15"/>
+<foreignObject width="50" height="50" transform="matrix(1.0248 0 0 1 298.2773 125.0361)" class="st2"><math color="var(--green)"><mi>5</mi></math></foreignObject>
+<ellipse class="st0" cx="351.55" cy="100.65" rx="4.25" ry="4.15"/>
+<foreignObject width="50" height="50" transform="matrix(1.0248 0 0 1 348.2773 125.0361)" class="st2"><math color="var(--green)"><mi>6</mi></math></foreignObject>
+<ellipse class="st0" cx="401.55" cy="100.65" rx="4.25" ry="4.15"/>
+<foreignObject width="50" height="50" transform="matrix(1.0248 0 0 1 398.2773 125.0361)" class="st2"><math color="var(--green)"><mi>7</mi></math></foreignObject>
+<ellipse class="st0" cx="451.55" cy="98.65" rx="4.25" ry="4.15"/>
+<foreignObject width="50" height="50" transform="matrix(1.0248 0 0 1 448.2773 123.0361)" class="st2"><math color="var(--green)"><mi>8</mi></math></foreignObject>
+<ellipse class="st0" cx="501.55" cy="98.65" rx="4.25" ry="4.15"/>
+<foreignObject width="50" height="50" transform="matrix(1.0248 0 0 1 498.2773 123.0361)" class="st2"><math color="var(--green)"><mi>9</mi></math></foreignObject>
+<ellipse class="st0" cx="522.55" cy="98.65" rx="4.25" ry="4.15"/>
+<foreignObject width="50" height="50" transform="matrix(1.0248 0 0 1 519.2773 123.0361)" class="st2"><math color="var(--green)"><mi>10</mi></math></foreignObject>
+<ellipse class="st0" cx="543.55" cy="98.65" rx="4.25" ry="4.15"/>
+<foreignObject width="50" height="50" transform="matrix(1.0248 0 0 1 555.2773 123.0361)" class="st2"><math color="var(--green)"><mi>...</mi></math></foreignObject>
+<ellipse class="st0" cx="564.55" cy="98.65" rx="4.25" ry="4.15"/>
+<circle class="st0" cx="596.3" cy="98.65" r="11.5"/>
+<foreignObject transform="matrix(1.0248 0 0 1 590.1705 123.0361)" class="st2" width="50" height="50">
+<math color="var(--green)"><mi>&omega;</mi></math>
+</foreignObject>
+</svg>
+```
+
+## Ordinal arithmetic
+
+Given two totally ordered sets [`X`]($mathtex) and [`Y`]($mathtex),
+you can produce a new one [`X + Y`]($mathtex) by sticking them "end-to-end"
+so that every element of [`Y`]($mathtex) is bigger than every elemetn of [`X`]($mathtex).
+When these sets [`X`]($mathtex) and [`Y`]($mathtex) are well-ordered, so too is [`X + Y`]($mathtex).
+This is _ordinal addition._
+
+Ordinal addition is _not_ commutative: you should convince yourself that
+[`\mathbf{1} + \omega = \omega`]($mathtex) but that [`\omega + \mathbf{1}`]($mathtex) is different from [`\omega`]($mathtex)
+by virtue of having a largest element.
+
+There is also _ordinal multiplication._
+Given two totally ordered sets [`X`]($mathtex) and [`Y`]($mathtex),
+their cartesian product [`X \times Y`]($mathtex) is totally ordered
+by saying that [`(x,y) > (x',y')`]($mathtex)
+when either [`y > y'`]($mathtex) or [`y = y'`]($mathtex) and [`x > x'`]($mathtex).
+This order is called _reverse lexicographic order,_
+because the "second letter" in the "word" is more important,
+which is the opposite from when you alphabetize a bookshelf.
+
+Again, when [`X`]($mathtex) and [`Y`]($mathtex) are totally ordered,
+the product with this reverse lexicographic order is totally ordered, and its order-isomorphism class
+is the _product_ [`X\cdot Y`]($mathtex) of these ordinals.
+This product is also not commutative:
+you can convince yourself that
+[`\mathbf{2} \cdot \omega = \omega`]($mathtex), but it turns out that [`\omega \cdot \mathbf{2} = \omega + \omega`]($mathtex) is different from [`\omega`]($mathtex).
+
+One final operation I want to mention is _ordinal exponentiation._
+Here I'll rely a little more on von Neumann's terminology.
+A function [`f \colon \alpha \to \beta`]($mathtex) where [`\alpha`]($mathtex) and [`\beta`]($mathtex)
+are ordinals is _finitely supported_ if for all but finitely many elements [`x \in \alpha`]($mathtex),
+we have [`f(x) = 0 \in \beta`]($mathtex).
+
+Two finitely supported functions can be compared:
+take [`x`]($mathtex) to be the largest element for which [`f(x) \ne g(x)`]($mathtex), and say that
+[`f > g`]($mathtex) if [`f(x) > g(x)`]($mathtex).
+This makes the collection of finitely supported functions into a well-ordered set,
+which we denote [`\beta^\alpha`]($mathtex).
+Exponentiation with base [`\omega`]($mathtex)
+has the nice property that
+[`\omega^{\alpha + 1} = \omega^\alpha\cdot\omega`]($mathtex).
+
+# Picturing ordinals
+
+What we've talked about so far can help us visualize ordinals.
+For example
+```=mathtex
+\omega^2 = \omega\cdot\omega = \lim_{n\to\infty}\omega\cdot n = \lim_{n\to\infty}\underbrace{\omega + \omega + \cdots + \omega}_{n\text{ times}}.
+```
+So to picture [`\omega^2`]($mathtex), the rule for ordinal addition says that we should stitch together
+infinitely many copies of [`\mathbb{N} = \omega`]($mathtex) end-to-end.
+
+Actually, we can be even braver! Now that we can picture [`\omega^2`]($mathtex),
+we can stitch together _those_ to build [`\omega^3`]($mathtex) and so on.
+The observation that if [`\alpha > \beta`]($mathtex), then [`\beta + \alpha = \alpha`]($mathtex)
+tells us that
+```=mathtex
+\omega^\omega = \lim_{n\to\infty} \omega^n = \mathbf{1} + \omega + \omega^2 + \omega^3 + \cdots.
+```
+So we can picture this ordinal by lining up a copy of [`\omega^n`]($mathtex) for each finite [`n`]($mathtex)
+in increasing order!
+
+Okay I'll finish this section with a challenge straight from your kid self:
+using the same strategies as before, we could picture [`\omega^{\omega^\omega}`]($mathtex)
+and line up all of _those_ ordinals to picture their limit, which is called [`\epsilon_0`]($mathtex).
+The ordinal [`\epsilon_0`]($mathtex) is a tower of repeated exponentiations with base [`\omega`]($mathtex)
+and has the weird property that [`\epsilon_0^\omega = \epsilon_0`]($mathtex).
+
+It turns out that [there may (or may not be!) many many many countable ordinals](https://en.wikipedia.org/wiki/Large_countable_ordinal) on beyond [`\epsilon_0`]($mathtex)!
+
+# Classifying homeomorphisms of ordinals
+
+[In a 2025 paper with myself, Branman, Domat and Hoganson](https://doi.org/10.1112/blms.70097),
+we studied the group of _homeomorphisms_ of countable ordinals equipped with the order topology.
+The reason for studying homeomorphism, which is weaker than order isomorphism,
+is that by definition ordinals have _no_ order automorphisms,
+but they do have many homeomorphisms.
+
+For example, the homeomorphism group of a finite ordinal [`\mathbf{n}`]($mathtex)
+is the symmetric group [`S_n`]($mathtex).
+The homeomorphism group of [`\omega`]($mathtex) or of [`\omega + 1`]($mathtex)
+is the group [`S_\omega`]($mathtex) of bijections of a countable set.
+
+When [`\alpha`]($mathtex) is a countable, _compact_ ordinal,
+the group [`\mathop{\mathrm{Homeo}}(\alpha)`]($mathtex) is a [Polish](https://en.wikipedia.org/wiki/Polish_space) topological group with the [compact--open topology](https://en.wikipedia.org/wiki/Compact-open_topology). 
+
+Such (nonempty) ordinals are classified up to homeomorphism by two pieces of data: a countable ordinal [`\alpha`]($mathtex) and a natural number [`n \ge 1`]($mathtex).
+In the notation above, the ordinal is homeomorphic (although not necessarily equal) to
+[`\omega^\alpha \cdot n + 1`]($mathtex).
+
+Using a framework introduced by [Christian Rosendal](https://sites.google.com/view/christian-rosendal),
+we showed in that previous paper that the following properties hold.
+
+> **Theorem** (Branman–Domat–Hoganson–Lyman, 2025). The groups
+> [`G(\alpha,n) = \mathop{\mathrm{Homeo}}(\omega^\alpha \cdot n + 1)`]($mathtex)
+> have a well-defined [_coarse structure._](https://en.wikipedia.org/wiki/Coarse_structure)
+> Moreover, they fall into three camps:
+> 1) If [`n = 1`]($mathtex), the group [`G(\alpha,n)`]($mathtex) is coarsely bounded, so coarsely equivalent to a point.
+>
+> 2) If [`n > 1`]($mathtex) and [`\alpha`]($mathtex) is a successor ordinal [`\alpha = \beta + 1`]($mathtex), the group [`G(\alpha,n)`]($mathtex) is generated by a coarsely bounded set, and has a well-defined, unbounded quasi-isometry type.
+>
+> 3) If [`n > 1`]($mathtex) and [`\alpha`]($mathtex) is a limit ordinal, the group [`G(\alpha,n)`]($mathtex) is _not_ generated by any coarsely bounded set.
+
+In a forthcoming paper we will complete the classification of homeomorphism groups of countable, compact ordinals by proving the following result.
+
+> **Theorem** (Branman–Domat–Hoganson–Lyman 2026). The groups
+> [`G(\alpha,n) = \mathop{\mathrm{Homeo}}(\omega^\alpha \cdot n + 1)`]($mathtex)
+> fall into exactly three coarse equivalence classes as described above. 
+
+That is, we show that all groups in any of the three camps above are coarsely equivalent to each other and not to ones from the other camps. This is obviously already known for the first camp by our previous work.
+For the other two camps, the result is to our knowledge one of the first of its kind in the setting of non-locally compact Polish groups.

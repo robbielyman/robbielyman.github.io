@@ -1,24 +1,10 @@
 ---
 .title = "The Urysohn Lemma",
-.date = @date("2025-11-30T12:00:00-05:00"),
+.date = @date("2026-01-01T12:00:00-05:00"),
 .author = "Robbie Lyman",
 .layout = "post.shtml",
 .draft = true,
 ---
-
-# Reinit
-
-Hi again. This is Robbie.
-For most of a decade, I used to go by Rylee.
-I do math,
-I make music,
-I write code,
-I'm learning Japanese.
-I like graphic design, writing, cooking, some other stuff too.
-Lately I've been discovering that running and the gym are actually fun and good things,
-which would have blown my sixteen-year-old self's mind.
-
-This is a blog. Let's go.
 
 # Topology
 
@@ -26,7 +12,7 @@ I was going to tell you about a fact in group theory,
 but I was talking to [Jeremy](https://jdkaplan.dev/) about
 my first favorite theorem in math—the one that blew my mind for the first time—and realized I should just write about that instead.
 
-It's a theorem in Topology.
+It's a theorem in topology.
 Topology starts with numbers—subsets of [`\mathbb{R}^n`]($mathtex).
 These have a natural way of measuring closeness: the _distance formula_ on [`\mathbb{R}^n`]($mathtex)
 is a kind of generalization of the Pythagorean theorem,
@@ -49,19 +35,70 @@ Here are some facts:
 
 The fact that [`\mathbb{R}^n`]($mathtex) is open is pretty clear,
 but the fact that [`\varnothing`]($mathtex) is open is one of
-those instances in math where being a scholar of the empty set requires clear sight:
+those instances in math where being a scholar of the empty set requires clear vision:
 since there are _no_ points to ask about, it _is_ (vacuously) true
 that for every point in sight, the empty set also contains a little neigbhorhood of that point.
 
 - The union of an arbitrary number of open sets is open.
 - The intersection of a finite number of open sets is open.
 
-Topology as a subject starts by taking those facts as a _definition,_ and then running wild.
+Finiteness really is required, by the way.
+The set [`\{0\}`]($mathtex) is not open in [`\mathbb{R}`]($mathtex),
+but it is the intersection of the open intervals [`(-\frac{1}{n},\frac{1}{n})`]($mathtex)
+which (as the name suggests) _are_ each open.
+
+Topology as a subject starts by taking those facts as a _definition_ of open sets
+and then running wild.
 That is, a _topological space_ is a set (whose objects may be nice things, like elements of [`\mathbb{R}^n`]($mathtex),
 but truly need not be) with a specified collection of subsets which are called _open,_
 which satisfy the properties above.
 
-## Pavel Urysohn
+By the way, since it will come up,
+there is a parallel notion of a _closed_ set.
+If [`U \subset X`]($mathtex) is open,
+the set [`U^c`]($mathtex) of points _not_ contained in [`U`]($mathtex)
+is a closed set. All closed sets have this property.
+Although they sound like antonyms,
+there are sets which are neither open nor closed,
+and sets which are both.
+
+There is also a _closure_ of a set.
+I won't give a definition, but the idea comes from [`\mathbb{R}`]($mathtex),
+where the basic idea of an open set is an open _interval_ like [`(-2,3)`]($mathtex).
+The _closure_ of this interval is the _closed interval_ [`[-2,3]`]($mathtex).
+So the closure operation adds some "missing pieces" to a set.
+
+# Continuity
+
+The point of topology is to formalize the notion of continuity.
+If you took a Calculus class, you might remember "continuous" as a word
+that got used. A function (for clarity, one where you put in real numbers and get out real numbers)
+is continuous, roughly, if you can draw its graph without picking up your pen.
+
+In topology, the abstraction of "open" set makes the definition of continuity
+gloriously simple: if [`f\colon X \to Y`]($mathtex) is a function between topological spaces
+[`X`]($mathtex) and [`Y`]($mathtex), we say that [`f`]($mathtex) is _continuous_
+if for every open subset [`U \subset Y`]($mathtex), its _preimage_
+the set of those [`x \in X`]($mathtex) such that [`f(x) \in U`]($mathtex)
+is open in [`X`]($mathtex).
+
+There is a world where I spend down some of your goodwill by explaining
+how this definition is the same as the [`(\epsilon,\delta)`]($mathtex)
+definition you might have learned in Calculus,
+but I want to get to something more interesting.
+
+Instead, let me just note that topological spaces can be weird:
+here's one, which I'll call [`\Omega`]($mathtex). It also goes by the name
+_Sierpinski space._ It has two points [`o`]($mathtex) and [`c`]($mathtex).
+The open sets are [`\varnothing,\ \{o\},\text{ and } \Omega`]($mathtex).
+One cool fact about [`\Omega`]($mathtex) is that if [`U \subset X`]($mathtex)
+is an open subset of any topological space, there is a unique continuous function
+[`f\colon X \to \Omega`]($mathtex) defined by specifying that
+[`f(x) = o`]($mathtex) if [`x \in U`]($mathtex) and [`f(x) = c`]($mathtex) ottherwise.
+Continuity is something you could prove for yourself.
+In some sense, then, [`\Omega`]($mathtex) _classifies_ open subsets.
+
+# Pavel Urysohn
 
 [Pavel Urysohn](https://en.wikipedia.org/wiki/Pavel_Urysohn) was a mathematician born in what is now the Ukraine in 1898,
 but he finished high school in Moscow.
@@ -69,17 +106,19 @@ He earned a PhD in 1921 (yes, the year he turned 24!)
 and traveled a little in Europe with mathematician [Pavel Aleksandrov](https://en.wikipedia.org/wiki/Pavel_Alexandrov).
 The recent historical consensus, which I only learned this year,
 is that the two were lovers, which I like to hear personally, since Urysohn's math really hit for me.
-Also, extremely strong move to date somebody with the same first name as you.
-Anyway, while they were traveling in France, Urysohn drowned while swimming at the age of 26.
 
+Also, extremely strong move to date somebody with the same first name as you.
+
+Anyway, while they were traveling in France, Urysohn drowned while swimming at the age of 26.
 Urysohn was working when topology itself was a very new field.
 For example, he and Alexandrov gave the modern formulation of a foundational and very peculiar mathematical property
 called _compactness._
 He also constructed a really profoundly beautiful and cursèd object:
 a metric space which contains an isometric copy of every separable metric space.
+
 Kid did good math.
 
-## Separation axioms
+# Separation axioms
 
 One of the frequent topics in a first topology course is working with the
 so-called "separation axioms".
@@ -103,95 +142,23 @@ Here is a cartoon:
   x="0px"
   y="0px"
   width="min(640, 100%)"
-  height="min(240, 75vh)"
-  viewBox="0 0 640 480"
-  style="enable-background: new 0 0 640 480; isolation: isolate; margin: 0 auto"
-  xml:space="preserve"
->
-  <style type="text/css">
-    .st0 {
-      stroke: var(--green);
-      fill: var(--green);
-      stroke-miterlimit: 10;
-    }
-    .st1 {
-      fill: rgb(from var(--blue) r g b / 30%);
-      stroke: var(--green);
-      stroke-width: 3;
-      stroke-miterlimit: 10;
-      stroke-dasharray: 12, 12, 12, 12, 12, 12;
-    }
-  </style>
-  <circle class="st0" cx="108.65" cy="168.32" r="6" />
-  <foreignObject x="125" y="172" width="50" height="50">
-  <math color="var(--green)">
-      <mi>x</mi>
-    </math>
-  </foreignObject>
-  <circle class="st0" cx="478.65" cy="329.32" r="6" />
-  <foreignObject x="490" y="335" width="50" height="50">
-  <math color="var(--green)">
-      <mi>y</mi>
-    </math>
-  </foreignObject>
-  <foreignObject x="40" y="75" width="50" height="50">
-  <math color="var(--green)">
-      <mi>U</mi>
-    </math>
-  </foreignObject>
-  <foreignObject x="340" y="265" width="50" height="50">
-  <math color="var(--green)">
-      <mi>V</mi>
-    </math>
-  </foreignObject>
-  <path
-    class="st1"
-    d="M62.99,145.2c9.33-19.97,19.59-41.03,38.25-52.76c5.92-3.73,13.27-6.39,19.86-4.04
-	c9.01,3.22,12.41,13.8,17.14,22.12c6.18,10.85,16.46,19.3,28.3,23.27c7.35,2.46,15.17,3.23,22.57,5.55s14.74,6.63,17.92,13.7
-	c3.59,7.99,0.97,17.49-3.54,24.99c-4.51,7.5-10.77,13.83-15.31,21.32c-5.13,8.47-7.91,18.35-7.96,28.25
-	c-0.04,8.2,1.7,16.75-1.25,24.4c-1.68,4.37-4.78,8.06-8.23,11.24c-17.45,16.08-45.51,19.26-66.13,7.51s-32.16-37.53-27.21-60.74
-	c1.2-5.62,3.27-11.2,2.81-16.92c-0.46-5.73-4.56-11.76-10.31-11.82c-4.73-0.05-8.5,3.77-12.9,5.5c-8.49,3.34-18.89-2.39-21.89-11
-	c-3.01-8.61,0.65-18.68,7.6-24.59S59.33,143.19,62.99,145.2z"
-  />
-  <path
-    class="st1"
-    d="M398.23,254.51c5.95-12.19,18.49-20.13,31.6-23.61c13.11-3.47,26.9-3.06,40.45-2.41
-	c11.74,0.57,24.33,1.62,33.44,9.04c8.91,7.26,12.52,18.97,17.66,29.25c5.1,10.21,12.42,19.77,22.61,24.92
-	c10.18,5.15,23.57,4.99,32.15-2.54c5.96-5.23,12.18-14.24,19.34-10.84c2.87,1.36,4.47,4.42,5.81,7.31
-	c9.11,19.72,15.06,41.29,14.12,63s-9.29,43.56-25.26,58.28c-11.54,10.63-26.33,17.06-41.3,21.72c-26.7,8.32-57.84,10.95-80.83-4.98
-	c-11.9-8.24-22.39-21.54-36.86-21.13c-10.75,0.31-19.44,8.3-28.39,14.26c-10.65,7.1-23.64,11.81-36.21,9.44
-	c-12.57-2.37-23.96-13.45-23.52-26.24c0.47-13.59,12.77-23.4,24.17-30.82c5.43-3.54,13.06-6.27,17.46-8.26
-	c9.26-4.18,30.27-15.53,31.54-25.61C418.77,314.79,384.42,282.83,398.23,254.51z"
-  />
-</svg>
-```
-
-```=html
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Adobe Illustrator 24.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg
-  version="1.1"
-  id="Layer_1"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink"
-  x="0px"
-  y="0px"
-  width="640px"
-  height="210px"
+  height="min(210, 75vh)"
   viewBox="0 0 640 210"
-  style="enable-background: new 0 0 640 210"
+  style="enable-background: new 0 0 640 210; isolation: isolate; margin: 0 auto"
   xml:space="preserve"
 >
   <style type="text/css">
     .st0 {
-      fill: #ffffff;
-      stroke: #000000;
+      fill: var(--lavender);
+      stroke: var(--lavender);
       stroke-miterlimit: 10;
     }
     .st1 {
-      fill: none;
-      stroke: #000000;
+      fill: var(--surface2);
+      stroke: var(--overlay0);
       stroke-miterlimit: 10;
+      stroke-width: 5;
+      stroke-dasharray: 12, 12, 12, 12, 12, 12;
     }
     .st2 {
       font-family: "SourceSansPro-Regular";
@@ -200,8 +167,6 @@ Here is a cartoon:
       font-size: 14px;
     }
   </style>
-  <circle class="st0" cx="120.55" cy="101.55" r="4.25" />
-  <circle class="st0" cx="479.21" cy="85.09" r="4.5" />
   <path
     class="st1"
     d="M107.66,22.67c23.12,0.11,43.95,12.84,64.55,23.33c4.81,2.45,9.81,4.84,15.19,5.23
@@ -224,9 +189,110 @@ Here is a cartoon:
 	c-0.15-1.98-0.14-4.04,0.64-5.87c1.84-4.31,7.02-5.85,11.52-7.16c6.07-1.77,11.99-4.05,17.68-6.81c5.43-2.63,11-6.06,13.38-11.61
 	S416.97,63.85,424.16,52.95z"
   />
-  <text transform="matrix(1 0 0 1 128.5541 117.4244)" class="st2 st3">x</text>
-  <text transform="matrix(1 0 0 1 489.5541 101.2072)" class="st2 st3">x</text>
-  <text transform="matrix(1 0 0 1 394.5541 92.5975)" class="st2 st3">x</text>
-  <text transform="matrix(1 0 0 1 22.5541 87.1651)" class="st2 st3">x</text>
+  <foreignObject transform="matrix(1 0 0 1 128.5541 100)" width="50" height="50">
+  <math color="var(--green)">
+    <mi>x</mi>
+  </math>
+  </foreignObject>
+  <foreignObject transform="matrix(1 0 0 1 489.5541 85)" width="50" height="50">
+  <math color="var(--green)">
+    <mi>y</mi>
+  </math>
+  </foreignObject>
+  <foreignObject transform="matrix(1 0 0 1 385 80)" width="50" height="50">
+  <math color="var(--green)">
+    <mi>V</mi>
+  </math>
+  </foreignObject>
+  <foreignObject transform="matrix(1 0 0 1 15 80)" width="50" height="50">
+  <math color="var(--green)">
+    <mi>U</mi>
+  </math>
+  </foreignObject>
+  <circle class="st0" cx="120.55" cy="101.55" r="4.25" />
+  <circle class="st0" cx="479.21" cy="85.09" r="4.5" />
 </svg>
+```
+
+The property of being _normal_ (terrible name, I know)
+is similar,
+except that instead of _points_ [`x`]($mathtex) and [`y`]($mathtex),
+we ask that any pair of _disjoint closed sets_ 
+[`A`]($mathtex) and [`B`]($mathtex)
+are also contained in disjoint open sets [`U`]($mathtex) and [`V`]($mathtex).
+
+# Urysohn's Lemma
+
+Urysohn's Lemma says that if [`X`]($mathtex) is normal,
+then for any pair of disjoint closed sets [`A`]($mathtex) and [`B`]($mathtex),
+there is actually a continuous function [`f\colon X \to \mathbb{R}`]($mathtex)
+with [`f(a) = 0`]($mathtex) for any point [`a \in A`]($mathtex)
+and [`f(b) = 1`]($mathtex) for any point [`b \in B`]($mathtex).
+
+This is kind of amazing to me.
+We took a concept based on numbers,
+abstracted it so far that spaces like [`\Omega`]($mathtex),
+which have nothing to do with numbers,
+start to show up,
+and then found a definition which gives us back numbers!
+How neat is that?
+
+What's more, the proof is really so gorgeous.
+Let me give you the first piece of it and then the main idea.
+The gorey details will be at the end in case you want to puzzle through them.
+
+## The first step
+
+First, we claim that if [`X`]($mathtex) is normal
+and [`A`]($mathtex) is closed, [`U`]($mathtex) is open
+and [`A \subset U`]($mathtex),
+then there is another open set [`V`]($mathtex), where if we
+let [`\overline{V}`]($mathtex) denote its closure,
+then we have [`A \subset V \subset \overline{V} \subset U`]($mathtex).
+
+Let's prove that!
+
+So, since [`U`]($mathtex) is open, its complement [`U^c`]($mathtex)
+is closed. Since [`A \subset U`]($mathtex),
+we have that [`A`]($mathtex) and [`U^c`]($mathtex) are disjoint.
+Since [`X`]($mathtex) is normal,
+there are disjoint open sets [`A \subset V`]($mathtex)
+and [`U^c \subset W`]($mathtex).
+The fact that [`V`]($mathtex) and [`W`]($mathtex) are disjoint
+actually implies (though not immediately from anything I've written on this page)
+that [`\overline{V}`]($mathtex) is disjoint from [`U^c`]($mathtex),
+which shows that we have
+[`A \subset V \subset \overline{V} \subset U`]($mathtex) as required. [`\blacksquare`]($mathtex)
+
+## The idea
+
+The idea of the proof is to repeatedly use the first step,
+filling in open sets in between open sets repeatedly.
+As we do so, the contours of the open sets trace out
+almost a _topographical map_ of the desired function [`f`]($mathtex)!
+
+## The details
+
+Actually, we can by systematic in numbering these sets
+with _dyadic rational numbers_ between 0 and 1—that is,
+finite binary decimals.
+
+Here's how: let's call [`A = C_0`]($mathtex) and [`B^c = U_1`]($mathtex).
+Using the first step, we construct [`U_{\frac{1}{2}}`]($mathtex)
+and [`C_{\frac{1}{2}} = \overline{U_{\frac{1}{2}}}`]($mathtex)
+such that [`C_0 \subset U_{\frac{1}{2}} \subset C_{\frac{1}{2}} \subset U_1`]($mathtex).
+Repeating the first step, we can fit in
+
+```=mathtex
+C_0 \subset U_{\frac{1}{4}} \subset C_{\frac{1}{4}} \subset U_{\frac{1}{2}} \subset
+C_{\frac{1}{2}} \subset U_{\frac{3}{4}} \subset C_{\frac{3}{4}} \subset U_1.
+```
+
+Clearly we can keep doing this for any finite binary decimal number between 0 and 1.
+The beautiful thing about this is that we can use one of the defining properties
+of real numbers, the "greatest lower bound" property, to construct the function [`f`]($mathtex).
+Namely, define
+
+```=mathtex
+f(x) = \inf \left\{ \frac{p}{2^n} \in \mathbb{Q} : x \in U_{\frac{p}{2^n}} \right\}.
 ```
