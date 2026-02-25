@@ -28,6 +28,10 @@
   --crust: light-dark(#dce0e8, #11111b);
 }
 
+math {
+  color: var(--blue);
+}
+
 a {
   color: var(--mauve);
 }
