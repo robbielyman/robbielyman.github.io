@@ -54,6 +54,12 @@ In this definition, each ordinal is a prefix of all ordinals which are bigger th
 Given an increasing sequence of ordinals [`\{\alpha_n\}_{n \in \mathbb{N}}`]($mathtex), their union is a well-ordered set which we call [`\lim_{n\to\infty}\alpha_n`]($mathtex). The first example is
 [`\mathbb{N} = \omega = \lim_{n\to\infty} \mathbf{n}`]($mathtex). The notation [`\omega`]($mathtex) is standard when referring to the set of natural numbers as an ordinal, so we'll use it throughout this post.
 
+Every ordinal turns out to either be [`\mathbf{0}`]($mathtex)
+or a _successor ordinal_ [`\alpha + 1`]($mathtex),
+or a _limit ordinal_ [`\lambda = \lim_{n \to \infty} \alpha_n`]($mathtex),
+where [`\alpha`]($\mathtex) and the [`\alpha_n`]($mathtex) are previously constructed ordinals.
+This is the basis for a proof technique called [transfinite induction](https://en.wikipedia.org/wiki/Transfinite_induction).
+
 Notice, this definition makes it totally sensible to say [`\omega + 1 = \omega \cup \{\omega\} = \mathbb{N} \cup \{\omega\}`]($mathtex)!
 Here is a picture representing [`\omega + 1`]($mathtex).
 
