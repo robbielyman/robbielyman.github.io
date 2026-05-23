@@ -73,8 +73,8 @@ Here is a picture representing [`\omega + 1`]($mathtex).
     xmlns:xlink="http://www.w3.org/1999/xlink" 
     x="0px" 
     y="0px"
-    width="640px" 
-    height="210px" 
+    width="min(640, 100%)"
+    height="min(210, 75vh)"
     viewBox="0 0 640 210" 
     style="enable-background:new 0 0 640 210; isolation: isolate; margin: 0 auto" 
     xml:space="preserve"
@@ -135,7 +135,7 @@ Here is a picture representing [`\omega + 1`]($mathtex).
 
 Given two totally ordered sets [`X`]($mathtex) and [`Y`]($mathtex),
 you can produce a new one [`X + Y`]($mathtex) by sticking them "end-to-end"
-so that every element of [`Y`]($mathtex) is bigger than every elemetn of [`X`]($mathtex).
+so that every element of [`Y`]($mathtex) is bigger than every element of [`X`]($mathtex).
 When these sets [`X`]($mathtex) and [`Y`]($mathtex) are well-ordered, so too is [`X + Y`]($mathtex).
 This is _ordinal addition._
 
