@@ -196,6 +196,7 @@ in increasing order!
 
 Okay I'll finish this section with a challenge straight from your kid self:
 using the same strategies as before, we could picture [`\omega^{\omega^\omega}`]($mathtex)
+and then [`\omega^{\omega^{\omega^\omega}}`]($mathtex) (so four [`\omega`]($mathtex)s, and then 5, and so on)
 and line up all of _those_ ordinals to picture their limit, which is called [`\epsilon_0`]($mathtex).
 The ordinal [`\epsilon_0`]($mathtex) is a tower of repeated exponentiations with base [`\omega`]($mathtex)
 and has the weird property that [`\epsilon_0^\omega = \epsilon_0`]($mathtex).
