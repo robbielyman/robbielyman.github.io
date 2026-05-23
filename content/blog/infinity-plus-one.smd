@@ -57,7 +57,7 @@ Given an increasing sequence of ordinals [`\{\alpha_n\}_{n \in \mathbb{N}}`]($ma
 Every ordinal turns out to either be [`\mathbf{0}`]($mathtex)
 or a _successor ordinal_ [`\alpha + 1`]($mathtex),
 or a _limit ordinal_ [`\lambda = \lim_{n \to \infty} \alpha_n`]($mathtex),
-where [`\alpha`]($\mathtex) and the [`\alpha_n`]($mathtex) are previously constructed ordinals.
+where [`\alpha`]($mathtex) and the [`\alpha_n`]($mathtex) are previously constructed ordinals.
 This is the basis for a proof technique called [transfinite induction](https://en.wikipedia.org/wiki/Transfinite_induction).
 
 Notice, this definition makes it totally sensible to say [`\omega + 1 = \omega \cup \{\omega\} = \mathbb{N} \cup \{\omega\}`]($mathtex)!
