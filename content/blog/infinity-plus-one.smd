@@ -94,33 +94,33 @@ Here is a picture representing [`\omega + 1`]($mathtex).
     }
   </style>
 <circle class="st0" cx="51.55" cy="100.75" r="4.25"/>
-<foreignObject width="50" height="50" transform="matrix(1 0 0 1 48.2772 125.7437)" class="st2"><math color="var(--green)"><mi>0</mi></math></foreignObject>
+<foreignObject width="50" height="50" transform="matrix(1 0 0 1 48.2772 125.7437)" class="st2"><math color="var(--blue)"><mi>0</mi></math></foreignObject>
 <circle class="st0" cx="101.55" cy="100.75" r="4.25"/>
-<foreignObject width="50" height="50" transform="matrix(1 0 0 1 98.2772 125.7437)" class="st2"><math color="var(--green)"><mi>1</mi></math></foreignObject>
+<foreignObject width="50" height="50" transform="matrix(1 0 0 1 98.2772 125.7437)" class="st2"><math color="var(--blue)"><mi>1</mi></math></foreignObject>
 <circle class="st0" cx="151.55" cy="100.75" r="4.25"/>
-<foreignObject width="50" height="50" transform="matrix(1 0 0 1 148.2772 125.7437)" class="st2"><math color="var(--green)"><mi>2</mi></math></foreignObject>
+<foreignObject width="50" height="50" transform="matrix(1 0 0 1 148.2772 125.7437)" class="st2"><math color="var(--blue)"><mi>2</mi></math></foreignObject>
 <circle class="st0" cx="201.55" cy="100.75" r="4.25"/>
-<foreignObject width="50" height="50" transform="matrix(1 0 0 1 198.2772 125.7437)" class="st2"><math color="var(--green)"><mi>3</mi></math></foreignObject>
+<foreignObject width="50" height="50" transform="matrix(1 0 0 1 198.2772 125.7437)" class="st2"><math color="var(--blue)"><mi>3</mi></math></foreignObject>
 <ellipse class="st0" cx="251.55" cy="100.65" rx="4.25" ry="4.15"/>
-<foreignObject width="50" height="50" transform="matrix(1.0248 0 0 1 248.2773 125.0361)" class="st2"><math color="var(--green)"><mi>4</mi></math></foreignObject>
+<foreignObject width="50" height="50" transform="matrix(1.0248 0 0 1 248.2773 125.0361)" class="st2"><math color="var(--blue)"><mi>4</mi></math></foreignObject>
 <ellipse class="st0" cx="301.55" cy="100.65" rx="4.25" ry="4.15"/>
-<foreignObject width="50" height="50" transform="matrix(1.0248 0 0 1 298.2773 125.0361)" class="st2"><math color="var(--green)"><mi>5</mi></math></foreignObject>
+<foreignObject width="50" height="50" transform="matrix(1.0248 0 0 1 298.2773 125.0361)" class="st2"><math color="var(--blue)"><mi>5</mi></math></foreignObject>
 <ellipse class="st0" cx="351.55" cy="100.65" rx="4.25" ry="4.15"/>
-<foreignObject width="50" height="50" transform="matrix(1.0248 0 0 1 348.2773 125.0361)" class="st2"><math color="var(--green)"><mi>6</mi></math></foreignObject>
+<foreignObject width="50" height="50" transform="matrix(1.0248 0 0 1 348.2773 125.0361)" class="st2"><math color="var(--blue)"><mi>6</mi></math></foreignObject>
 <ellipse class="st0" cx="401.55" cy="100.65" rx="4.25" ry="4.15"/>
-<foreignObject width="50" height="50" transform="matrix(1.0248 0 0 1 398.2773 125.0361)" class="st2"><math color="var(--green)"><mi>7</mi></math></foreignObject>
+<foreignObject width="50" height="50" transform="matrix(1.0248 0 0 1 398.2773 125.0361)" class="st2"><math color="var(--blue)"><mi>7</mi></math></foreignObject>
 <ellipse class="st0" cx="451.55" cy="98.65" rx="4.25" ry="4.15"/>
-<foreignObject width="50" height="50" transform="matrix(1.0248 0 0 1 448.2773 123.0361)" class="st2"><math color="var(--green)"><mi>8</mi></math></foreignObject>
+<foreignObject width="50" height="50" transform="matrix(1.0248 0 0 1 448.2773 123.0361)" class="st2"><math color="var(--blue)"><mi>8</mi></math></foreignObject>
 <ellipse class="st0" cx="501.55" cy="98.65" rx="4.25" ry="4.15"/>
-<foreignObject width="50" height="50" transform="matrix(1.0248 0 0 1 498.2773 123.0361)" class="st2"><math color="var(--green)"><mi>9</mi></math></foreignObject>
+<foreignObject width="50" height="50" transform="matrix(1.0248 0 0 1 498.2773 123.0361)" class="st2"><math color="var(--blue)"><mi>9</mi></math></foreignObject>
 <ellipse class="st0" cx="522.55" cy="98.65" rx="4.25" ry="4.15"/>
-<foreignObject width="50" height="50" transform="matrix(1.0248 0 0 1 519.2773 123.0361)" class="st2"><math color="var(--green)"><mi>10</mi></math></foreignObject>
+<foreignObject width="50" height="50" transform="matrix(1.0248 0 0 1 519.2773 123.0361)" class="st2"><math color="var(--blue)"><mi>10</mi></math></foreignObject>
 <ellipse class="st0" cx="543.55" cy="98.65" rx="4.25" ry="4.15"/>
-<foreignObject width="50" height="50" transform="matrix(1.0248 0 0 1 555.2773 123.0361)" class="st2"><math color="var(--green)"><mi>...</mi></math></foreignObject>
+<foreignObject width="50" height="50" transform="matrix(1.0248 0 0 1 555.2773 123.0361)" class="st2"><math color="var(--blue)"><mi>...</mi></math></foreignObject>
 <ellipse class="st0" cx="564.55" cy="98.65" rx="4.25" ry="4.15"/>
 <circle class="st0" cx="596.3" cy="98.65" r="11.5"/>
 <foreignObject transform="matrix(1.0248 0 0 1 590.1705 123.0361)" class="st2" width="50" height="50">
-<math color="var(--green)"><mi>&omega;</mi></math>
+<math color="var(--blue)"><mi>&omega;</mi></math>
 </foreignObject>
 </svg>
 ```

@@ -30,7 +30,7 @@
 }
 
 math {
-  color: color-mix(in oklab, var(--green), var(--subtext1));
+  color: color-mix(in oklab, var(--blue), var(--subtext1));
 }
 
 a {
@@ -41,6 +41,7 @@ html {
   color: var(--text);
   font-family: "Georgia", serif;
   font-size: 1.2rem;
+  line-height: 1.5;
   display: flex;
   flex-direction: row;
   justify-content: center;

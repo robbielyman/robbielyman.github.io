@@ -1,0 +1,169 @@
+---
+.title = "Subgroupoids of Groups",
+.date = @date("2026-02-25T12:00:00-05:00"),
+.author = "Robbie Lyman",
+.layout = "post.shtml",
+.draft = false,
+---
+
+There's an annoying philistinism in some areas of mathematics,
+including my own area of geometric group theory,
+of pooh-poohing category theory.
+
+It's easy to see why:
+if you browse the [nLab](https://ncatlab.org/nlab/show/HomePage) or the [Stacks project](https://stacks.math.columbia.edu/) or talk to a PL theory person who knows too much Haskell,
+you mostly get what sounds like meaningless gobbledigook—excuse me, I meant _abstract nonsense._
+This isn't to bash the work that went into these projects, which are valuable references once you learn how to read them.
+The problem is that many people don't discover why they might want to.
+
+Ostensibly, the aim of a field like geometric group theory, low-dimensional topology or analysis,
+is concerned with answering concrete questions about fairly specific objects.
+Such and such family of solitons, or Artin groups or knots, or what have you.
+Often a strong geometric intuition or a willingness to get one's hands dirty with the simplest nontrivial example
+is a key part of the work.
+Knowledge of category theory often does not help here.
+Knowing that an HNN extension is an example of a _co-inserter_
+is very different from being able to comfortably work with its Bass–Serre tree.
+Everyone in mathematics has met an approximation of the bright senior undergrad or first-year grad student
+who appears to have swallowed _Category Theory for the Working Mathematician_ whole.
+This student might use abstract nonsense as a deflection, a way of avoiding actually getting their hands dirty learning a field.
+
+That being said, there really is a time for theory-building,
+and geometric group theory for the most part falls on its face at this step.
+It's great for definitions to be difficult so that theorems can be easy,
+for instance, but [some definitions are still too difficult.](https://arxiv.org/pdf/2601.15410)
+To me, this signals a lack of time spent trying to fit tools into a bigger picture.
+
+Anyway, that's enough polemics from me for today.
+The purpose of this post is to introduce a concept familiar to folks working in category theory
+that suffers from a lack of attention from group theorists:
+the notion of a _subgroupoid_ of a group.
+In an effort to make it relevant to a geometric group theorist,
+I'll close by reformulating the definitions of _height_ and _width_ of subgroups
+as properties of a subgroupoid.
+
+# Background
+
+I'm going to _fly_ through this because you probably have seen this stuff before,
+and if you haven't, you should do more work understanding it than this post is gonna provide.
+
+A _groupoid_ is a small category where every arrow is invertible.
+
+If that's too fast for you, you have two sets [`V \mathsf{G}`]($mathtex) of _objects_ and [`E \mathsf{G}`]($mathtex) of _arrows._
+I'll use function notation for arrows: [`f\colon x \to y`]($mathtex) saying that [`f \in E \mathsf{G}`]($mathtex) is an arrow
+with _source object_ [`\iota(f) = x \in V\mathsf{G}`]($mathtex) and _target_ object [`\tau(f) = y \in V\mathsf{G}`]($mathtex).
+Arrows [`f\colon x \to y`]($mathtex) and [`g \colon y \to z`]($mathtex)
+can compose like functions as [`g \circ f = g f \colon x \to z`]($mathtex),
+and each object [`x`]($mathtex) has an identity arrow [`1_x \colon x \to x`]($mathtex).
+Composition is associative and identity arrows are (two-sided) identities for composition.
+Finally if [`f\colon x \to y`]($mathtex) is an arrow, there is an arrow [`f^{-1}\colon y \to x`]($mathtex)
+such that [`f \circ f^{-1} = 1_y`]($mathtex) and [`f^{-1} \circ f = 1_x`]($mathtex).
+
+You might have heard "a group is a groupoid with one object."
+This is true: if [`G`]($mathtex) is a group, let [`G`]($mathtex) itself denote the object
+and each element [`g \in G`]($mathtex) becomes an arrow [`g \colon G \to G`]($mathtex).
+Composition is the group operation and inversion is inversion.
+
+Morphisms of groupoids are _functors:_ [`F \colon \mathsf{H} \to \mathsf{G}`]($mathtex)
+sends, for example [`f \colon x \to y`]($mathtex) in [`\mathsf{H}`]($mathtex) to [`F f \colon F x \to F y`]($mathtex) in [`\mathsf{G}`]($mathtex),
+so there are assignments of objects to objects and arrows to arrows.
+Composition and identities must be respected.
+
+A _natural transformation,_ _natural isomorphism,_
+or my emerging favorite terminology, a _conjugacy_ [`\eta`]($mathtex)
+between functors [`F, K \colon \mathsf{H} \to \mathsf{G}`]($mathtex)
+is an assignment, for each object [`x \in V \mathsf{H}`]($mathtex), of an _arrow_ [`\eta_x \colon F x \to K x`]($mathtex)
+in [`\mathsf{G}`]($mathtex) such that for each arrow [`f \colon x \to y`]($mathtex) in [`\mathsf{H}`]($mathtex),
+the equation
+```=mathtex
+K f \circ \eta_x = \eta_y \circ F f
+```
+is true in [`\mathsf{G}`]($mathtex).
+The notation is [`\eta \colon F \Rightarrow K`]($mathtex).
+
+I like the word conjugacy because in the case where [`H`]($mathtex) and [`G`]($mathtex) are groups,
+a functor is a homomorphism and a conjugacy is simply a choice of an element [`\eta \in G`]($mathtex)
+with the property that [`K(h) = \eta F(h) \eta^{-1}`]($mathtex) for all elements [`h \in H`]($mathtex).
+
+An _equivalence_ of groupoids [`\mathsf{G}`]($mathtex) and [`\mathsf{H}`]($mathtex) is a pair of functors 
+[`F \colon \mathsf{G} \to \mathsf{H}`]($mathtex) and [`K \colon \mathsf{H} \to \mathsf{G}`]($mathtex)
+and conjugacies [`\eta \colon 1_{\mathsf{G}} \Rightarrow K F`]($mathtex) and [`\epsilon \colon F K \Rightarrow 1_{\mathsf{H}}`]($mathtex).
+
+Assuming the Axiom of Choice,
+a functor [`F`]($mathtex) is an equivalence if and only if it is _full_ (surjective on arrows [`Fx \to Fy`]($mathtex)),
+_faithful_ (injective on arrows [`x \to y`]($mathtex)) and _essentially surjective_ 
+(every object [`y`]($mathtex) in the target groupoid is connected to an object [`Fx`]($mathtex) by an arrow [`Fx \to y`]($mathtex)).
+
+# Group Systems are Groupoids
+
+A groupoid is _connected_ if between every pair of objects [`x`]($mathtex) and [`y`]($mathtex), there is an arrow [`x \to y`]($mathtex).
+A groupoid is _contractible_ if it is connected and the aforementioned arrow is _unique._
+Every nonempty connected groupoid [`\mathsf{H}`]($mathtex) is equivalent to the group [`\mathsf{H}(v,v)`]($mathtex)
+of arrows [`v \to v`]($mathtex) for some (and hence any) object [`v \in V\mathsf{H}`]($mathtex).
+A nonempty contractible groupoid is equivalent to the trivial group.
+
+If [`v \in V\mathsf{G}`]($mathtex) is an object, its _connected component_ is the set of objects [`w`]($mathtex) in [`\mathsf{G}`]($mathtex)
+such that there is an arrow [`v \to w`]($mathtex).
+Suppose [`\{ [v_i] : i \in I \}`]($mathtex) is the set of connected components of [`\mathsf{G}`]($mathtex).
+We can construct a _spanning groupoid_ from this set
+by choosing for each [`w \in [v_i]`]($mathtex) a unique arrow [`s_w \colon v_i \to w`]($mathtex),
+with the stipulation that the arrow [`s_{v_i} \colon v_i \to v_i`]($mathtex) is [`1_{v_i}`]($mathtex).
+Completing this by addding in identities and compositions, we get a contractible groupoid [`\mathsf{S}`]($mathtex)
+with vertex set [`V\mathsf{G}`]($mathtex).
+With all of this data, one can show that each arrow [`f \colon v \to w`]($mathtex) factors uniquely as
+[`f = s_w f_i s_v^{-1}`]($mathtex), where [`s_v \colon v_i \to v`]($mathtex) and [`s_w \colon v_i \to w`]($mathtex) are in [`\mathsf{S}`]($mathtex)
+and [`f_i \colon v_i \to v_i`]($mathtex) is an element of the group [`G_i = \mathsf{G}(v_i, v_i)`]($mathtex).
+
+Every groupoid, then, is equivalent to what [J.P. Mutanguha](https://mutanguha.com) denotes
+a _group system:_ an indexed disjoint union of groups.
+Explicitly, if [`\{ [v_i] : i \in I \}`]($mathtex) is the set of connected components of [`\mathsf{G}`]($mathtex),
+then [`\mathsf{G}`]($mathtex) is equivalent to the disjoint union of groups
+[`\bigsqcup_{i \in I} G_i`]($mathtex), where [`G_i = \mathsf{G}(v_i,v_i)`]($mathtex).
+
+# Subgroupoids of Groups
+
+A _subgroupoid_ [`\mathsf{H}`]($mathtex) of a group [`G`]($mathtex)
+is a groupoid [`\mathsf{H}`]($mathtex) together with a functor [`F \colon \mathsf{H} \to G`]($mathtex)
+with _trivial kernel,_ meaning that if [`F f = 1_G`]($mathtex), then [`f`]($mathtex) is an identity arrow.
+
+Let's analyze what this means.
+By our discussion in the previous section,
+we should consider the groups [`H_i = \mathsf{H}(v_i,v_i)`]($mathtex) where [`\{ [v_i] : i \in I \}`]($mathtex)
+is the set of connected components of [`\mathsf{H}`]($mathtex).
+On each such group [`F`]($mathtex) restricts to an _injective homomorphism,_
+so each group [`H_i`]($mathtex) _is a subgroup_ of [`G`]($mathtex).
+Each arrow [`s_v \colon v_i \to v`]($mathtex) maps to an _element_ [`g_v \in G`]($mathtex)
+and the stipulation that no arrow (necessarily) of the form [`s_w h_i s_v^{-1}`]($mathtex) maps to the identity says that
+if [`v`]($mathtex) and [`w`]($mathtex) are distinct elements of [`[v_i]`]($mathtex), the _cosets_ [`g_v H_i`]($mathtex) are distinct in [`G`]($mathtex).
+
+A _connected_ subgroupoid [`\mathsf{H}`]($mathtex) of a group [`G`]($mathtex) 
+therefore corresponds to a set of cosets of a given subgroup [`H \le G`]($mathtex).
+The groupoid [`\mathsf{H}`]($mathtex) therefore has at most [`G / H`]($mathtex) many objects
+I'll say that a component [`\mathsf{H}_i`]($mathtex) of a subgroupoid [`\mathsf{H}`]($mathtex) is _total_
+if it has [`G / H_i`]($mathtex) for its set of objects,
+and that [`\mathsf{H}`]($mathtex) is _total_ if each component is.
+(I don't love "total". Maybe another name could be ["wide"](https://ncatlab.org/nlab/show/wide+subcategory), which generally has a slightly different meaning; if you have a better name, please let me know.) 
+
+# Height and Width 
+
+Suppose [`G`]($mathtex) is a group.
+Typically [`G`]($mathtex) should be finitely generated, perhaps even finitely presented,
+but the following definition makes some amount of sense for a group [`G`]($mathtex).
+
+First, we say the _height_ of an infinite subgroup [`H \le G`]($mathtex) is [`n`]($mathtex) if there exist distinct cosets [`\{ g_1H, \ldots, g_nH \}`]($mathtex) such that the intersection [`\bigcap_{i=1}^n g_iHg_i^{-1}`]($mathtex) is infinite and [`n`]($mathtex) is maximum possible.
+
+Next, we say that the _width_ of an infinite subgroup [`H \le G`]($mathtex) is [`n`]($mathtex) if there are distinct cosets as above so that _pairwise_ we have that [`g_iHg_i^{-1} \cap g_jHg_j^{-1}`]($mathtex) and again [`n`]($mathtex) is maximum possible.
+
+Finite width implies finite height.
+
+This is phrased both simply and cleanly in the language of subgroupoids:
+If [`\mathsf{H}`]($mathtex) is a total subgroupoid of [`G`]($mathtex),
+the inclusion witnesses "vertex" or "isotropy" groups [`\mathsf{H}(v,v)`]($mathtex) as subgroups of [`G`]($mathtex).
+A component [`\mathsf{H}_i`]($mathtex) of [`\mathsf{H}`]($mathtex) has _width_ (or respectively _height_) [`n`]($mathtex)
+if [`H_i = \mathsf{H}(v_i,v_i)`]($mathtex) is infinite
+and there is a collection of [`n`]($mathtex) objects in [`\mathsf{H}_i`]($mathtex) 
+(which are, remember, subgroups of [`G`]($mathtex) conjugate to [`H_i`]($mathtex) by conjugators from distinct cosets)
+with pairwise (or respectively total) infinite intersection
+and [`n`]($mathtex) is chosen maximum possible.
+A subgroupoid [`\mathsf{H}`]($mathtex) therefore has width (or height) [`n`]($mathtex)
+if [`n`]($mathtex) is the maximum width (or height) among its components.
