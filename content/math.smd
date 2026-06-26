@@ -18,7 +18,7 @@ but my mathematical interests are fairly broad, with group theory, geometry and 
 ## Coarse geometry of homeomorphism groups: Classifying countable Stone spaces []($section.id("2026-06-25"))
 with [George Domat](https://sites.google.com/view/georgedomat/home) and [Hannah Hoganson](https://www.math.umd.edu/~hoganson/).
 
-[PDF]($site.asset("CountableStoneSpaces.pdf").link()).
+[PDF]($link.siteAsset("CountableStoneSpaces.pdf")).
 
 **Abstract:** Towards developing the tools of geometric group theory for non-locally compact topological groups,
 we give one of the first complete classifications of a family of such groups up to coarse equivalence,
