@@ -8,5 +8,4 @@ ADD --checksum=sha256:c25e5372b8a5d2759f2b7e581aefb90c8019ff0056a230a97efe3c8eda
 
 RUN tar -oxf /zine.tar.xz -C /usr/bin
 COPY . /site
-
-CMD zine release
+RUN zine release
